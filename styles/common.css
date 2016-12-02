@@ -2,3 +2,7 @@
     background-color: black;
     color: black;
 }
+.show {
+    visibility: visible !important;
+    display: unset !important;
+}

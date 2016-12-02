@@ -9,7 +9,7 @@ html {
 }
 body {
     background-color: black;
-    transition: background-color 5s;
+    transition: background-color 5s linear;
 }
 *::selection {
     background-color: rgba(127, 127, 127, 0.5);
@@ -41,6 +41,34 @@ a:active {
 .avatar-img {
     width: 10em;
     height: 10em;
+    /*display: none;*/
+    opacity: 0;
+    transform: rotate(180deg);
+    position: absolute;
+}
+.clockwise-in {
+    animation: rotate-in-clockwise 500ms linear;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.counter-clockwise-in {
+    animation: rotate-in-counter-clockwise 500ms linear;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.clockwise-out {
+    animation: rotate-out-clockwise 500ms linear;
+    transform: rotate(0deg);
+}
+.counter-clockwise-out {
+    animation: rotate-out-counter-clockwise 500ms linear;
+    transform: rotate(0deg);
+}
+.text-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.text-button:active {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* ID */
@@ -53,8 +81,68 @@ a:active {
     text-align: right;
 }
 #avatarContainer {
+    position: absolute;
     width: 10em;
     height: 10em;
     border-radius: 50%;
     overflow: hidden;
+    /* WebKit Hack */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+#avatarController {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    position: relative;
+    font-family: "Times New Roman", serif;
+}
+#avatarPrevious {
+    position: absolute;
+}
+#avatarNext {
+    position: absolute;
+    right: 0;
+}
+
+/* 关键帧 */
+
+@keyframes rotate-in-clockwise {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+@keyframes rotate-out-clockwise {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+@keyframes rotate-in-counter-clockwise {
+    0% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+@keyframes rotate-out-counter-clockwise {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
 }
