@@ -8,7 +8,11 @@ html {
     color: rgba(255, 255, 255, 0.8);
 }
 body {
+    background-color: black;
     transition: background-color 5s;
+}
+*::selection {
+    background-color: rgba(127, 127, 127, 0.5);
 }
 
 /* 元素 */
@@ -34,9 +38,23 @@ a:active {
     opacity: 0.8;
     font-size: 60%;
 }
+.avatar-img {
+    width: 10em;
+    height: 10em;
+}
 
 /* ID */
 
 #footer {
-    font-size: 70%;
+    font-size: 60%;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    text-align: right;
+}
+#avatarContainer {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
 }
