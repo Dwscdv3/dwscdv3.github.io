@@ -6,6 +6,12 @@ html {
     font-weight: lighter;
     text-shadow: 0.05em 0.05em 0.2em black;
     color: rgba(255, 255, 255, 0.8);
+    cursor: default;
+    /* user-select */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 body {
     background-color: black;
@@ -47,22 +53,25 @@ a:active {
     position: absolute;
 }
 .clockwise-in {
-    animation: rotate-in-clockwise 500ms linear;
+    animation: rotate-in-clockwise 300ms linear;
     opacity: 1;
     transform: rotate(0deg);
 }
 .counter-clockwise-in {
-    animation: rotate-in-counter-clockwise 500ms linear;
+    animation: rotate-in-counter-clockwise 300ms linear;
     opacity: 1;
     transform: rotate(0deg);
 }
 .clockwise-out {
-    animation: rotate-out-clockwise 500ms linear;
+    animation: rotate-out-clockwise 300ms linear;
     transform: rotate(0deg);
 }
 .counter-clockwise-out {
-    animation: rotate-out-counter-clockwise 500ms linear;
+    animation: rotate-out-counter-clockwise 300ms linear;
     transform: rotate(0deg);
+}
+.text-button{
+    padding: 0.2em;
 }
 .text-button:hover {
     background-color: rgba(255, 255, 255, 0.5);

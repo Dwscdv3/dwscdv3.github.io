@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     images[currentClone].classList.remove("counter-clockwise-in");
                     images[currentClone].classList.remove("clockwise-out");
                     images[currentClone + 1].classList.add("clockwise-in");
-                }, 500);
+                }, 300);
                 current++;
             }
         }
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     images[currentClone].classList.remove("counter-clockwise-in");
                     images[currentClone].classList.remove("counter-clockwise-out");
                     images[currentClone - 1].classList.add("counter-clockwise-in");
-                }, 500);
+                }, 300);
                 current--;
             }
         }
