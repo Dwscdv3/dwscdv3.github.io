@@ -86,16 +86,9 @@ a:active {
 
 #footer {
     font-size: 60%;
-    position: absolute;
+    position: fixed;
     left: 0.6rem;
     bottom: 0.6rem;
-}
-#tip-viewSource {
-    font-size: 80%;
-    position: fixed;
-    right: 0.6rem;
-    top: 0.6rem;
-    text-align: right;
 }
 #avatarContainer {
     position: absolute;
@@ -131,12 +124,14 @@ a:active {
     padding: 1em;
     top: 0;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 #main {
     margin-left: 16em;
 }
 #tip {
-    font-size: 70%;
+    font-weight: normal;
+    font-size: 65%;
 }
 
 /* 关键帧 */
