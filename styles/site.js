@@ -2,15 +2,16 @@ var avatarContainer;
 
 document.addEventListener("DOMContentLoaded", function() {
     avatarContainer = (function() {
-        var images = $$("#avatarContainer img");
         var current = 0;
 
         var getCount = function() {
+            var images = $$("#avatarContainer img");
             return images.length;
         }
 
         var Next = function() {
             if (current < getCount() - 1) {
+                var images = $$("#avatarContainer img");
                 var currentClone = current;
                 images[currentClone].classList.add("clockwise-out");
                 setTimeout(function() {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         var Previous = function() {
             if (current > 0) {
+                var images = $$("#avatarContainer img");
                 var currentClone = current;
                 images[currentClone].classList.add("counter-clockwise-out");
                 setTimeout(function() {
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+        var images = $$("#avatarContainer img");
         images[0].classList.add("clockwise-in");
 
         return {

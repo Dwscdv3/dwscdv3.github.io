@@ -16,6 +16,8 @@ html {
 body {
     background-color: black;
     transition: background-color 5s linear;
+    /*display: flex;*/
+    margin: 0;
 }
 *::selection {
     background-color: rgba(127, 127, 127, 0.5);
@@ -45,8 +47,8 @@ a:active {
     font-size: 60%;
 }
 .avatar-img {
-    width: 10em;
-    height: 10em;
+    width: 100%;
+    height: 100%;
     /*display: none;*/
     opacity: 0;
     transform: rotate(180deg);
@@ -70,7 +72,7 @@ a:active {
     animation: rotate-out-counter-clockwise 300ms linear;
     transform: rotate(0deg);
 }
-.text-button{
+.text-button {
     padding: 0.2em;
 }
 .text-button:hover {
@@ -84,15 +86,21 @@ a:active {
 
 #footer {
     font-size: 60%;
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.6rem;
+}
+#tip-viewSource {
+    font-size: 80%;
     position: fixed;
-    right: 1em;
-    bottom: 1em;
+    right: 0.6rem;
+    top: 0.6rem;
     text-align: right;
 }
 #avatarContainer {
     position: absolute;
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
     border-radius: 50%;
     overflow: hidden;
     /* WebKit Hack */
@@ -100,8 +108,8 @@ a:active {
 }
 #avatarController {
     display: inline-block;
-    width: 10em;
-    height: 10em;
+    width: 100%;
+    height: 12em;
     position: relative;
     font-family: "Times New Roman", serif;
 }
@@ -111,6 +119,24 @@ a:active {
 #avatarNext {
     position: absolute;
     right: 0;
+}
+#nickname {
+    text-align: center;
+}
+#left {
+    position: fixed;
+    width: 14em;
+    height: 100%;
+    /*flex: 10em 0 0;*/
+    padding: 1em;
+    top: 0;
+    box-sizing: border-box;
+}
+#main {
+    margin-left: 16em;
+}
+#tip {
+    font-size: 70%;
 }
 
 /* 关键帧 */

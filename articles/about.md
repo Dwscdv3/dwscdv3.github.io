@@ -1,0 +1,35 @@
+## 开发状态
+基于 Markdown 的博客系统已完成。  
+接下来加上 <a href="//mouto.org" target="_blank">トトロ</a> 的 <a href="//comment.moe" target="_blank">萌评论</a> 就可以当博客用了。  
+<br />
+
+## 我是谁？
+<p>
+    这些信息构成了我，你们眼中的我：
+    <ul>
+        <li>
+            <a href="http://weibo.com/Dwscdv3" target="_blank">我的碎碎念</a>
+            <span class="service">新浪微博</span>
+        </li>
+        <li>
+            <a href="http://space.bilibili.com/2898837" target="_blank">我的…… 呃</a>
+            <span class="service">bilibili</span>
+        </li>
+        <li>
+            <a href="http://github.com/Dwscdv3" target="_blank">我的作品</a>
+            <span class="service">GitHub</span>
+        </li>
+        <li>
+            <a href="https://y.qq.com/portal/profile.html?uin=893309102" target="_blank">我的音乐品味</a>
+            <span class="service">QQ音乐</span>
+        </li>
+    </ul>
+</p>
+<p>
+    <span style="color: black">黑历史</span>传送门：
+    <ul>
+        <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">主页 ver.1</a></li>-->
+        <li><a href="http://dwscdv3.gq" target="_blank">主页 ver.2</a></li>
+        <!--<li><a href="https://zh.moegirl.org/User:Dwscdv3" target="_blank">萌娘百科用户页 (2014/12/24)</a></li>-->
+    </ul>
+</p>
