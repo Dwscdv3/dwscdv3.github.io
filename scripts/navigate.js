@@ -2,8 +2,9 @@ var prefixes = {
     articles: "#/articles/"
 };
 
+var md = window.markdownit("commonmark");
 document.addEventListener("DOMContentLoaded", navigateToArticle);
-document.addEventListener("hashchange", navigateToArticle);
+window.addEventListener("hashchange", navigateToArticle);
 
 function navigateToArticle() {
     setTimeout(function() {
@@ -11,7 +12,6 @@ function navigateToArticle() {
             ajaxGet("/articles/about.md", function() {
                 if (this.readyState == XMLHttpRequest.DONE) {
                     if (this.status == 200) {
-                        var md = window.markdownit("commonmark");
                         $("#main").innerHTML = md.render(this.responseText);
                     }
                 }
@@ -21,7 +21,6 @@ function navigateToArticle() {
             ajaxGet(window.location.hash.substring(1) + ".md", function() {
                 if (this.readyState == XMLHttpRequest.DONE) {
                     if (this.status == 200) {
-                        var md = window.markdownit("commonmark");
                         $("#main").innerHTML = md.render(this.responseText);
                     }
                 }
