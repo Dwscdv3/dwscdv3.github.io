@@ -23,7 +23,7 @@ function navigateToArticle() {
 function renderMarkdown() {
     if (this.readyState == XMLHttpRequest.DONE) {
         if (this.status == 200) {
-            $("#main").innerHTML = md.render(this.responseText);
+            $("#article").innerHTML = md.render(this.responseText);
         }
     }
 }

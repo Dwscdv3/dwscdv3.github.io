@@ -4,7 +4,7 @@ html {
     font-family: "Microsoft YaHei", sans-serif;
     font-size: 150%;
     font-weight: lighter;
-    text-shadow: 0.05em 0.05em 0.2em black;
+    text-shadow: 0.05em 0.05em 0.2em black !important;
     color: rgba(255, 255, 255, 0.8);
     cursor: default;
     /* user-select */
@@ -25,9 +25,36 @@ body {
 
 /* 元素 */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: initial;
+    margin-bottom: initial;
+}
+h1 {
+    font-size: 220%;
+}
+h2 {
+    font-size: 190%;
+}
+h3 {
+    font-size: 165%;
+}
+h4 {
+    font-size: 145%;
+}
+h5 {
+    font-size: 130%;
+}
+h6 {
+    font-size: 120%;
+}
 a {
     text-decoration: none;
-    color: inherit;
+    color: rgba(223, 223, 255, 0.8);
     text-shadow: 0.05em 0.05em 0.2em blue;
 }
 a:hover {
@@ -35,6 +62,10 @@ a:hover {
 }
 a:active {
     background-color: rgba(127, 127, 127, 0.8);
+}
+button,
+button::before {
+    text-shadow: 0.05em 0.05em 0.2em black;
 }
 
 /* 类 */
@@ -152,6 +183,28 @@ a:active {
 }
 #homeButton:hover {
     opacity: 1;
+}
+#comment {
+    margin-top: 3em;
+}
+#comment-header {
+    font-size: 200%;
+}
+#backgroundContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+#background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
 }
 
 /* 关键帧 */

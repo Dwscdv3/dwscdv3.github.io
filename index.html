@@ -5,9 +5,10 @@
     <meta charset="utf-8" />
     <title>施工中 - Dw 的个人页</title>
     <link rel="stylesheet" href="fonts/material-icons.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.1/markdown-it.min.js"></script>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/comment.moe.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.1/markdown-it.min.js"></script>
     <script src="scripts/common.js"></script>
     <script src="styles/common.js"></script>
     <script src="styles/site.js"></script>
@@ -15,18 +16,23 @@
 </head>
 
 <body>
+    <div id="backgroundContainer">
+        <img id="background">
+    </div>
     <div id="left">
         <span id="avatarController">
-        <div id="avatarContainer">
-            <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg">
-            <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png">
-            <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png">
-            <img class="avatar-img" src="images/avatars/天体的秩序-圆盘 (2016-1-27).jpg">
-            <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
-            <!--<img class="avatar-img" src="images/avatars/Chrome？ (2016-10-24, 自制, 副头像).png">-->
-            <div id="homeButton"><span id="homeIcon" class="material-icons">home</span></div>
-        </div>
-        <span id="avatarPrevious" class="text-button">←</span>
+            <div id="avatarContainer">
+                <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg">
+                <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png">
+                <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png">
+                <img class="avatar-img" src="images/avatars/天体的秩序-圆盘 (2016-1-27).jpg">
+                <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
+                <!--<img class="avatar-img" src="images/avatars/Chrome？ (2016-10-24, 自制, 副头像).png">-->
+                <div id="homeButton">
+                    <div id="homeIcon" class="material-icons">home</div>
+                </div>
+            </div>
+            <span id="avatarPrevious" class="text-button">←</span>
         <span id="avatarNext" class="text-button">→</span>
         </span>
         <div id="nickname"><strong>Dwscdv3</strong></div>
@@ -46,7 +52,14 @@
         </div>
     </div>
     <div id="main">
-
+        <div id="article"></div>
+        <div id="comment">
+            <h1 id="comment-header">
+                评论
+                <a class="service" href="http://comment.moe" target="_blank">萌评论</a>
+            </h1>
+            <div class="cm-article"></div>
+        </div>
     </div>
 
     <!-- 萌评论 -->

@@ -1,9 +1,14 @@
-## 开发状态
-基于 Markdown 的博客系统已完成。  
-接下来加上 <a href="http://mouto.org" target="_blank">トトロ</a> 的 <a href="http://comment.moe" target="_blank">萌评论</a> 就可以当博客用了。  
-<br />
+<div style="float: right; margin-right: 2em;">
 
-## 我是谁？
+# 开发状态
+## 待办事项
+* 关于：第三方服务
+  * 萌评论
+  * Material Design Icon
+
+</div>
+
+# 我是谁？
 <p>
     这些信息构成了我，你们眼中的我：
     <ul>

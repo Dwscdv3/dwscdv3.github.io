@@ -53,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#avatarNext").addEventListener("click", function() {
         avatarContainer.Next();
     });
-    $("#homeButton").addEventListener("click", function() {
-        window.location.hash = "#";
-    });
 
     setTimeout(function() {
         document.body.style.backgroundColor = getRandomColor();
@@ -63,4 +60,13 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.backgroundColor = getRandomColor();
         }, 5000);
     }, 17);
+
+    ajaxGet("/images/backgrounds/index.json", function() {
+        if (this.readyState == XMLHttpRequest.DONE) {
+            if (this.status == 200) {
+                var bgList = JSON.parse(this.responseText);
+                $("#background").src = "/images/backgrounds/" + bgList[Math.floor(Math.random() * bgList.length)];
+            }
+        }
+    });
 });

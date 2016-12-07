@@ -1,0 +1,6 @@
+.cm-bar button {
+    color: rgba(255, 255, 255, 0.8);
+}
+.cm-reply-text textarea {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
