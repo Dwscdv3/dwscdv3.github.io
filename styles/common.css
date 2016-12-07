@@ -2,7 +2,19 @@
     background-color: black;
     color: black;
 }
-.show {
+.visible {
     visibility: visible !important;
     display: unset !important;
+}
+.transparent {
+    opacity: 0;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }

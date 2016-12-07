@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#avatarNext").addEventListener("click", function() {
         avatarContainer.Next();
     });
+    $("#homeButton").addEventListener("click", function() {
+        window.location.hash = "#";
+    });
 
     setTimeout(function() {
         document.body.style.backgroundColor = getRandomColor();
