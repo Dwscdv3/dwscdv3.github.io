@@ -25,7 +25,7 @@ function renderMarkdown() {
         $(".cm-article").innerHTML = "";
         if (this.status >= 200 && this.status < 400) {
             $("#article").innerHTML = md.render(this.responseText);
-            $(".cm-article").dataset.key = window.location.hash;
+            $(".cm-article").dataset.key = encodeURIComponent(window.location.hash);
             萌评.运转();
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
