@@ -7,3 +7,9 @@
 .cm-fo-pre .cm-comment {
     background-color: rgba(0, 0, 0, 0.6) !important;
 }
+.cm-article .cm-reply .cm-reply-ctrl .cm-smile-box {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.cm-article .cm-reply .cm-reply-ctrl .cm-smile-box span:hover {
+    color: #99f !important;
+}
