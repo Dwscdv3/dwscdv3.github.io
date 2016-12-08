@@ -65,6 +65,7 @@ a:active {
 }
 button,
 button::before {
+    color: rgba(223, 223, 255, 0.8);
     text-shadow: 0.05em 0.05em 0.2em black;
 }
 
