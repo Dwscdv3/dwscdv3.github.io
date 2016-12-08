@@ -1,6 +1,4 @@
-var prefixes = {
-    articles: "#/articles/"
-};
+var homePage = "#/about";
 
 var md = window.markdownit("commonmark");
 document.addEventListener("DOMContentLoaded", navigateToArticle);
@@ -14,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function navigateToArticle() {
     if (window.location.hash.length <= 1) {
-        ajaxGet("/about", renderMarkdown);
-    } else {
-        ajaxGet(window.location.hash.substring(1), renderMarkdown);
+        window.location.hash = homePage;
+        return;
     }
+    ajaxGet(window.location.hash.substring(1), renderMarkdown);
 }
 
 function renderMarkdown() {
