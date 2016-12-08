@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
         avatarContainer.Next();
     });
 
-    setTimeout(function() {
-        document.body.style.backgroundColor = getRandomColor();
-        setInterval(function() {
-            document.body.style.backgroundColor = getRandomColor();
-        }, 5000);
-    }, 17);
+    // setTimeout(function() {
+    //     document.body.style.backgroundColor = getRandomColor();
+    //     setInterval(function() {
+    //         document.body.style.backgroundColor = getRandomColor();
+    //     }, 5000);
+    // }, 17);
 
     ajaxGet("/images/backgrounds/index.json", function() {
         if (this.readyState == XMLHttpRequest.DONE) {
