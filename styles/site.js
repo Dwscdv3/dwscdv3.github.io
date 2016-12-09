@@ -1,3 +1,6 @@
+var PATH_BACKGROUND_DESKTOP = "/images/backgrounds/desktop/";
+var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
+
 var avatarContainer;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -63,12 +66,35 @@ document.addEventListener("DOMContentLoaded", function() {
     //     }, 5000);
     // }, 17);
 
-    ajaxGet("/images/backgrounds/index.json", function() {
-        if (this.readyState == XMLHttpRequest.DONE) {
-            if (this.status == 200) {
-                var bgList = JSON.parse(this.responseText);
-                $("#background").src = "/images/backgrounds/" + bgList[Math.floor(Math.random() * bgList.length)];
+    if (window.innerWidth >= window.innerHeight) {
+        ajaxGet(PATH_BACKGROUND_DESKTOP + "index.json", function() {
+            if (this.readyState == XMLHttpRequest.DONE) {
+                if (this.status == 200) {
+                    var bgList = JSON.parse(this.responseText);
+                    $("#background").src = PATH_BACKGROUND_DESKTOP + bgList[Math.floor(Math.random() * bgList.length)];
+                }
             }
-        }
-    });
+        });
+    } else {
+        ajaxGet(PATH_BACKGROUND_MOBILE + "index.json", function() {
+            if (this.readyState == XMLHttpRequest.DONE) {
+                if (this.status == 200) {
+                    var bgList = JSON.parse(this.responseText);
+                    $("#background").src = PATH_BACKGROUND_MOBILE + bgList[Math.floor(Math.random() * bgList.length)];
+                }
+            }
+        });
+
+    }
+    setBlur();
 });
+window.addEventListener("resize", setBlur);
+
+function setBlur() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var depth = (width * 0.5 + height * 0.5) / 200;
+    var bg = $("#background");
+    bg.style["-webkit-filter"] = "blur(" + depth.toFixed(2) + "px)";
+    bg.style["filter"] = "blur(" + depth.toFixed(2) + "px)";
+}
