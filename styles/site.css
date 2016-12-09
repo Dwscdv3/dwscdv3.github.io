@@ -129,7 +129,7 @@ button::before {
     position: fixed;
     right: 0;
     bottom: 0;
-    padding: 0.5rem;
+    padding: 0 0.4rem 0.35rem 0;
     text-align: right;
     pointer-events: none;
 }
