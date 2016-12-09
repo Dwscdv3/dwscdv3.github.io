@@ -13,3 +13,9 @@
 .cm-article .cm-reply .cm-reply-ctrl .cm-smile-box span:hover {
     color: #99f !important;
 }
+@media (max-width: 800px) {
+    .cm-article .cm-comment-child {
+        background-color: unset !important;
+        border-left: 0.1em solid rgba(127, 127, 127, 0.5);
+    }
+}

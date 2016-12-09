@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 var currentClone = current;
                 images[currentClone].classList.add("clockwise-out");
                 setTimeout(function() {
-                    images[currentClone].classList.remove("clockwise-in");
-                    images[currentClone].classList.remove("counter-clockwise-in");
-                    images[currentClone].classList.remove("clockwise-out");
+                    images[currentClone].className = "avatar-img";
+                    // images[currentClone].classList.remove("clockwise-in");
+                    // images[currentClone].classList.remove("counter-clockwise-in");
+                    // images[currentClone].classList.remove("clockwise-out");
                     images[currentClone + 1].classList.add("clockwise-in");
                 }, 300);
                 current++;
@@ -29,9 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 var currentClone = current;
                 images[currentClone].classList.add("counter-clockwise-out");
                 setTimeout(function() {
-                    images[currentClone].classList.remove("clockwise-in");
-                    images[currentClone].classList.remove("counter-clockwise-in");
-                    images[currentClone].classList.remove("counter-clockwise-out");
+                    images[currentClone].className = "avatar-img";
+                    // images[currentClone].classList.remove("clockwise-in");
+                    // images[currentClone].classList.remove("counter-clockwise-in");
+                    // images[currentClone].classList.remove("counter-clockwise-out");
                     images[currentClone - 1].classList.add("counter-clockwise-in");
                 }, 300);
                 current--;

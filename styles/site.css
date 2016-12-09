@@ -81,6 +81,7 @@ button::before {
 .avatar-img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     /*display: none;*/
     opacity: 0;
     transform: rotate(180deg);
@@ -129,7 +130,7 @@ button::before {
     border-radius: 50%;
     overflow: hidden;
     /* WebKit Hack */
-    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    /*-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);*/
 }
 #avatarController {
     display: inline-block;
@@ -171,13 +172,15 @@ button::before {
     vertical-align: middle;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     font-size: 144px;
 }
 #homeButton {
     display: table;
     position: absolute;
     width: 100%;
-    height: 101%;
+    height: 100%;
+    border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 200ms linear;
