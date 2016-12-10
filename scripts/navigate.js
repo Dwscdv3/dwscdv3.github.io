@@ -1,8 +1,11 @@
 var homePage = "#/about";
 
 var md = window.markdownit("commonmark");
+
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
+document.addEventListener("DOMContentLoaded", getRecentPosts);
+window.addEventListener("hashchange", getRecentPosts);
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     $("#homeButton").addEventListener("click", function() {
@@ -16,6 +19,32 @@ function navigateToArticle() {
         return;
     }
     ajaxGet(window.location.hash.substring(1), renderMarkdown);
+}
+
+function getRecentPosts() {
+    ajaxGet("/articles/index.json", function() {
+        if (this.readyState == XMLHttpRequest.DONE) {
+            var posts = JSON.parse(this.responseText);
+            posts.forEach(function(post) {
+                post.date = Date.parse(post.dateString);
+            });
+
+            posts.sort(function(a, b) {
+                return b - a;
+            });
+
+            var recentPostsList = $("#recentPosts");
+            recentPostsList.innerHTML = "";
+            for (var i = 0; i < min(5, posts.length); i++) {
+                var li = document.createElement("li");
+                var a = document.createElement("a");
+                a.href = "#/articles/" + posts[i].fileName;
+                a.appendChild(document.createTextNode(posts[i].title));
+                li.appendChild(a);
+                recentPostsList.appendChild(li);
+            }
+        }
+    });
 }
 
 function renderMarkdown() {

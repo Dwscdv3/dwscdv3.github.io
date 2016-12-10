@@ -184,7 +184,10 @@ button::before {
     overflow-y: auto;
 }
 #main {
-    margin-left: 16em;
+    padding-left: 15em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 #tip {
     font-weight: normal;
