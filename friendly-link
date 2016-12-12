@@ -1,0 +1,126 @@
+<h1>
+    有趣的人们
+    <date>2016/12/13</date>
+</h1>
+
+<style>
+    .friendly-link-box a {
+        display: block;
+        padding: 1em;
+    }
+    
+    .friendly-link-box a:hover {
+        background: transparent;
+    }
+    
+    .friendly-link-box a:active {
+        background: transparent;
+    }
+    
+    a h2 {
+        font-size: 1.1em;
+        padding-left: 0.5em;
+        display: inline-block;
+        box-sizing: border-box;
+        width: calc(100% - 3em);
+        vertical-align: middle;
+        margin: 0;
+    }
+    
+    .friendly-link-box {
+        position: relative;
+        flex: 1 0 12.5em;
+        height: 5em;
+        box-sizing: content-box;
+        overflow: hidden;
+    }
+    
+    .friendly-link-box:hover {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: visible;
+    }
+    
+    .friendly-link-info {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 80%;
+        word-break: break-all;
+    }
+    
+    .friendly-link-avatar {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        border-width: 0;
+        vertical-align: middle;
+    }
+    
+    #friendly-link-flexContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div id="friendly-link-flexContainer">
+    <div class="friendly-link-box">
+        <a href="//www.sardinefish.com" target="_blank">
+            <img class="friendly-link-avatar" src="http://www.sardinefish.com/account/user/face/getFace.php?uid=SardineFish">
+            <h2>Sardine Fish</h2>
+        </a>
+        <div class="friendly-link-info">ta 公开发表的东西很少，但是与我的聊天记录能绕地球两周半</div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="https://silversky.moe" target="_blank">
+            <img class="friendly-link-avatar" src="http://tva2.sinaimg.cn/large/005QHKeDjw8f7zualdbr5j30f90egwex.jpg">
+            <h2>暁龍之介</h2>
+        </a>
+        <div class="friendly-link-info">硬件&amp;运维 dalao，是个变态（</div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="//mouto.org" target="_blank">
+            <img class="friendly-link-avatar" src="http://mouto.org/f/me.jpg">
+            <h2>卜卜口</h2>
+        </a>
+        <div class="friendly-link-info">又名“itorr”、“偷偷揉”，Web 前辈</div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="//yoooooooooo.com/yashi" target="_blank">
+            <img class="friendly-link-avatar" src="https://avatars1.githubusercontent.com/u/2824841?v=3&s=460">
+            <h2>神楽坂雅詩</h2>
+        </a>
+        <!--<div class="friendly-link-info"></div>-->
+    </div>
+    <div class="friendly-link-box">
+        <a href="//im.dimpurr.com" target="_blank">
+            <img class="friendly-link-avatar" src="http://tva3.sinaimg.cn/large/5ac786bbjw8eujhhwyr0oj20qx0qxk0n.jpg">
+            <h2>Dimpurr Cheny</h2>
+        </a>
+        <!--<div class="friendly-link-info"></div>-->
+    </div>
+    <!--<div class="friendly-link-box">
+        <a href="http://weibo.com/tokihime" target="_blank">
+            <img class="friendly-link-avatar" src="http://tva3.sinaimg.cn/crop.138.47.266.266.180/c08ac8d3jw8f8wja8l56uj20l60rsn1z.jpg">
+            <h2>神風型駆逐艦三番艦春風</h2>
+        </a>
+        <div class="friendly-link-info">很有故事的人呢……</div>
+    </div>-->
+</div>
+
+<!--<script>
+    $("#friendly-link-flexContainer").addEventListener("DOMContentLoaded", function() {
+        var boxes = $$(".friendly-link-box");
+        for (var i = 0; i < boxes.length; i++) {
+            boxes[i].addEventListener("mouseenter", function() {
+                
+            });
+            boxes[i].addEventListener("mouseleave", function() {
+                
+            });
+        }
+    });
+</script>-->
