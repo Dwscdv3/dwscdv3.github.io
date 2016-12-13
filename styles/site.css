@@ -213,6 +213,12 @@ date::before {
 #left::-webkit-scrollbar {
     width: 0;
 }
+#left ul {
+    padding-left: 0.5em;
+}
+#left li {
+    margin-top: 0.2em;
+}
 #main {
     padding-left: 15em;
     padding-right: 1em;
@@ -272,6 +278,9 @@ date::before {
     object-position: center;
     /*-webkit-filter: blur(5px);
     filter: blur(5px);*/
+}
+#recentPosts {
+    font-size: 75%;
 }
 
 /* 关键帧 */
