@@ -1,0 +1,20 @@
+<h1>
+    Windows 资源管理器的“智能”删除
+    <date>2016/12/14</date>
+</h1>
+
+I have a folder  
+![](/images/articles/windows-explorer-stupid-deleting/1.png)
+
+I have an HTML  
+![](/images/articles/windows-explorer-stupid-deleting/2.png)
+
+Ah!  
+![](/images/articles/windows-explorer-stupid-deleting/3.png)
+
+Nothing here  
+![](/images/articles/windows-explorer-stupid-deleting/4.png)
+
+我在无意中发现了 Windows 资源管理器的这个特性  
+如上图所示，当同一目录下存在 `*_files` 目录和 `*.html` 文件时，在 Explorer 中删除**其中一个**就会顺带把另一个也删除  
+后来我又用 `del` 命令试了下，并不会连带删除另一个
