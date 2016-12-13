@@ -30,7 +30,7 @@ function getRecentPosts() {
             });
 
             posts.sort(function(a, b) {
-                return b - a;
+                return Date.parse(b.dateString) - Date.parse(a.dateString);
             });
 
             var recentPostsList = $("#recentPosts");
