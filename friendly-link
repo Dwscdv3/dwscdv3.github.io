@@ -66,6 +66,8 @@
     }
 </style>
 
+<!--Go meet some other friends?-->
+
 <div id="friendly-link-flexContainer">
     <div class="friendly-link-box">
         <a href="//www.sardinefish.com" target="_blank">
@@ -102,6 +104,13 @@
         </a>
         <!--<div class="friendly-link-info"></div>-->
     </div>
+    <div class="friendly-link-box">
+        <a href="http://blog.hakugyokurou.net/" target="_blank">
+            <img class="friendly-link-avatar" src="http://cn.gravatar.com/avatar/fa72aa9177a7bda1cf3827c2bcb55a21?s=88&d=mm&r=g">
+            <h2>szszss</h2>
+        </a>
+        <div class="friendly-link-info">16年春做MC的Mod玩时看的教程的博主，现在应该是图形学菊苣了吧</div>
+    </div>
     <!--<div class="friendly-link-box">
         <a href="http://weibo.com/tokihime" target="_blank">
             <img class="friendly-link-avatar" src="http://tva3.sinaimg.cn/crop.138.47.266.266.180/c08ac8d3jw8f8wja8l56uj20l60rsn1z.jpg">
@@ -110,17 +119,3 @@
         <div class="friendly-link-info">很有故事的人呢……</div>
     </div>-->
 </div>
-
-<!--<script>
-    $("#friendly-link-flexContainer").addEventListener("DOMContentLoaded", function() {
-        var boxes = $$(".friendly-link-box");
-        for (var i = 0; i < boxes.length; i++) {
-            boxes[i].addEventListener("mouseenter", function() {
-                
-            });
-            boxes[i].addEventListener("mouseleave", function() {
-                
-            });
-        }
-    });
-</script>-->
