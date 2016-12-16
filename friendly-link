@@ -1,10 +1,10 @@
 <h1>
     有趣的人们
-    <date>2016/12/13</date>
+    <date>2016/12/16</date>
 </h1>
 
 <style>
-    .friendly-link-box a {
+    .friendly-link-box > a {
         display: block;
         padding: 1em;
     }
@@ -19,7 +19,7 @@
     
     a h2 {
         font-size: 1.1em;
-        padding-left: 0.5em;
+        padding-left: 0.3em;
         display: inline-block;
         box-sizing: border-box;
         width: calc(100% - 3em);
@@ -89,6 +89,16 @@
             <h2>卜卜口</h2>
         </a>
         <div class="friendly-link-info">又名“itorr”、“偷偷揉”，Web 前辈</div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="http://www.pc426.com/forum-150-27.html" target="_blank">
+            <img class="friendly-link-avatar" src="http://tva2.sinaimg.cn/crop.1262.2.716.716.180/4a954ac6gw1ewupfj4320j21kw0zk1eb.jpg">
+            <h2>guanyuhan426</h2>
+        </a>
+        <div class="friendly-link-info">
+            由
+            <a href="http://space.bilibili.com/123484" target="_blank">bilibili</a> 的《东京印象》系列视频关注的 UP 主
+        </div>
     </div>
     <div class="friendly-link-box">
         <a href="//yoooooooooo.com/yashi" target="_blank">
