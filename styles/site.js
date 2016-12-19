@@ -5,7 +5,7 @@ var avatarContainer;
 
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("keydown", function (e) {
-        if (e.ctrlKey && e.key == "B") {
+        if (e.ctrlKey && e.key == "b") {
             isBlurred = !isBlurred;
             setBlur();
         }
