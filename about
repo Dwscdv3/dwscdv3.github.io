@@ -1,15 +1,52 @@
 <h1>
     我是谁？
-    <date>2016/12/16</date>
+    <date>2016/12/19</date>
 </h1>
 
-先来个一百条吧。  
+<style>
+    .collapse {
+        position: relative;
+        padding: 1em;
+        height: 2em;
+        overflow: hidden;
+    }
+    .collapse:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: visible;
+        z-index: 1;
+    }
+    .collapse-extend {
+        position: absolute;
+        top: 4em;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.8);
+        word-break: break-all;
+    }
+    .ellipsis::before {
+        content: " ··· ";
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: #060;
+    }
+</style>
+
+先来个<del>一百</del>管它多少条吧。  
 虽然我不喜欢用简短的文字去形容一个人，但是这确实是很有效率的方式。
 
-`version 2016.12.16, revision 1: in progress`
+<div class="collapse">
+    想看么？鼠标移上来！ (╯‵□′)╯︵┻━┻<br>
+    <code style="display: inline-block">version 2016.12.19, revision 0: incomplete</code>
+    <div class="collapse-extend">
 
-1. **Dwscdv3** 是初中时候<!--在2125还是4399弹弹堂里-->随便敲的名字，经历了一丢丢改动后一直用下来了
-   <!--确切的说是
+1. **【Dwscdv3】**  
+   是初中时候<!--在2125还是4399弹弹堂里-->随便敲的名字，经历了一丢丢改动后一直用下来了  
+   <span class="ellipsis">
+   <!--
+       确切的说是
        dwscdv   万恶之源，随手敲的
        dwscdv1  不知道有没有这个
        dwscdv2  小号的昵称迭代，以此类推
@@ -17,20 +54,73 @@
        dwscdv4  但其实还有4
        Dwscdv3  当网名用后过了一两年就首字母大写化了
    -->
-1. Gender unknown
-1. 大概是内向、自卑、负能量的一个人
-1. 不过很少公开宣泄负能量
-1. **自诩为开发者**
-1. .NET(C#) + XAML 党
-1. 然而最近在玩 Web
-1. **活在梦里的死宅**
-1. *游戏从小玩到大*
-1. 抱歉，我以前是个盗版狗
-1. *喜欢日本动画*
-1. 《刀剑神域》入宅作，14年9月
-1. 是理想中的异世界与 RPG 游戏
+   </span>
 
-其实，连我自己都不知道怎样用语言来描述自己，以及这样的描述是否准确。
+1. Gender unknown
+1. 拒绝刻板印象
+1. 秩序 <---------------|-----> 自由
+1. Nothing is true, everything is permitted.
+1. 大概是内向、自卑、负能量的一个人  
+   不过很少公开宣泄负能量
+1. **【自诩为开发者】**
+1. 开源大法好
+1. .NET(C#) + XAML 党  
+   然而最近在玩 Web
+1. 算法不精，架构无力，debug 迟缓
+1. **【活在梦里的死宅】**
+1. *- 游戏从小玩到大 -*
+1. 列举几个时期**代表性**的  
+   童年玩山寨 FC（某王牌 VCD 的《中文游戏 300》  
+   四到六年级玩摩尔赛尔  
+   六到八年级玩各种网游（腾讯全家桶什么的  
+   然后是 Minecraft、Terraria 这类沙盒，跟朋友联机  
+   现在么…… 不好总结啊，不过现在更喜欢各种社交  
+   <span class="ellipsis">
+   <!--
+       并不是很难总结，只是有点杂乱多
+       那么，就写到注释里好了 2333
+       从小到大所有印象深刻的游戏（除去上面提过的
+       ↓
+       PC 单机游戏
+       ==============================
+       刺客信条: 4 -> 枭雄(90%) -> 2 -> 兄弟会(40%)
+       魔法门之英雄无敌: Ⅲ / Ⅳ / Ⅴ
+       植物大战僵尸
+       光之子
+       奥里与迷失森林(30%)
+       ……
+   -->
+   </span>
+1. 准 Steam 剁手党（x
+1. *- 喜欢日本动画 -*
+1. 《刀剑神域》入宅作，14年9月  
+   是理想中的异世界与 RPG 游戏，乌托邦的存在  
+   当年对于我真的有种寄托的感觉吧（Fly!
+1. 看过很多引我深思的作品  
+   （时间顺序）  
+   《刀剑神域》（你没看错，包括Ⅱ  
+   《四月是你的谎言》  
+   《可塑性记忆》  
+   《Angel Beats》  
+   《CLANNAD》  
+   《你的名字。》（算么？不算么？  
+   ……
+1. 看到左上角那头像了么？点箭头可以切换的
+1. 然而并没有真的 100 条，233  
+   其实上面的内容拆一下就够了x
+1. 未完待续
+
+<span class="ellipsis">
+<!--
+1. 是个变态
+-->
+</span>
+<br>
+<br>
+其实，连我自己都不知道怎样用语言来描述自己，以及这样的描述是否准确。  
+嗯，人都是不可描述的（x
+
+</div></div><br>
 
 <p>
     这些信息构成了我，你们眼中的我：
@@ -58,11 +148,13 @@
     <ul>
         <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">主页 ver.1</a></li>-->
         <li><a href="http://dwscdv3.gq" target="_blank">主页 ver.2</a></li>
+        <span class="ellipsis">
         <!--<li><a href="https://zh.moegirl.org/User:Dwscdv3" target="_blank">萌娘百科用户页 (2014/12/24)</a></li>-->
         <!--<li><a href="http://tieba.baidu.com/home/main?un=_Dwscdv3_" target="_blank">中二那年</a><span class="service">百度贴吧</span></li>-->
         <!--<li>
             31813668
             <a href="http://mole.61.com/"><span class="service">摩尔庄园</span></a>
         </li>-->
+        </span>
     </ul>
 </p>
