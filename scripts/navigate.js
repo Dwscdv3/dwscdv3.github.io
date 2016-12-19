@@ -58,6 +58,7 @@ function renderMarkdown() {
             萌评.运转();
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
+            document.title = "404" + " - I'm Dwscdv3";
         }
     }
 }
