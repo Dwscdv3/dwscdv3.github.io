@@ -4,6 +4,12 @@ var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 var avatarContainer;
 
 document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.key == "B") {
+            isBlurred = !isBlurred;
+        }
+    });
+
     avatarContainer = (function() {
         var current = 0;
 
@@ -59,13 +65,12 @@ document.addEventListener("DOMContentLoaded", function() {
         avatarContainer.Next();
     });
 
-    // setTimeout(function() {
-    //     document.body.style.backgroundColor = getRandomColor();
-    //     setInterval(function() {
-    //         document.body.style.backgroundColor = getRandomColor();
-    //     }, 5000);
-    // }, 17);
+    setBackground();
+    setBlur();
+});
+window.addEventListener("resize", setBlur);
 
+function setBackground() {
     if (window.innerWidth >= window.innerHeight) {
         ajaxGet(PATH_BACKGROUND_DESKTOP + "index.json", function() {
             if (this.readyState == XMLHttpRequest.DONE) {
@@ -84,17 +89,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-
     }
-    setBlur();
+}
+
+var _isBlurred = true;
+Object.defineProperty(this, "isBlurred", {
+    get: function() {
+        return _isBlurred;
+    },
+    set: function(val) {
+        _isBlurred = val;
+        setBlur();
+    }
 });
-window.addEventListener("resize", setBlur);
 
 function setBlur() {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    var depth = (width * 0.5 + height * 0.5) / 200;
     var bg = $("#background");
-    bg.style["-webkit-filter"] = "blur(" + depth.toFixed(2) + "px)";
-    bg.style["filter"] = "blur(" + depth.toFixed(2) + "px)";
+    if (_isBlurred) {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var depth = (width * 0.5 + height * 0.5) / 200;
+        bg.style["-webkit-filter"] = "blur(" + depth.toFixed(2) + "px)";
+        bg.style["filter"] = "blur(" + depth.toFixed(2) + "px)";
+    } else {
+        bg.style["-webkit-filter"] = "initial";
+        bg.style["filter"] = "initial";
+    }
 }
