@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("keydown", function (e) {
         if (e.ctrlKey && e.key == "B") {
             isBlurred = !isBlurred;
+            setBlur();
         }
     });
 
