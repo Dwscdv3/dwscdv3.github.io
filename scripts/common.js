@@ -22,7 +22,7 @@ function Then(func) {
 }
 
 function IsEdgeThen(func) {
-    if (userAgent.indexOf("Edge") > -1) {
+    if (navigator.userAgent.indexOf("Edge") > -1) {
         Then.apply(null, arguments);
     }
 }
