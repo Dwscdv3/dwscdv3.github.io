@@ -66,6 +66,12 @@ document.addEventListener("DOMContentLoaded", function() {
         avatarContainer.Next();
     });
 
+    IsEdgeThen(function () {
+        $("html").style.overflow = "hidden";
+        $("html").style.height = "100%";
+        document.body.style.overflow = "auto";
+        document.body.style.height = "100%";
+    });
     setBackground();
     setBlur();
 });
