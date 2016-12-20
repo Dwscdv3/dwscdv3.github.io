@@ -23,3 +23,10 @@
     white-space: nowrap;
     overflow-x: hidden;
 }
+.comment::after {
+    content: " ··· ";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #060;
+}
