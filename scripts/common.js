@@ -12,3 +12,17 @@ function max(a, b) {
 function min(a, b) {
     return a > b ? b : a;
 }
+
+function Then(func) {
+    var newArgs = new Array(arguments.length - 1);
+    for (var i = 1; i < arguments.length; i++) {
+        newArgs[i - 1] = arguments[i];
+    }
+    func.apply(null, newArgs);
+}
+
+function IsEdgeThen(func) {
+    if (userAgent.indexOf("Edge") > -1) {
+        Then.apply(null, arguments);
+    }
+}
