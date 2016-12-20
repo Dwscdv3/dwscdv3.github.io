@@ -263,21 +263,17 @@ date::before {
 #comment-header {
     font-size: 200%;
 }
-#backgroundContainer {
+#background {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-#background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    /*-webkit-filter: blur(5px);
-    filter: blur(5px);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 #recentPosts {
     font-size: 75%;

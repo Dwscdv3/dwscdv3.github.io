@@ -77,7 +77,7 @@ function setBackground() {
             if (this.readyState == XMLHttpRequest.DONE) {
                 if (this.status == 200) {
                     var bgList = JSON.parse(this.responseText);
-                    $("#background").src = PATH_BACKGROUND_DESKTOP + bgList[Math.floor(Math.random() * bgList.length)];
+                    $("#background").style.backgroundImage = "url(" + PATH_BACKGROUND_DESKTOP + bgList[Math.floor(Math.random() * bgList.length)] + ")";
                 }
             }
         });
@@ -86,7 +86,7 @@ function setBackground() {
             if (this.readyState == XMLHttpRequest.DONE) {
                 if (this.status == 200) {
                     var bgList = JSON.parse(this.responseText);
-                    $("#background").src = PATH_BACKGROUND_MOBILE + bgList[Math.floor(Math.random() * bgList.length)];
+                    $("#background").style.backgroundImage = "url(" + PATH_BACKGROUND_MOBILE + bgList[Math.floor(Math.random() * bgList.length)] + ")";
                 }
             }
         });
