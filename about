@@ -1,6 +1,6 @@
 <h1>
     我是谁？
-    <date>2016/12/19</date>
+    <date>2016/12/20</date>
 </h1>
 
 <style>
@@ -25,26 +25,27 @@
         background-color: rgba(0, 0, 0, 0.8);
         word-break: break-all;
     }
-    .ellipsis::before {
-        content: " ··· ";
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1rem;
-        color: #060;
-    }
 </style>
 
 先来个<del>一百</del>管它多少条吧。  
 虽然我不喜欢用简短的文字去形容一个人，但是这确实是很有效率的方式。
 
-<div class="collapse">
-    想看么？鼠标移上来！ (╯‵□′)╯︵┻━┻<br>
-    <code style="display: inline-block">version 2016.12.19, revision 0: incomplete</code>
+<div id="intro" class="collapse"
+    onmouseleave="
+        IsEdgeThen(function () {
+            if (isBlurred) {
+                isBlurred = false;
+                isBlurred = true;
+            }
+        });
+    ">
+    想看么？鼠标移过来！ (╯‵□′)╯︵┻━┻<br>
+    <code>version 2016.12.19, revision 0: incomplete</code>
     <div class="collapse-extend">
 
 1. **【Dwscdv3】**  
    是初中时候<!--在2125还是4399弹弹堂里-->随便敲的名字，经历了一丢丢改动后一直用下来了  
-   <span class="ellipsis">
+   <span class="comment">
    <!--
        确切的说是
        dwscdv   万恶之源，随手敲的
@@ -75,7 +76,7 @@
    六到八年级玩各种网游（腾讯全家桶什么的  
    然后是 Minecraft、Terraria 这类沙盒，跟朋友联机  
    现在么…… 不好总结啊，不过现在更喜欢各种社交  
-   <span class="ellipsis">
+   <span class="comment">
    <!--
        并不是很难总结，只是有点杂乱多
        那么，就写到注释里好了 2333
@@ -110,7 +111,7 @@
    其实上面的内容拆一下就够了x
 1. 未完待续
 
-<span class="ellipsis">
+<span class="comment">
 <!--
 1. 是个变态
 -->
@@ -148,7 +149,7 @@
     <ul>
         <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">主页 ver.1</a></li>-->
         <li><a href="http://dwscdv3.gq" target="_blank">主页 ver.2</a></li>
-        <span class="ellipsis">
+        <span class="comment">
         <!--<li><a href="https://zh.moegirl.org/User:Dwscdv3" target="_blank">萌娘百科用户页 (2014/12/24)</a></li>-->
         <!--<li><a href="http://tieba.baidu.com/home/main?un=_Dwscdv3_" target="_blank">中二那年</a><span class="service">百度贴吧</span></li>-->
         <!--<li>
