@@ -110,10 +110,10 @@ function setBlur() {
         var width = window.innerWidth;
         var height = window.innerHeight;
         var depth = (width * 0.5 + height * 0.5) / 200;
-        bg.style["-webkit-filter"] = "blur(" + depth.toFixed(2) + "px)";
-        bg.style["filter"] = "blur(" + depth.toFixed(2) + "px)";
+        bg.style.webkitFilter = "blur(" + depth.toFixed(2) + "px)";
+        bg.style.filter = "blur(" + depth.toFixed(2) + "px)";
     } else {
-        bg.style["-webkit-filter"] = "initial";
-        bg.style["filter"] = "initial";
+        bg.style.webkitFilter = "none";
+        bg.style.filter = "none";
     }
 }
