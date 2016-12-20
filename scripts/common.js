@@ -21,7 +21,7 @@ function Then(func) {
     func.apply(null, newArgs);
 }
 
-function IsEdgeThen(func) {
+function IsEdgeThen() {
     if (navigator.userAgent.indexOf("Edge") > -1) {
         Then.apply(null, arguments);
     }
