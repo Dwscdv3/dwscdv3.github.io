@@ -52,6 +52,7 @@ function renderMarkdown() {
         $(".cm-article").innerHTML = "";
         if (this.status >= 200 && this.status < 400) {
             $("#article").innerHTML = md.render(this.responseText);
+            replaceLinksToTargetBlank($("#article"));
             window.scrollTo(0, 0);
             $(".cm-article").dataset.key = window.location.hash;
             document.title = $("h1").childNodes[0].textContent + " - I'm Dwscdv3";
@@ -59,6 +60,15 @@ function renderMarkdown() {
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
             document.title = "404" + " - I'm Dwscdv3";
+        }
+    }
+}
+
+function replaceLinksToTargetBlank(node) {
+    if (node instanceof HTMLElement) {
+        var anchors = node.querySelectorAll("a");
+        for (var i = 0; i < anchors.length; i++) {
+            anchors[i].target = "_blank";
         }
     }
 }
