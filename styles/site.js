@@ -84,7 +84,7 @@ var tips = null;
 
 function getTips() {
     ajaxGet("/tips", function() {
-        tips = this.responseText.split("\r\n");
+        tips = this.responseText.split("\n");
         nextTip();
     });
 }
