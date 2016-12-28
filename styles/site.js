@@ -4,12 +4,15 @@ var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 var avatarContainer;
 
 document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener("keydown", function (e) {
+    window.addEventListener("keydown", function(e) {
         if (e.ctrlKey && e.key == "b") {
             isBlurred = !isBlurred;
             setBlur();
         }
     });
+
+    getTips();
+    $("#tip").addEventListener("click", nextTip);
 
     avatarContainer = (function() {
         var current = 0;
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         avatarContainer.Next();
     });
 
-    IsEdgeThen(function () {
+    IsEdgeThen(function() {
         $("html").style.overflow = "hidden";
         $("html").style.height = "100%";
         document.body.style.overflow = "auto";
@@ -76,6 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
     setBlur();
 });
 window.addEventListener("resize", setBlur);
+
+var tips = null;
+
+function getTips() {
+    ajaxGet("/tips", function() {
+        tips = this.responseText.split("\r\n");
+        nextTip();
+    });
+}
+
+function nextTip() {
+    $("#tip").innerHTML = tips[Math.floor(Math.random() * tips.length)];
+}
 
 function setBackground() {
     if (window.innerWidth >= window.innerHeight) {

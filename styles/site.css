@@ -227,8 +227,8 @@ date::before {
     overflow-x: hidden;
 }
 #tip {
-    font-weight: normal;
-    font-size: 65%;
+    margin-top: 3em;
+    font-size: 80%;
 }
 #homeIcon {
     /*display: table-cell;*/
