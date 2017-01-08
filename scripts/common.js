@@ -26,3 +26,10 @@ function IsEdgeThen() {
         Then.apply(null, arguments);
     }
 }
+
+function NotInputingThen(func) {
+    if (!(document.activeElement instanceof HTMLTextAreaElement) &&
+        !(document.activeElement instanceof HTMLInputElement)) {
+        Then.apply(null, arguments);
+    }
+}
