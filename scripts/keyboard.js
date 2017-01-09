@@ -1,8 +1,15 @@
+jwerty.key("slash/shift+slash", function () {
+    NotInputingThen(function () {
+        window.location.hash = "#/shortcuts";
+    });
+});
+jwerty.key("alt+b", toggleBackground);
+
 // 彩蛋
 function jumpToEggKikkou() {
     NotInputingThen(function() {
         window.location.hash = "#/eggs/kikkou";
-    })
+    });
 }
 
 jwerty.key("g,u,i,j,i,a", jumpToEggKikkou);
