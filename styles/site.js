@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     getTips();
-    $("#tip").addEventListener("click", nextTip);
+    $("#tip").addEventListener("mousedown", nextTip);
 
     avatarContainer = (function() {
         var current = 0;
@@ -91,6 +91,7 @@ function getTips() {
 
 function nextTip() {
     $("#tip").innerHTML = tips[Math.floor(Math.random() * tips.length)];
+    scrollToBottom($("#left"));
 }
 
 function setBackground() {

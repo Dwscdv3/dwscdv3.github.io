@@ -33,3 +33,7 @@ function NotInputingThen(func) {
         Then.apply(null, arguments);
     }
 }
+
+function scrollToBottom(node) {
+    node.scrollTop = node.scrollHeight;
+}
