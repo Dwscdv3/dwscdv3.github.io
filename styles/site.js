@@ -84,14 +84,22 @@ var tips = null;
 
 function getTips() {
     ajaxGet("/tips", function() {
-        tips = this.responseText.split("\n");
-        nextTip();
+        if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+            tips = this.responseText.split("\n");
+            nextTip();
+        }
     });
 }
 
+var tipFirstShow = true;
+
 function nextTip() {
     $("#tip").innerHTML = tips[Math.floor(Math.random() * tips.length)];
-    scrollToBottom($("#left"));
+    if (tipFirstShow) {
+        tipFirstShow = false;
+    } else {
+        scrollToBottom($("#left"));
+    }
 }
 
 function setBackground() {
@@ -113,6 +121,15 @@ function setBackground() {
                 }
             }
         });
+    }
+}
+
+function toggleBackground() {
+    var bg = $("#background");
+    if (bg.style.opacity == "" || bg.style.opacity > 0) {
+        bg.style.opacity = "0";
+    } else {
+        bg.style.opacity = "1";
     }
 }
 

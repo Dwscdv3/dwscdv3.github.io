@@ -54,14 +54,21 @@ h6 {
 }
 a {
     text-decoration: none;
-    color: rgba(223, 223, 255, 0.8);
+    color: rgba(191, 191, 255, 0.8);
     text-shadow: 0.05em 0.05em 0.2em blue;
+    transition: all 0.3s;
 }
 a:hover {
-    background-color: rgba(127, 127, 127, 0.4);
+    /*background-color: rgba(127, 127, 127, 0.5);*/
+    color: rgba(255, 223, 255, 0.8);
+    text-shadow: 0.05em 0.05em 0.2em #ff7fff;
+    transition: all 0.3s;
 }
 a:active {
-    background-color: rgba(127, 127, 127, 0.8);
+    /*background-color: rgba(127, 127, 127, 0.8);*/
+    color: rgba(255, 191, 191, 0.8);
+    text-shadow: 0.05em 0.05em 0.2em red;
+    transition: all 0.3s;
 }
 button,
 button::before {
@@ -275,6 +282,7 @@ date::before {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    transition: all 1s;
 }
 #recentPosts {
     font-size: 75%;
