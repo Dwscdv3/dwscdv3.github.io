@@ -229,6 +229,7 @@ date::before {
 #tip {
     margin-top: 3em;
     font-size: 80%;
+    height: 7em;
 }
 #homeIcon {
     /*display: table-cell;*/
