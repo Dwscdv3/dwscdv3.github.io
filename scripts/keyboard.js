@@ -1,8 +1,14 @@
-jwerty.key("slash/shift+slash", function () {
-    NotInputingThen(function () {
+jwerty.key("h", function() {
+    NotInputingThen(function() {
+        window.location.hash = "#";
+    })
+});
+jwerty.key("slash/shift+slash", function() {
+    NotInputingThen(function() {
         window.location.hash = "#/shortcuts";
     });
 });
+
 jwerty.key("alt+b", toggleBackground);
 
 // 彩蛋
