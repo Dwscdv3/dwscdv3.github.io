@@ -8,15 +8,12 @@
         display: block;
         padding: 1em;
     }
-    
     .friendly-link-box a:hover {
         background: transparent;
     }
-    
     .friendly-link-box a:active {
         background: transparent;
     }
-    
     a h2 {
         font-size: 1.1em;
         padding-left: 0.3em;
@@ -26,7 +23,6 @@
         vertical-align: middle;
         margin: 0;
     }
-    
     .friendly-link-box {
         position: relative;
         flex: 1 0 12.5em;
@@ -34,13 +30,11 @@
         box-sizing: content-box;
         overflow: hidden;
     }
-    
     .friendly-link-box:hover {
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.8);
         overflow: visible;
     }
-    
     .friendly-link-info {
         position: absolute;
         top: 5rem;
@@ -51,7 +45,6 @@
         font-size: 80%;
         word-break: break-all;
     }
-    
     .friendly-link-avatar {
         width: 3em;
         height: 3em;
@@ -59,7 +52,6 @@
         border-width: 0;
         vertical-align: middle;
     }
-    
     #friendly-link-flexContainer {
         display: flex;
         flex-wrap: wrap;
@@ -70,59 +62,72 @@
 
 <div id="friendly-link-flexContainer">
     <div class="friendly-link-box">
-        <a href="//www.sardinefish.com" target="_blank">
+        <a href="//www.sardinefish.com">
             <img class="friendly-link-avatar" src="//www.sardinefish.com/account/user/face/getFace.php?uid=SardineFish">
             <h2>Sardine Fish</h2>
         </a>
         <div class="friendly-link-info">ta 公开发表的东西很少，但是与我的聊天记录能绕地球两周半</div>
     </div>
     <div class="friendly-link-box">
-        <a href="https://silversky.moe" target="_blank">
-            <img class="friendly-link-avatar" src="//tva2.sinaimg.cn/large/005QHKeDjw8f7zualdbr5j30f90egwex.jpg">
+        <a href="https://silversky.moe">
+            <img class="friendly-link-avatar" src="//tva2.sinaimg.cn/large/005QHKeDjw8fb11iajhxcj30ro0rowgf.jpg">
             <h2>暁龍之介</h2>
         </a>
-        <div class="friendly-link-info">硬件&amp;运维 dalao，是个变态（</div>
+        <div class="friendly-link-info">
+            微博 <a href="http://weibo.com/AkatsukiRyuu">@暁龍之介_Icarus更新姬</a><br>
+            硬件&amp;运维 dalao，是个变态（
+        </div>
     </div>
     <div class="friendly-link-box">
-        <a href="//mouto.org" target="_blank">
+        <a href="http://gpbeta.com">
+            <img class="friendly-link-avatar" src="//tva3.sinaimg.cn/large/6a6bd9c5gw1f68m1blcf4j2050050dg4.jpg">
+            <h2>GPBeta</h2>
+        </a>
+        <div class="friendly-link-info">
+            微博 <a href="http://weibo.com/gpbeta">@-约修亚-</a><br>
+            SAO Utils 的开发者<del>，正式社畜，萝莉控</del>
+        </div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="//mouto.org">
             <img class="friendly-link-avatar" src="//mouto.org/f/me.jpg">
             <h2>卜卜口</h2>
         </a>
         <div class="friendly-link-info">又名“itorr”、“偷偷揉”，Web 前辈</div>
     </div>
     <div class="friendly-link-box">
-        <a href="//hakugyokurou.space" target="_blank">
+        <a href="//hakugyokurou.space">
             <img class="friendly-link-avatar" src="/images/avatars/@opshd.jpg">
             <h2>opshd</h2>
         </a>
         <div class="friendly-link-info">与 szszss 是一对啊（我是说域名啦</div>
     </div>
     <div class="friendly-link-box">
-        <a href="http://www.pc426.com/forum-150-27.html" target="_blank">
+        <a href="http://www.pc426.com/forum-150-27.html">
             <img class="friendly-link-avatar" src="//tva2.sinaimg.cn/crop.1262.2.716.716.180/4a954ac6gw1ewupfj4320j21kw0zk1eb.jpg">
             <h2>guanyuhan426</h2>
         </a>
         <div class="friendly-link-info">
             由
-            <a href="http://space.bilibili.com/123484" target="_blank">bilibili</a> 的《东京印象》系列视频关注的 UP 主
+            <a href="http://space.bilibili.com/123484">bilibili</a> 的《东京印象》系列视频关注的 UP 主
         </div>
     </div>
     <div class="friendly-link-box">
-        <a href="//yoooooooooo.com/yashi" target="_blank">
+        <a href="//yoooooooooo.com/yashi">
             <img class="friendly-link-avatar" src="//avatars1.githubusercontent.com/u/2824841?v=3&s=460">
             <h2>神楽坂雅詩</h2>
         </a>
         <!--<div class="friendly-link-info"></div>-->
     </div>
     <div class="friendly-link-box">
-        <a href="//im.dimpurr.com" target="_blank">
+        <a href="//im.dimpurr.com">
             <img class="friendly-link-avatar" src="//tva3.sinaimg.cn/large/5ac786bbjw8eujhhwyr0oj20qx0qxk0n.jpg">
             <h2>Dimpurr Cheny</h2>
         </a>
         <!--<div class="friendly-link-info"></div>-->
     </div>
     <div class="friendly-link-box">
-        <a href="http://blog.hakugyokurou.net/" target="_blank">
+        <a href="http://blog.hakugyokurou.net/">
             <img class="friendly-link-avatar" src="//cn.gravatar.com/avatar/fa72aa9177a7bda1cf3827c2bcb55a21?s=88&d=mm&r=g">
             <h2>szszss</h2>
         </a>
