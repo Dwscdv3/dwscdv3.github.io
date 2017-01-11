@@ -54,7 +54,7 @@ function renderMarkdown() {
             $("#article").innerHTML = md.render(this.responseText);
             replaceLinksToTargetBlank($("#article"));
             window.scrollTo(0, 0);
-            $(".cm-article").dataset.key = window.location.hash;
+            $(".cm-article").dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - I'm Dwscdv3";
             萌评.运转();
         } else if (this.status >= 400) {
