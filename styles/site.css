@@ -60,6 +60,15 @@ code {
     padding: 0.2em 0.5em;
     /*margin: 0.2em 0;*/
 }
+blockquote {
+    display: inline-block;
+    padding: 0.2em 0.2em 0.2em 0.5em;
+    border-left: 0.2em solid rgba(255, 191, 255, 0.8);
+    background-color: rgba(63, 63, 63, 0.33);
+}
+blockquote>p {
+    margin: 0;
+}
 a {
     text-decoration: none;
     color: rgba(191, 191, 255, 0.8);
