@@ -3,6 +3,8 @@ var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 
 var avatarContainer;
 
+var sidebar;
+
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("keydown", function(e) {
         if (e.ctrlKey && e.key == "b") {
@@ -11,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    Ps.initialize($("#left"));
+    sidebar = $("#left");
+    Ps.initialize(sidebar, {
+        swipePropagation: false
+    });
 
     getTips();
     $("#tip").addEventListener("mousedown", nextTip);
@@ -80,7 +85,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setBackground();
     setBlur();
 });
-window.addEventListener("resize", setBlur);
+window.addEventListener("resize", function() {
+    Ps.update(sidebar);
+    setBlur();
+});
 
 var tips = null;
 
