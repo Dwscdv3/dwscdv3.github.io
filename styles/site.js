@@ -13,11 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    sidebar = $("#left");
-    Ps.initialize(sidebar, {
-        swipePropagation: false
-    });
-
     getTips();
     $("#tip").addEventListener("mousedown", nextTip);
 
@@ -84,6 +79,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     setBackground();
     setBlur();
+
+    sidebar = $("#left");
+    Ps.initialize(sidebar, {
+        wheelSpeed: 0.5,
+        swipePropagation: false
+    });
 });
 window.addEventListener("resize", function() {
     Ps.update(sidebar);
@@ -110,6 +111,7 @@ function nextTip() {
     } else {
         scrollToBottom($("#left"));
     }
+    Ps.update(sidebar);
 }
 
 function setBackground() {

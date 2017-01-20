@@ -44,6 +44,7 @@ function getRecentPosts() {
                 li.appendChild(a);
                 recentPostsList.appendChild(li);
             }
+            Ps.update(sidebar);
         }
     });
 }
