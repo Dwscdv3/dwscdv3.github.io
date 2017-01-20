@@ -5,7 +5,8 @@ var md = window.markdownit("commonmark");
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
 document.addEventListener("DOMContentLoaded", getRecentPosts);
-window.addEventListener("hashchange", getRecentPosts);
+// Disabled due to GitHub Pages quota.
+// window.addEventListener("hashchange", getRecentPosts);
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     $("#homeButton").addEventListener("click", function() {
@@ -30,7 +31,7 @@ function getRecentPosts() {
             });
 
             posts.sort(function(a, b) {
-                return Date.parse(b.dateString) - Date.parse(a.dateString);
+                return b.date - a.date;
             });
 
             var recentPostsList = $("#recentPosts");
