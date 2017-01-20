@@ -7,7 +7,7 @@
     .collapse {
         position: relative;
         padding: 1em;
-        height: 2em;
+        height: 2.2em;
         overflow: hidden;
     }
     .collapse:hover {
@@ -17,7 +17,7 @@
     }
     .collapse-extend {
         position: absolute;
-        top: 4em;
+        top: 4.2em;
         left: 0;
         width: 100%;
         box-sizing: border-box;
