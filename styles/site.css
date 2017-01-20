@@ -52,7 +52,12 @@ h5 {
 h6 {
     font-size: 120%;
 }
+pre {
+    white-space: pre-wrap;
+}
 code {
+    font-size: 0.9em;
+    line-height: 120%;
     border: 0.1em solid rgba(127, 127, 127, 0.5);
     border-radius: 0.5em;
     background-color: rgba(63, 63, 63, 0.33);
@@ -232,7 +237,7 @@ date::before {
     padding: 1em;
     top: 0;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 #left::-webkit-scrollbar {
     width: 0;

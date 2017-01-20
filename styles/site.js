@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    Ps.initialize($("#left"));
+
     getTips();
     $("#tip").addEventListener("mousedown", nextTip);
 
