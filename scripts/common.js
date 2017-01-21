@@ -22,7 +22,7 @@ function formatAlignedDate(date, separator, largeSeparator) {
             largeSeparator = separator + " ";
         }
         var dateString = "";
-        dateString += date.getUTCFullYear();
+        dateString += date.getUTCFullYear() % 100;
         dateString += date.getUTCMonth() < 10 ? largeSeparator : separator;
         dateString += date.getUTCMonth() + 1;
         dateString += date.getUTCDate() < 10 ? largeSeparator : separator;
