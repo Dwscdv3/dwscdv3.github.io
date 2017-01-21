@@ -3,6 +3,11 @@ jwerty.key("h", function() {
         window.location.hash = "#";
     })
 });
+jwerty.key("i", function() {
+    NotInputingThen(function() {
+        window.location.hash = "#/index";
+    })
+});
 jwerty.key("slash/shift+slash", function() {
     NotInputingThen(function() {
         window.location.hash = "#/shortcuts";
