@@ -26,7 +26,7 @@ function formatAlignedDate(date, separator, largeSeparator) {
         dateString += date.getUTCMonth() < 10 ? largeSeparator : separator;
         dateString += date.getUTCMonth() + 1;
         dateString += date.getUTCDate() < 10 ? largeSeparator : separator;
-        dateString += date.getUTCDate() + 1;
+        dateString += date.getUTCDate();
         return dateString;
     } else {
         throw "Illegal param type: Date expected";
