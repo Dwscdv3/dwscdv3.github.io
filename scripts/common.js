@@ -24,9 +24,9 @@ function formatAlignedDate(date, separator, largeSeparator) {
         var dateString = "";
         dateString += date.getUTCFullYear();
         dateString += date.getUTCMonth() < 10 ? largeSeparator : separator;
-        dateString += date.getUTCMonth();
+        dateString += date.getUTCMonth() + 1;
         dateString += date.getUTCDay() < 10 ? largeSeparator : separator;
-        dateString += date.getUTCDay();
+        dateString += date.getUTCDay() + 1;
         return dateString;
     } else {
         throw "Illegal param type: Date expected";
