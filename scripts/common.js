@@ -16,7 +16,7 @@ function min(a, b) {
 function formatAlignedDate(date, separator, largeSeparator) {
     if (date instanceof Date) {
         if (!separator) {
-            separator = " ";
+            separator = "  ";
         }
         if (!largeSeparator) {
             largeSeparator = separator + " ";
