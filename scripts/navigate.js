@@ -1,10 +1,16 @@
-var homePage = "#/about";
+var mainTitle = "I'm Dwscdv3"
+
+var commentDisabled = '<p class="cm-text-banner">评论在此页上不可用</p>';
+
+var hash404 = "#/404";
+var hashHomePage = "#/about";
+var hashIndex = "#/index";
 
 var md = window.markdownit("commonmark");
 
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
-document.addEventListener("DOMContentLoaded", getRecentPosts);
+document.addEventListener("DOMContentLoaded", getIndex);
 // Disabled due to GitHub Pages quota.
 // window.addEventListener("hashchange", getRecentPosts);
 
@@ -16,37 +22,127 @@ document.addEventListener("DOMContentLoaded", getRecentPosts);
 
 function navigateToArticle() {
     if (window.location.hash.length <= 1) {
-        window.location.hash = homePage;
+        window.location.hash = hashHomePage;
+        return;
+    }
+    if (window.location.hash == hashIndex) {
+        window.location.hash = hashIndex + "/1";
+        return;
+    }
+    if (window.location.hash.startsWith(hashIndex + "/")) {
+        if (articleList != null) {
+            routeIndex();
+        }
         return;
     }
     ajaxGet(window.location.hash.substring(1), renderMarkdown);
 }
 
-function getRecentPosts() {
+var articleList = null;
+
+function getIndex() {
     ajaxGet("/articles/index.json", function() {
         if (this.readyState == XMLHttpRequest.DONE) {
-            var posts = JSON.parse(this.responseText);
-            posts.forEach(function(post) {
-                post.date = Date.parse(post.dateString);
+            var _articleList = JSON.parse(this.responseText);
+            _articleList.forEach(function(article) {
+                article.date = new Date(Date.parse(article.dateString));
             });
 
-            posts.sort(function(a, b) {
+            _articleList.sort(function(a, b) {
                 return b.date - a.date;
             });
 
-            var recentPostsList = $("#recentPosts");
-            recentPostsList.innerHTML = "";
-            for (var i = 0; i < min(5, posts.length); i++) {
-                var li = document.createElement("li");
-                var a = document.createElement("a");
-                a.href = "#/articles/" + posts[i].fileName;
-                a.appendChild(document.createTextNode(posts[i].title));
-                li.appendChild(a);
-                recentPostsList.appendChild(li);
+            articleList = _articleList;
+
+            renderRecentArticlesList();
+            if (window.location.hash.startsWith(hashIndex + "/")) {
+                routeIndex();
             }
-            Ps.update(sidebar);
         }
     });
+}
+
+function routeIndex() {
+    var page = parseInt(window.location.hash.substring(hashIndex.length + 1));
+    if (page != NaN) {
+        renderIndex(page);
+    } else {
+        window.location.hash = hash404;
+    }
+}
+
+var itemsPerPage = 10;
+function renderIndex(page) {
+    if (!page) {
+        page = 1;
+    }
+
+    document.title = "文章索引" + " - " + mainTitle;
+    $(".cm-article").innerHTML = commentDisabled;
+    var indexes = $("#article");
+    indexes.innerHTML = "<h1>文章索引</h1><br>";
+
+    for (var i = (page - 1) * itemsPerPage; i < min(page * itemsPerPage, articleList.length); i++) {
+        var index = document.createElement("div");
+        index.classList.add("article");
+        var title = document.createElement("h2");
+        var anchor = document.createElement("a");
+        anchor.appendChild(document.createTextNode(articleList[i].title));
+        anchor.href = "#/articles/" + articleList[i].fileName;
+        title.appendChild(anchor);
+        index.appendChild(title);
+        var date = document.createElement("date");
+        date.appendChild(document.createTextNode(formatAlignedDate(articleList[i].date)));
+        index.appendChild(date);
+        indexes.appendChild(index);
+    }
+
+    var pageControl = document.createElement("div");
+    pageControl.classList.add("page-control");
+
+    var prevPage = document.createElement("a");
+    if (page <= 1) {
+        prevPage.classList.add("anchor-disabled");
+    }
+    prevPage.addEventListener("click", function() {
+        if (!this.classList.contains("anchor-disabled")) {
+            if (page > 1) {
+                window.location.hash = hashIndex + "/" + (page - 1);
+            }
+        }
+    });
+    prevPage.appendChild(document.createTextNode("← 上一页 "));
+    pageControl.appendChild(prevPage);
+
+    var nextPage = document.createElement("a");
+    if (page >= Math.ceil(articleList.length / itemsPerPage)) {
+        nextPage.classList.add("anchor-disabled");
+    }
+    nextPage.addEventListener("click", function() {
+        if (!this.classList.contains("anchor-disabled")) {
+            window.location.hash = hashIndex + "/" + (page + 1);
+        }
+    });
+    nextPage.appendChild(document.createTextNode(" 下一页 →"));
+    pageControl.appendChild(nextPage);
+
+    indexes.appendChild(pageControl);
+
+    $("#article").scrollIntoView(true);
+}
+
+function renderRecentArticlesList() {
+    var recentPostsList = $("#recentPosts");
+    recentPostsList.innerHTML = "";
+    for (var i = 0; i < min(5, articleList.length); i++) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "#/articles/" + articleList[i].fileName;
+        a.appendChild(document.createTextNode(articleList[i].title));
+        li.appendChild(a);
+        recentPostsList.appendChild(li);
+    }
+    Ps.update(sidebar);
 }
 
 function renderMarkdown() {
@@ -57,11 +153,11 @@ function renderMarkdown() {
             replaceLinksToTargetBlank($("#article"));
             window.scrollTo(0, 0);
             $(".cm-article").dataset.key = encodeURI(window.location.hash);
-            document.title = $("h1").childNodes[0].textContent + " - I'm Dwscdv3";
+            document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
             萌评.运转();
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
-            document.title = "404" + " - I'm Dwscdv3";
+            document.title = "404" + " - " + mainTitle;
         }
     }
 }
