@@ -114,8 +114,8 @@
 <span class="comment">
 <!--
 1. 变态
-1. + 少女心
-1. = 抖M
+1. 少女心
+1. 抖M
 -->
 </span>
 <br>
@@ -125,8 +125,88 @@
 
 </div></div><br>
 
+<div>
+    <h2>地球 Online™ 设定</h2>
+    <style>
+        .rpg-attr {
+            font-weight: 500;
+            text-transform: uppercase;
+            position: relative;
+            margin: 0.5em;
+        }
+        .prog {
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .prog-twoway {
+            width: 100%;
+            transform: scaleX(0.5);
+        }
+        .prog-twoway-inner {
+            left: 50%;
+        }
+        .prog-twoway-reverse {
+            transform: scaleX(-0.5) !important;
+        }
+        .rpg-attr-text {
+            margin-left: 0.2em;
+        }
+        .rpg-attr-text-left {
+            position: absolute;
+            right: calc(50% + 0.5em);
+            text-align: left;
+        }
+        .rpg-attr-text-center {
+            text-align: center;
+        }
+        .rpg-attr-text-right {
+            position: absolute;
+            left: calc(50% + 0.5em);
+            text-align: right;
+        }
+    </style>
+    <div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 8%; background-color: #F00;"></div>
+            <span class="rpg-attr-text">Strength</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 33%; background-color: #6F6;"></div>
+            <span class="rpg-attr-text">Dexterity</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 64%; background-color: #F90;"></div>
+            <span class="rpg-attr-text">Endurance</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 75%; background-color: #09F;"></div>
+            <span class="rpg-attr-text">Intelligence</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 30%; background-color: #090;"></div>
+            <span class="rpg-attr-text">Luck</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 25%; background-color: #603;"></div>
+            <span class="rpg-attr-text">Diligence</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 72%; background-color: #F36;"></div>
+            <span class="rpg-attr-text">Kindness</span>
+        </div>
+        <!--<div class="rpg-attr">
+            <div class="prog prog-twoway"><div class="prog prog-twoway-inner" style="width: 15%; background-color: #699;"></div></div>
+            <span class="rpg-attr-text-left">DOMINANT</span>
+            <span class="rpg-attr-text-right">SUBMISSIVE</span>
+            <div class="rpg-attr-text-center">─</div>
+        </div>-->
+    </div>
+</div>
+
+<h2>次元之门</h2>
 <p>
-    这些信息构成了我，你们眼中的我：
+    运行中的传送门：
     <ul>
         <li>
             <a href="http://weibo.com/Dwscdv3" target="_blank">我的碎碎念</a>
@@ -147,7 +227,7 @@
     </ul>
 </p>
 <p>
-    <span style="color: black">黑历史</span>传送门：
+    已废弃的<span style="color: black">黑历史</span>传送门：
     <ul>
         <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">主页 ver.1</a></li>-->
         <li><a href="https://home-dwscdv3.rhcloud.com/" target="_blank">主页 ver.2</a></li>
