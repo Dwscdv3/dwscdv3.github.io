@@ -154,7 +154,8 @@ function renderMarkdown() {
             window.scrollTo(0, 0);
             $(".cm-article").dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
-            萌评.运转();
+            萌评.运转($("#article"));
+            activateScript($("#article"));
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
             document.title = "404" + " - " + mainTitle;
@@ -168,5 +169,16 @@ function replaceLinksToTargetBlank(node) {
         for (var i = 0; i < anchors.length; i++) {
             anchors[i].target = "_blank";
         }
+    }
+}
+
+function activateScript(node) {
+    var oldNodes = node.querySelectorAll("script");
+    for (var i = 0; i < oldNodes.length; i++) {
+        var oldNode = oldNodes[i];
+        var newNode = document.createElement("script");
+        newNode.textContent = oldNode.textContent;
+        oldNode.parentNode.removeChild(oldNode);
+        node.appendChild(newNode);
     }
 }
