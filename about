@@ -1,6 +1,6 @@
 <h1>
     我是谁？
-    <date>2016/12/20</date>
+    <date>2017/6/2</date>
 </h1>
 
 <style>
@@ -125,10 +125,17 @@
 
 </div></div><br>
 
-<div>
-    <h2>地球 Online™ 设定</h2>
+<h2>地球 Online™ 设定</h2>
+<p>
+    Lv. 17 (<span id="exp"></span>%) <span style="font-size: smaller; opacity: 0.4;">Auto level-up disabled</span>
+    <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(2); </script>
     <style>
+        #rpg-attrs {
+            background-color: rgba(0, 0, 0, 0.25);
+            padding: 0.5em;
+        }
         .rpg-attr {
+            height: 1.5em;
             font-weight: 500;
             text-transform: uppercase;
             position: relative;
@@ -136,8 +143,6 @@
         }
         .prog {
             height: 100%;
-            position: absolute;
-            z-index: -1;
         }
         .prog-twoway {
             width: 100%;
@@ -150,7 +155,10 @@
             transform: scaleX(-0.5) !important;
         }
         .rpg-attr-text {
-            margin-left: 0.2em;
+            line-height: 1.5em;
+            position: absolute;
+            top: 0;
+            margin-left: 0.25em;
         }
         .rpg-attr-text-left {
             position: absolute;
@@ -166,21 +174,21 @@
             text-align: right;
         }
     </style>
-    <div>
+    <div id="rpg-attrs">
         <div class="rpg-attr">
-            <div class="prog" style="width: 8%; background-color: #F00;"></div>
+            <div class="prog" style="width: 8%; background-color: #C00;"></div>
             <span class="rpg-attr-text">Strength</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 33%; background-color: #6F6;"></div>
+            <div class="prog" style="width: 33%; background-color: #CFC;"></div>
             <span class="rpg-attr-text">Dexterity</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 64%; background-color: #F90;"></div>
+            <div class="prog" style="width: 76%; background-color: #F60;"></div>
             <span class="rpg-attr-text">Endurance</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 75%; background-color: #09F;"></div>
+            <div class="prog" style="width: 72%; background-color: #09F;"></div>
             <span class="rpg-attr-text">Intelligence</span>
         </div>
         <div class="rpg-attr">
@@ -188,21 +196,19 @@
             <span class="rpg-attr-text">Luck</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 25%; background-color: #603;"></div>
+            <div class="prog" style="width: 25%; background-color: #906;"></div>
             <span class="rpg-attr-text">Diligence</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 72%; background-color: #F36;"></div>
+            <div class="prog" style="width: 70%; background-color: #F36;"></div>
             <span class="rpg-attr-text">Kindness</span>
         </div>
-        <!--<div class="rpg-attr">
-            <div class="prog prog-twoway"><div class="prog prog-twoway-inner" style="width: 15%; background-color: #699;"></div></div>
-            <span class="rpg-attr-text-left">DOMINANT</span>
-            <span class="rpg-attr-text-right">SUBMISSIVE</span>
-            <div class="rpg-attr-text-center">─</div>
-        </div>-->
+        <div class="rpg-attr">
+            <div class="prog" style="width: 30%; background-color: #CCC;"></div>
+            <span class="rpg-attr-text">Liberalism</span>
+        </div>
     </div>
-</div>
+</p>
 
 <h2>次元之门</h2>
 <p>
