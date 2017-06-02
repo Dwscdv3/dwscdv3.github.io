@@ -58,6 +58,14 @@ function scrollToBottom(node) {
     node.scrollTop = node.scrollHeight;
 }
 
+Number.prototype.pad = function (size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {
+        s = "0" + s;
+    }
+    return s;
+}
+
 // Polyfills
 if (!String.prototype.startsWith) {
     String.prototype.startsWith = function(searchString, position){

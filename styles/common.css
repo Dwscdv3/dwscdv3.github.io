@@ -1,5 +1,5 @@
 .hard-to-see {
-    opacity: 0.15;
+    opacity: 0.1;
 }
 .hard-to-see:hover {
     opacity: unset;

@@ -3,127 +3,9 @@
     <date>2017/6/2</date>
 </h1>
 
-<style>
-    .collapse {
-        position: relative;
-        padding: 1em;
-        height: 2.2em;
-        overflow: hidden;
-    }
-    .collapse:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        overflow: visible;
-        z-index: 1;
-    }
-    .collapse-extend {
-        position: absolute;
-        top: 4.2em;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 1em;
-        background-color: rgba(0, 0, 0, 0.8);
-        word-break: break-all;
-    }
-</style>
-
-先来个<del>一百</del>管它多少条吧。  
-虽然我不喜欢用简短的文字去形容一个人，但是这确实是很有效率的方式。
-
-<div id="intro" class="collapse"
-    onmouseleave="
-        IsEdgeThen(function () {
-            if (isBlurred) {
-                isBlurred = false;
-                isBlurred = true;
-            }
-        });
-    ">
-    想看么？鼠标移过来！ (╯‵□′)╯︵┻━┻<br>
-    <code>version 2016.12.19, revision 0: incomplete</code>
-    <div class="collapse-extend">
-
-1. **【Dwscdv3】**  
-   是初中时候<!--在2125还是4399弹弹堂里-->随便敲的名字，经历了一丢丢改动后一直用下来了  
-   <span class="comment">
-   <!--
-       确切的说是
-       dwscdv   万恶之源，随手敲的
-       dwscdv1  不知道有没有这个
-       dwscdv2  小号的昵称迭代，以此类推
-       dwscdv3  稀里糊涂的就选了这个迭代当作常用网名
-       dwscdv4  但其实还有4
-       Dwscdv3  当网名用后过了一两年就首字母大写化了
-   -->
-   </span>
-
-1. Gender unknown
-1. 拒绝刻板印象
-1. 善良中立阵营
-1. 秩序 <---------------|-----> 自由
-1. Nothing is true, everything is permitted.
-1. 大概是内向、自卑、负能量的一个人
-1. **【自诩为开发者】**
-1. 开源大法好
-1. .NET(C#) + XAML 党  
-   然而最近在玩 Web
-1. 算法不精，架构无力，debug 迟缓
-1. **【活在梦里的死宅】**
-1. *- 游戏从小玩到大 -*
-1. 列举几个时期**代表性**的  
-   童年玩山寨 FC（某王牌 VCD 的《中文游戏 300》  
-   四到六年级玩摩尔赛尔  
-   六到八年级玩各种网游（腾讯全家桶什么的  
-   然后是 Minecraft、Terraria 这类沙盒，跟朋友联机  
-   现在么…… 不好总结啊，不过现在更喜欢各种社交  
-   <span class="comment">
-   <!--
-       并不是很难总结，只是有点杂乱多
-       那么，就写到注释里好了 2333
-       从小到大所有印象深刻的游戏（除去上面提过的
-       ↓
-       PC 单机游戏
-       ==============================
-       刺客信条: 4 -> 枭雄(90%) -> 2 -> 兄弟会(40%)
-       魔法门之英雄无敌: Ⅲ / Ⅳ / Ⅴ
-       植物大战僵尸
-       光之子
-       奥里与迷失森林(30%)
-       ……
-   -->
-   </span>
-1. 已成为 Steam 剁手党（x
-1. *- 喜欢日本动画 -*
-1. 《刀剑神域》入宅作，14年9月  
-   是理想中的异世界与 RPG 游戏，乌托邦的存在  
-   当年对于我真的有种寄托的感觉吧（Fly!
-1. 看过很多引我深思的作品  
-   （时间顺序）  
-   《刀剑神域》（你没看错，包括Ⅱ  
-   《四月是你的谎言》  
-   《可塑性记忆》  
-   《Angel Beats》  
-   《CLANNAD》  
-   《你的名字。》（算么？不算么？  
-   ……
-1. 看到左上角那头像了么？点箭头可以切换的
-1. 然而并没有真的 100 条，233  
-   其实上面的内容拆一下就够了x
-1. 未完待续
-
-<span class="comment">
-<!--
-1. 变态
-1. 少女心
-1. 抖M
--->
-</span>
-<br>
-<br>
-其实，连我自己都不知道怎样用语言来描述自己，以及这样的描述是否准确。  
-嗯，人都是不可描述的（x
-
-</div></div><br>
+一百条已经删辣！新的简介看心情了（下边那个可以当作半个新版简介<span class="hard-to-see">（其实黑历史还是能从某章鱼的肚子里扒出来的2333 <del>Fuck you Git</del></span>  
+想要交朋友的可以关注我的微博啊 ↓↓  
+内向，一般不会主动搭话，除非我们真的很熟
 
 <h2>地球 Online™ 设定</h2>
 <p>
@@ -212,7 +94,7 @@
 
 <h2>次元之门</h2>
 <p>
-    运行中的传送门：
+    <h3 style="font-size: 100%;">运行中的传送门</h3>
     <ul>
         <li>
             <a href="http://weibo.com/Dwscdv3" target="_blank">我的碎碎念</a>
@@ -223,20 +105,20 @@
             <span class="service">bilibili</span>
         </li>
         <li>
-            <a href="http://github.com/Dwscdv3" target="_blank">我的作品</a>
+            <a href="http://github.com/Dwscdv3" target="_blank">我的代码</a>
             <span class="service">GitHub</span>
         </li>
         <li>
-            <a href="https://y.qq.com/portal/profile.html?uin=893309102" target="_blank">我的音乐品味</a>
+            <a href="https://y.qq.com/portal/profile.html?uin=893309102" target="_blank">我的歌单</a>
             <span class="service">QQ音乐</span>
         </li>
     </ul>
 </p>
 <p>
-    已废弃的<span style="color: black">黑历史</span>传送门：
+    <h3 style="font-size: 100%;">已废弃的传送门<span class="hard-to-see">（黑历史</span></h3>
     <ul>
-        <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">主页 ver.1</a></li>-->
-        <li><a href="https://home-dwscdv3.rhcloud.com/" target="_blank">主页 ver.2</a></li>
+        <!--<li><a href="http://dwscdv3.github.io/1st-Homepage" target="_blank">旧主页 ver.1</a></li>-->
+        <li><a href="https://home-dwscdv3.rhcloud.com/" target="_blank">旧主页 ver.2</a></li>
         <span class="comment">
         <!--<li><a href="https://zh.moegirl.org/User:Dwscdv3" target="_blank">萌娘百科用户页 (2014/12/24)</a></li>-->
         <!--<li><a href="http://tieba.baidu.com/home/main?un=_Dwscdv3_" target="_blank">中二那年</a><span class="service">百度贴吧</span></li>-->
