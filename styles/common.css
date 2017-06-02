@@ -1,6 +1,8 @@
-.blackbar {
-    background-color: black;
-    color: black;
+.hard-to-see {
+    opacity: 0.15;
+}
+.hard-to-see:hover {
+    opacity: unset;
 }
 .visible {
     visibility: visible !important;
