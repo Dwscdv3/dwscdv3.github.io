@@ -204,8 +204,8 @@
             <span class="rpg-attr-text">Kindness</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 30%; background-color: #CCC;"></div>
-            <span class="rpg-attr-text">Liberalism</span>
+            <div class="prog" style="width: 60%; background-color: #066;"></div>
+            <span class="rpg-attr-text">Deviation</span>
         </div>
     </div>
 </p>
