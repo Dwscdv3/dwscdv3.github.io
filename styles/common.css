@@ -1,5 +1,6 @@
 .hard-to-see {
-    opacity: 0.1;
+    opacity: 0.05;
+    transition: opacity 2s ease-in;
 }
 .hard-to-see:hover {
     opacity: unset;
