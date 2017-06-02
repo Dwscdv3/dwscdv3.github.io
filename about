@@ -105,12 +105,16 @@
             <span class="service">bilibili</span>
         </li>
         <li>
-            <a href="http://github.com/Dwscdv3" target="_blank">我的代码</a>
+            <a href="https://github.com/Dwscdv3" target="_blank">我的代码</a>
             <span class="service">GitHub</span>
         </li>
         <li>
             <a href="https://y.qq.com/portal/profile.html?uin=893309102" target="_blank">我的歌单</a>
             <span class="service">QQ音乐</span>
+        </li>
+        <li>
+            <a href="http://steamcommunity.com/id/dwscdv3" target="_blank">我的 -90%</a>
+            <span class="service">Steam</span>
         </li>
     </ul>
 </p>
