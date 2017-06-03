@@ -115,25 +115,32 @@ function nextTip() {
 }
 
 function setBackground() {
-    if (window.innerWidth >= window.innerHeight) {
-        ajaxGet(PATH_BACKGROUND_DESKTOP + "index.json", function() {
-            if (this.readyState == XMLHttpRequest.DONE) {
-                if (this.status == 200) {
-                    var bgList = JSON.parse(this.responseText);
-                    $("#background").style.backgroundImage = "url(" + PATH_BACKGROUND_DESKTOP + bgList[Math.floor(Math.random() * bgList.length)] + ")";
+    ajaxGet((window.innerWidth >= window.innerHeight ? PATH_BACKGROUND_DESKTOP : PATH_BACKGROUND_MOBILE) + "index.json", function() {
+        if (this.readyState == XMLHttpRequest.DONE) {
+            if (this.status == 200) {
+                var bgList = JSON.parse(this.responseText);
+                var bg = bgList[Math.floor(Math.random() * bgList.length)];
+                $("#background").style.backgroundImage = "url(" + (window.innerWidth >= window.innerHeight ? PATH_BACKGROUND_DESKTOP : PATH_BACKGROUND_MOBILE) + bg.fileName + ")";
+                if (!bg.srcType || bg.srcType === "none") {
+                    $("#bginfo-title").textContent = bg.title;
+                } else if (bg.srcType === "url") {
+                    $("#bginfo-title").innerHTML = '<a href="' + bg.src + '" target="_blank">' + bg.title + "</a>";
+                } else if (bg.srcType === "pixiv") {
+                    $("#bginfo-title").innerHTML = '<a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=' + bg.src + '" target="_blank">' + bg.title + "</a>";
+                }
+                if (bg.author) {
+                    $("#bginfo-author").textContent = bg.author;
+                    $("#bginfo-label-author").hidden = false;
                 }
             }
-        });
-    } else {
-        ajaxGet(PATH_BACKGROUND_MOBILE + "index.json", function() {
-            if (this.readyState == XMLHttpRequest.DONE) {
-                if (this.status == 200) {
-                    var bgList = JSON.parse(this.responseText);
-                    $("#background").style.backgroundImage = "url(" + PATH_BACKGROUND_MOBILE + bgList[Math.floor(Math.random() * bgList.length)] + ")";
-                }
-            }
-        });
-    }
+        }
+    });
+}
+
+var effects = true;
+
+function toggleEffects() {
+    // TODO
 }
 
 function toggleBackground() {

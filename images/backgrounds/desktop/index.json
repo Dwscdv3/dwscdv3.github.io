@@ -1,4 +1,14 @@
 [
-    "《你的名字。》剧照-1.jpg",
-    "id=58991926.jpg"
+    {
+        "fileName": "《你的名字。》剧照-1.jpg",
+        "title": "《你的名字。》剧照",
+        "srcType": "none"
+    },
+    {
+        "fileName": "id=58991926.jpg",
+        "title": "君の名は。",
+        "srcType": "pixiv",
+        "src": "58991926",
+        "author": "Masabodo"
+    }
 ]

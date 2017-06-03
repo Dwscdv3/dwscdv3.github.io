@@ -219,6 +219,16 @@ date::before {
     font-size: 120%;
     margin: 0.5em;
 }
+.bginfo-label {
+    text-align: right;
+    width: 2.5em;
+    vertical-align: top;
+    font-weight: bold;
+}
+.bginfo-content {
+    width: calc(100% - 2.5em);
+    display: inline-block;
+}
 
 /* ID */
 
@@ -300,7 +310,7 @@ date::before {
 #tip {
     margin-top: 3em;
     font-size: 80%;
-    height: 7em;
+    /*height: 7em;*/
 }
 #homeIcon {
     /*display: table-cell;*/
@@ -350,6 +360,9 @@ date::before {
 }
 #recentPosts {
     font-size: 75%;
+}
+#bginfo {
+    font-size: 80%;
 }
 
 /* 关键帧 */
