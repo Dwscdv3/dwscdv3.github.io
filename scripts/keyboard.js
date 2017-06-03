@@ -14,7 +14,11 @@ jwerty.key("slash/shift+slash", function() {
     });
 });
 
-jwerty.key("alt+b", toggleBackground);
+jwerty.key("alt+b", function() {
+    toggleHighContrast();
+    var setting_HighContrast = $("#setting_HighContrast");
+    setting_HighContrast.checked = !setting_HighContrast.checked;
+});
 
 // 彩蛋
 function jumpToEggKikkou() {

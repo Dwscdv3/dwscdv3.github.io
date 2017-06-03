@@ -33,3 +33,6 @@
     line-height: 1rem;
     color: #060;
 }
+.spin180 {
+    transform: rotate(180deg);
+}

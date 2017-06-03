@@ -29,6 +29,10 @@
 <body>
     <div id="background"></div>
     <div id="main">
+        <noscript>
+            This site requires JavaScript to work properly.<br>
+            这个站点需要 JavaScript 才能正常运转。
+        </noscript>
         <article id="article"></article>
         <div id="comment">
             <h1 id="comment-header">
@@ -92,6 +96,16 @@
         <span>Created: 2016/12/1</span><br>
         <span>Last modified: 2017/6/3</span><br>
         <span>由 <a href="http://github.com/Dwscdv3/dwscdv3.github.io" target="_blank">Dwscdv3 的中二能量</a>强力驱动</span>
+    </div>
+    <div id="setting">
+        <span id="settingIcon" class="material-icons text-button">settings</span>
+        <div id="settingPanel" class="setting-hide">
+            <h2 id="settingHeader">设置</h2>
+            <h4>性能</h4>
+            <label><input id="setting_Effects" type="checkbox" disabled>禁用滤镜及动画</label>
+            <h4>辅助功能</h4>
+            <label><input id="setting_HighContrast" type="checkbox">启用高对比度</label>
+        </div>
     </div>
 
     <!-- 萌评论 -->

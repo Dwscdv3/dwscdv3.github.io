@@ -12,6 +12,7 @@ html {
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    transition: color 1s;
 }
 body {
     background-color: black;
@@ -171,7 +172,10 @@ date::before {
     transform: rotate(0deg);
 }
 .text-button {
+    display: inline-block;
+    text-align: center;
     padding: 0.2em;
+    border-radius: 50%;
 }
 .text-button:hover {
     background-color: rgba(255, 255, 255, 0.5);
@@ -229,6 +233,9 @@ date::before {
     width: calc(100% - 2.5em);
     display: inline-block;
 }
+.setting-hide {
+    transform: translateY(calc(-100% - 2rem));
+}
 
 /* ID */
 
@@ -254,6 +261,7 @@ date::before {
     border-bottom: 9em solid rgba(0, 0, 0, 0.6);
     z-index: -1;
     pointer-events: none !important;
+    transition: border-bottom-color 1s;
 }
 #avatarContainer {
     position: absolute;
@@ -272,9 +280,15 @@ date::before {
     font-family: "Times New Roman", serif;
 }
 #avatarPrevious {
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
     position: absolute;
 }
 #avatarNext {
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
     position: absolute;
     right: 0;
 }
@@ -363,6 +377,39 @@ date::before {
 }
 #bginfo {
     font-size: 80%;
+}
+#setting {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    height: calc(100% - 150px);
+    box-sizing: border-box;
+    pointer-events: none;
+}
+#settingIcon {
+    float: right;
+    position: relative;
+    font-size: 2em;
+    z-index: 1;
+    pointer-events: initial;
+    transition: transform 0.5s;
+}
+#settingPanel {
+    font-size: 75%;
+    padding: 0.5em 1em 1em;
+    width: 12rem;
+    max-height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.5);
+    border-radius: 33.6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: initial;
+    transition: transform 0.5s, background-color 1s;
+}
+#settingHeader {
+    margin: 0;
+    font-weight: normal;
 }
 
 /* 关键帧 */

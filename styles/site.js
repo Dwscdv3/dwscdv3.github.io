@@ -71,6 +71,14 @@ document.addEventListener("DOMContentLoaded", function() {
         avatarContainer.Next();
     });
 
+    $("#settingIcon").addEventListener("click", function() {
+        this.classList.toggle("spin180");
+        $("#settingPanel").classList.toggle("setting-hide");
+    });
+    $("#setting_HighContrast").addEventListener("click", function() {
+        toggleHighContrast();
+    });
+
     IsEdgeThen(function() {
         $("html").style.overflow = "hidden";
         $("html").style.height = "100%";
@@ -137,19 +145,32 @@ function setBackground() {
     });
 }
 
+var highContrast = false;
+
+function toggleHighContrast() {
+    // TODO: Control state
+
+    highContrast = !highContrast;
+
+    var bg = $("#background");
+
+    if (highContrast) {
+        bg.style.opacity = "0";
+        document.documentElement.style.color = "white";
+        $("#settingPanel").style.backgroundColor = "black";
+        $("#footerBackground").style.borderBottomColor = "rgba(0, 0, 0, 0.8)";
+    } else {
+        bg.style.opacity = "1";
+        document.documentElement.style.color = "";
+        $("#settingPanel").style.backgroundColor = "";
+        $("#footerBackground").style.borderBottomColor = "";
+    }
+}
+
 var effects = true;
 
 function toggleEffects() {
     // TODO
-}
-
-function toggleBackground() {
-    var bg = $("#background");
-    if (bg.style.opacity == "" || bg.style.opacity > 0) {
-        bg.style.opacity = "0";
-    } else {
-        bg.style.opacity = "1";
-    }
 }
 
 var _isBlurred = true;
