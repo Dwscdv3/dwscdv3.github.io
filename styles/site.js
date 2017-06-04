@@ -126,19 +126,51 @@ function setBackground() {
     ajaxGet((window.innerWidth >= window.innerHeight ? PATH_BACKGROUND_DESKTOP : PATH_BACKGROUND_MOBILE) + "index.json", function() {
         if (this.readyState == XMLHttpRequest.DONE) {
             if (this.status == 200) {
+                var $bg = $("#background"),
+                    $title = $("#bginfo-title"),
+                    $author = $("#bginfo-author"),
+                    $src = $("#bginfo-src"),
+                    $labelAuthor = $("#bginfo-label-author"),
+                    $labelSrc = $("#bginfo-label-src");
+
+                $labelAuthor.parentNode.hidden = true;
+                $labelSrc.parentNode.hidden = true;
+
                 var bgList = JSON.parse(this.responseText);
                 var bg = bgList[Math.floor(Math.random() * bgList.length)];
-                $("#background").style.backgroundImage = "url(" + (window.innerWidth >= window.innerHeight ? PATH_BACKGROUND_DESKTOP : PATH_BACKGROUND_MOBILE) + bg.fileName + ")";
-                if (!bg.srcType || bg.srcType === "none") {
-                    $("#bginfo-title").textContent = bg.title;
-                } else if (bg.srcType === "url") {
-                    $("#bginfo-title").innerHTML = '<a href="' + bg.src + '" target="_blank">' + bg.title + "</a>";
-                } else if (bg.srcType === "pixiv") {
-                    $("#bginfo-title").innerHTML = '<a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=' + bg.src + '" target="_blank">' + bg.title + "</a>";
+
+                if (typeof bg.prop === "string") {
+                    var props = bg.prop.split(" ");
+                    if (props.contains("tile")) {
+                        $bg.classList.add("background-tile");
+                    }
                 }
+
+                if (bg.fileName) {
+                    $bg.style.backgroundImage = "url(" + (window.innerWidth >= window.innerHeight ? PATH_BACKGROUND_DESKTOP : PATH_BACKGROUND_MOBILE) + bg.fileName + ")";
+                } else if (bg.url) {
+                    $bg.style.backgroundImage = "url(" + bg.url + ")";
+                }
+
+                if (!bg.srcType || bg.srcType === "none" || bg.srcType === "original") {
+                    $title.textContent = bg.title;
+                } else if (bg.srcType === "text") {
+                    $title.textContent = bg.title;
+                    $src.textContent = bg.srcText;
+                    $labelSrc.parentNode.hidden = false;
+                } else if (bg.srcType === "url") {
+                    $title.innerHTML = '<a href="' + bg.src + '" target="_blank">' + bg.title + "</a>";
+                } else if (bg.srcType === "pixiv") {
+                    $title.innerHTML = '<a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=' + bg.src + '" target="_blank">' + bg.title + "</a>";
+                }
+
                 if (bg.author) {
-                    $("#bginfo-author").textContent = bg.author;
-                    $("#bginfo-label-author").hidden = false;
+                    $author.textContent = bg.author;
+                    $labelAuthor.parentNode.hidden = false;
+                } else if (bg.srcType === "original") {
+                    $author.innerHTML = "<em>原创</em>";
+                    $labelAuthor.style.visibility = hidden;
+                    $labelAuthor.parentNode.hidden = false;
                 }
             }
         }
@@ -157,8 +189,8 @@ function toggleHighContrast() {
     if (highContrast) {
         bg.style.opacity = "0";
         document.documentElement.style.color = "white";
-        $("#settingPanel").style.backgroundColor = "black";
-        $("#footerBackground").style.borderBottomColor = "rgba(0, 0, 0, 0.8)";
+        $("#settingPanel").style.backgroundColor = "#333";
+        $("#footerBackground").style.borderBottomColor = "#333";
     } else {
         bg.style.opacity = "1";
         document.documentElement.style.color = "";

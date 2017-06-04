@@ -129,6 +129,10 @@ date::before {
 
 /* 类 */
 
+.background-tile {
+    background-repeat: repeat;
+    background-size: initial;
+}
 .anchor-disabled,
 .anchor-disabled:hover,
 .anchor-disabled:active {
