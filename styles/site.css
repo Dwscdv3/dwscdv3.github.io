@@ -12,7 +12,7 @@ html {
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    transition: color 1s;
+    transition: color 1s, text-shadow 1s;
 }
 body {
     background-color: black;
