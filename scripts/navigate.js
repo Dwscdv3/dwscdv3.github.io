@@ -72,6 +72,7 @@ function routeIndex() {
 }
 
 var itemsPerPage = 10;
+
 function renderIndex(page) {
     if (!page) {
         page = 1;
@@ -138,7 +139,7 @@ function renderRecentArticlesList() {
         var li = document.createElement("li");
         var a = document.createElement("a");
         a.href = "#/articles/" + articleList[i].fileName;
-        a.appendChild(document.createTextNode(articleList[i].title));
+        a.appendChild(document.createTextNode(articleList[i].shortTitle ? articleList[i].shortTitle : articleList[i].title));
         li.appendChild(a);
         recentPostsList.appendChild(li);
     }
@@ -154,7 +155,11 @@ function renderMarkdown() {
             window.scrollTo(0, 0);
             $(".cm-article").dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
-            萌评.运转($("#article"));
+            try {
+                萌评.运转($("#article"));
+            } catch (ex) {
+                $(".cm-article").innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
+            }
             activateScript($("#article"));
         } else if (this.status >= 400) {
             $("#article").innerHTML = md.render("# 404: Not found");
