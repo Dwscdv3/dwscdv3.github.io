@@ -58,7 +58,11 @@ function scrollToBottom(node) {
     node.scrollTop = node.scrollHeight;
 }
 
-Number.prototype.pad = function (size) {
+Array.prototype.contains = function(element) {
+    return this.indexOf(element) > -1;
+};
+
+Number.prototype.pad = function(size) {
     var s = String(this);
     while (s.length < (size || 2)) {
         s = "0" + s;
@@ -68,8 +72,8 @@ Number.prototype.pad = function (size) {
 
 // Polyfills
 if (!String.prototype.startsWith) {
-    String.prototype.startsWith = function(searchString, position){
-      position = position || 0;
-      return this.substr(position, searchString.length) === searchString;
-  };
+    String.prototype.startsWith = function(searchString, position) {
+        position = position || 0;
+        return this.substr(position, searchString.length) === searchString;
+    };
 }
