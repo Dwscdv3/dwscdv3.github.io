@@ -156,7 +156,7 @@ function renderMarkdown() {
             $(".cm-article").dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
             try {
-                萌评.运转($("#article"));
+                萌评.运转();
             } catch (ex) {
                 $(".cm-article").innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
             }
