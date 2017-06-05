@@ -8,6 +8,9 @@ var hashIndex = "#/index";
 
 var md = window.markdownit("commonmark");
 
+var $article = $("#article"),
+    $cmArticle = $(".cm-article");
+
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
 document.addEventListener("DOMContentLoaded", getIndex);
@@ -79,9 +82,8 @@ function renderIndex(page) {
     }
 
     document.title = "文章索引" + " - " + mainTitle;
-    $(".cm-article").innerHTML = commentDisabled;
-    var indexes = $("#article");
-    indexes.innerHTML = "<h1>文章索引</h1><br>";
+    $cmArticle.innerHTML = commentDisabled;
+    $article.innerHTML = "<h1>文章索引</h1><br>";
 
     for (var i = (page - 1) * itemsPerPage; i < min(page * itemsPerPage, articleList.length); i++) {
         var index = document.createElement("div");
@@ -129,7 +131,7 @@ function renderIndex(page) {
 
     indexes.appendChild(pageControl);
 
-    $("#article").scrollIntoView(true);
+    window.scrollTo(0, 0);
 }
 
 function renderRecentArticlesList() {
@@ -148,21 +150,21 @@ function renderRecentArticlesList() {
 
 function renderMarkdown() {
     if (this.readyState == XMLHttpRequest.DONE) {
-        $(".cm-article").innerHTML = "";
+        $cmArticle.innerHTML = "";
         if (this.status >= 200 && this.status < 400) {
-            $("#article").innerHTML = md.render(this.responseText);
-            replaceLinksToTargetBlank($("#article"));
+            $article.innerHTML = md.render(this.responseText);
+            replaceLinksToTargetBlank($article);
             window.scrollTo(0, 0);
-            $(".cm-article").dataset.key = encodeURI(window.location.hash);
+            $cmArticle.dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
             try {
                 萌评.运转();
             } catch (ex) {
-                $(".cm-article").innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
+                $cmArticle.innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
             }
-            activateScript($("#article"));
+            activateScript($article);
         } else if (this.status >= 400) {
-            $("#article").innerHTML = md.render("# 404: Not found");
+            $article.innerHTML = md.render("# 404: Not found");
             document.title = "404" + " - " + mainTitle;
         }
     }
@@ -178,12 +180,14 @@ function replaceLinksToTargetBlank(node) {
 }
 
 function activateScript(node) {
-    var oldNodes = node.querySelectorAll("script");
-    for (var i = 0; i < oldNodes.length; i++) {
-        var oldNode = oldNodes[i];
-        var newNode = document.createElement("script");
-        newNode.textContent = oldNode.textContent;
-        oldNode.parentNode.removeChild(oldNode);
-        node.appendChild(newNode);
+    if (node instanceof HTMLElement) {
+        var oldNodes = node.querySelectorAll("script");
+        for (var i = 0; i < oldNodes.length; i++) {
+            var oldNode = oldNodes[i];
+            var newNode = document.createElement("script");
+            newNode.textContent = oldNode.textContent;
+            oldNode.parentNode.removeChild(oldNode);
+            node.appendChild(newNode);
+        }
     }
 }
