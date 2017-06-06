@@ -20,7 +20,7 @@
 目前的计划：
 * <span class="done">将网页背景的 JSON 清单及加载代码重新设计，加入 标题、来源 等附加信息并显示到界面某个地方（<span class="chosen">侧边栏最底部</span>，<span class="deprecated">右下角</span>或<span class="deprecated">右键菜单</span></span>
 * <span class="done">将 关闭背景 扩展为 高对比度模式</span>
-* 模糊滤镜、文字阴影等特效开关
+* <span class="done">模糊滤镜、文字阴影等特效开关</span>
 * <span class="done">将上述开关做成设置界面，而不仅仅是快捷键</span>
 * <span class="done">多找几张新背景图</span>（但仍然需要持续更新
 * 补充几条 Tips

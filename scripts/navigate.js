@@ -8,9 +8,6 @@ var hashIndex = "#/index";
 
 var md = window.markdownit("commonmark");
 
-var $article = $("#article"),
-    $cmArticle = $(".cm-article");
-
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
 document.addEventListener("DOMContentLoaded", getIndex);

@@ -5,13 +5,11 @@ var avatarContainer;
 
 var sidebar;
 
+var $article, $cmArticle;
+
 document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && e.key == "b") {
-            isBlurred = !isBlurred;
-            setBlur();
-        }
-    });
+    $article = $("#article");
+    $cmArticle = $(".cm-article");
 
     getTips();
     $("#tip").addEventListener("mousedown", nextTip);
@@ -74,6 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#settingIcon").addEventListener("click", function() {
         this.classList.toggle("spin180");
         $("#settingPanel").classList.toggle("setting-hide");
+    });
+    $("#setting_Blur").addEventListener("click", function() {
+        toggleBlur();
+    });
+    $("#setting_Shadow").addEventListener("click", function() {
+        toggleShadow();
+    });
+    $("#setting_Transition").addEventListener("click", function() {
+        toggleTransition();
     });
     $("#setting_HighContrast").addEventListener("click", function() {
         toggleHighContrast();
@@ -199,26 +206,26 @@ function toggleHighContrast() {
     }
 }
 
-var effects = true;
+var blur = true;
 
-function toggleEffects() {
-    // TODO
+function toggleBlur() {
+    blur = !blur;
+    setBlur();
 }
 
-var _isBlurred = true;
 Object.defineProperty(this, "isBlurred", {
     get: function() {
-        return _isBlurred;
+        return blur;
     },
     set: function(val) {
-        _isBlurred = val;
+        blur = val;
         setBlur();
     }
 });
 
 function setBlur() {
     var bg = $("#background");
-    if (_isBlurred) {
+    if (blur) {
         var width = window.innerWidth;
         var height = window.innerHeight;
         var depth = (width * 0.5 + height * 0.5) / 200;
@@ -227,5 +234,31 @@ function setBlur() {
     } else {
         bg.style.webkitFilter = "none";
         bg.style.filter = "none";
+    }
+}
+
+var shadow = true;
+
+function toggleShadow() {
+    shadow = !shadow;
+
+    if (shadow) {
+        document.documentElement.style.textShadow = "";
+    } else {
+        document.documentElement.style.setProperty("text-shadow", "none", "important");
+    }
+}
+
+var transition = true;
+var style_DisableTransition = document.createElement("style");
+style_DisableTransition.innerHTML = "* { transition: initial !important }";
+
+function toggleTransition() {
+    transition = !transition;
+
+    if (transition) {
+        document.body.removeChild(style_DisableTransition);
+    } else {
+        document.body.appendChild(style_DisableTransition);
     }
 }

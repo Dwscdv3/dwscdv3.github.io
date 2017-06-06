@@ -14,6 +14,11 @@ jwerty.key("slash/shift+slash", function() {
     });
 });
 
+jwerty.key("ctrl+b", function() {
+    toggleBlur();
+    var setting_Blur = $("#setting_Blur");
+    setting_Blur.checked = !setting_Blur.checked;
+});
 jwerty.key("alt+b", function() {
     toggleHighContrast();
     var setting_HighContrast = $("#setting_HighContrast");
