@@ -94,7 +94,7 @@ function renderIndex(page) {
         var date = document.createElement("date");
         date.appendChild(document.createTextNode(formatAlignedDate(articleList[i].date)));
         index.appendChild(date);
-        indexes.appendChild(index);
+        $article.appendChild(index);
     }
 
     var pageControl = document.createElement("div");
@@ -126,7 +126,7 @@ function renderIndex(page) {
     nextPage.appendChild(document.createTextNode(" 下一页 →"));
     pageControl.appendChild(nextPage);
 
-    indexes.appendChild(pageControl);
+    $article.appendChild(pageControl);
 
     window.scrollTo(0, 0);
 }
