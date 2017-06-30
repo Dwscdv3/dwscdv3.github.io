@@ -1,6 +1,6 @@
 <h1>
     写了个程序来致敬这爱罢工的 Wi-Fi
-    <date>2017/6/30</date>
+    <date>2017/7/1</date>
 </h1>
 
 我目前这台笔记本的 Wi-Fi 最近出了点问题，放着长时间不用的话 Wi-Fi 功能有很大的几率会被 Windows 10 禁用掉，重新启动才能恢复。虽然直到现在都不太明白问题出在哪里，但是作为整个局域网的科学上网服务器，以及时不时地需要远距离问候小娜，断网怎么行呢？于是刚刚写了个程序，当电脑闲置并且指定的适配器未连接的情况下自动重启。
@@ -9,15 +9,15 @@
 
 ### 获取网络适配器状态
 
-Google 一下，很轻松地就找到了 .NET 的相关方法 [`System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()`](https://msdn.microsoft.com/en-us/library/system.net.networkinformation.networkinterface.getallnetworkinterfaces(v=vs.110).aspx)，然后读取注册表里的一个 "网卡1:组1|网卡2:组2…" 格式的配置字符串，如果在同一个组内的所有网卡都不处于已连接状态，则重启。
+Google 了一下，很轻松地就找到了 .NET 的获取所有网络接口的方法 [`System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()`](https://msdn.microsoft.com/en-us/library/system.net.networkinformation.networkinterface.getallnetworkinterfaces(v=vs.110).aspx)，以及当前状态的属性 [`System.Net.NetworkInformation.NetworkInterface.OperationalStatus`](https://msdn.microsoft.com/en-us/library/system.net.networkinformation.networkinterface.operationalstatus(v=vs.110).aspx)，然后读取注册表里的一个 "网卡1:组1|网卡2:组2…" 格式的配置字符串，如果在同一个组内的任何网卡都不在已连接状态，则重启系统。
 
 P.S. 头一次尝试 LINQ 查询，真好用！
 
 ### 判断系统处于闲置状态
 
-我一开始打算把这个程序写成 Windows 服务的，但是正因如此，User32 的 [`GetLastInputInfo()`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms646302(v=vs.85).aspx) 只能获取到当前会话的输入数据，而服务运行在会话 0，无法通过这个 API 来判断系统闲置了多长时间。
+我一开始是把这个程序作为 Windows 服务写的，但是，User32 的 [`GetLastInputInfo()`](https://msdn.microsoft.com/en-us/library/windows/desktop/ms646302(v=vs.85).aspx) 只能获取到当前会话的输入数据，而服务运行在会话 0，无法通过这个 API 来判断系统闲置了多长时间。
 
-后来又找到 [`Microsoft.Win32.SystemEvents.SessionSwitch`](https://msdn.microsoft.com/en-us/library/microsoft.win32.systemevents.sessionswitch(v=vs.110).aspx) 事件，于是想了个变通的办法，设置系统在闲置一段时间后锁定，于是这个事件被触发，从而判断闲置。
+后来又找到 [`Microsoft.Win32.SystemEvents.SessionSwitch`](https://msdn.microsoft.com/en-us/library/microsoft.win32.systemevents.sessionswitch(v=vs.110).aspx) 这个事件，于是想了个变通的办法，设置系统在闲置一段时间后锁定，这个事件就会被触发，从而判断为闲置。
 
 不过这些都然并卵，最后全删了。原因下面会讲。
 
