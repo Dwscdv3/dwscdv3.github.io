@@ -154,11 +154,12 @@ function renderMarkdown() {
             window.scrollTo(0, 0);
             $cmArticle.dataset.key = encodeURI(window.location.hash);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
-            try {
-                萌评.运转();
-            } catch (ex) {
-                $cmArticle.innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
-            }
+            // try {
+            //     萌评.运转();
+            // } catch (ex) {
+            //     $cmArticle.innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
+            // }
+            $cmArticle.innerHTML = '<div class="cm-text-banner">萌评论故障，无力回天，已移除<br>评论系统暂无</div>';
             activateScript($article);
         } else if (this.status >= 400) {
             $article.innerHTML = md.render("# 404: Not found");
