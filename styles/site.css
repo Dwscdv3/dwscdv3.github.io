@@ -154,26 +154,31 @@ date::before {
     border-radius: 50%;
     /*display: none;*/
     opacity: 0;
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     position: absolute;
 }
 .clockwise-in {
     animation: rotate-in-clockwise 300ms linear;
     opacity: 1;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
 }
 .counter-clockwise-in {
     animation: rotate-in-counter-clockwise 300ms linear;
     opacity: 1;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
 }
 .clockwise-out {
     animation: rotate-out-clockwise 300ms linear;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
 }
 .counter-clockwise-out {
     animation: rotate-out-counter-clockwise 300ms linear;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
 }
 .text-button {
     display: inline-block;
@@ -238,6 +243,7 @@ date::before {
     display: inline-block;
 }
 .setting-hide {
+    -webkit-transform: translateY(calc(-100% - 2rem));
     transform: translateY(calc(-100% - 2rem));
 }
 
@@ -420,40 +426,48 @@ date::before {
 
 @keyframes rotate-in-clockwise {
     0% {
+        -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
         opacity: 0;
     }
     100% {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
         opacity: 1;
     }
 }
 @keyframes rotate-out-clockwise {
     0% {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
         opacity: 1;
     }
     100% {
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         opacity: 0;
     }
 }
 @keyframes rotate-in-counter-clockwise {
     0% {
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         opacity: 0;
     }
     100% {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
         opacity: 1;
     }
 }
 @keyframes rotate-out-counter-clockwise {
     0% {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
         opacity: 1;
     }
     100% {
+        -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
         opacity: 0;
     }
