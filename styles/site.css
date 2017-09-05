@@ -142,11 +142,11 @@ date::before {
     pointer-events: none;
 }
 .service::before {
-    content: "@";
+    content: "— ";
 }
 .service {
     opacity: 0.8;
-    font-size: 60%;
+    font-size: 70%;
 }
 .avatar-img {
     width: 100%;
