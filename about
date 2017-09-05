@@ -89,6 +89,52 @@
             <div class="prog" style="width: 60%; background-color: #066;"></div>
             <span class="rpg-attr-text">Deviation</span>
         </div>
+        <hr>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 20%; background-color: #C3F;"></div>
+            <span class="rpg-attr-text">Music</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 8%; background-color: #FC0;"></div>
+            <span class="rpg-attr-text">Paint</span>
+        </div>
+        <hr>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 78%; background-color: #E34C26;"></div>
+            <span class="rpg-attr-text">HTML</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 71%; background-color: #563D7C;"></div>
+            <span class="rpg-attr-text">CSS</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 53%; background-color: #F1E05A;"></div>
+            <span class="rpg-attr-text">JavaScript</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 55%; background-color: #555;"></div>
+            <span class="rpg-attr-text">C</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 12%; background-color: #F34B7D;"></div>
+            <span class="rpg-attr-text">C++</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 64%; background-color: #178600;"></div>
+            <span class="rpg-attr-text">C# / .NET</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 10%; background-color: #3572A5;"></div>
+            <span class="rpg-attr-text">Python</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 22%; background-color: #4F5D95;"></div>
+            <span class="rpg-attr-text">PHP</span>
+        </div>
+        <div class="rpg-attr">
+            <div class="prog" style="width: 15%; background-color: #B07219;"></div>
+            <span class="rpg-attr-text">Java</span>
+        </div>
     </div>
 </p>
 
