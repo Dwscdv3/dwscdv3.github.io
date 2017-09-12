@@ -5,5 +5,17 @@
         "srcType": "pixiv",
         "src": "59183487",
         "author": "unknown007"
+    },
+    {
+        "fileName": "Aincrad.jpg",
+        "title": "艾恩葛朗特",
+        "srcType": "text",
+        "srcText": "刀剑神域 -艾恩葛朗特-"
+    },
+    {
+        "fileName": "Mother%27s%20Rosario.jpg",
+        "title": "优纪",
+        "srcType": "text",
+        "srcText": "刀剑神域 -圣母圣咏-"
     }
 ]
