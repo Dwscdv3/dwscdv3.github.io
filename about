@@ -8,7 +8,7 @@
 
 <h2>地球 Online™ 人物属性</h2>
 <p>
-    Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Auto level-up disabled</span>
+    Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span>
     <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
     <style>
         #rpg-attrs {
@@ -73,7 +73,7 @@
             <span class="rpg-attr-text">Intelligence</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 30%; background-color: #090;"></div>
+            <div class="prog" style="width: 20%; background-color: #090;"></div>
             <span class="rpg-attr-text">Luck</span>
         </div>
         <div class="rpg-attr">
