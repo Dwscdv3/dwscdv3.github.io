@@ -1,6 +1,6 @@
 <h1>
     我是谁？
-    <date>2017/9/6</date>
+    <date>2017/11/15</date>
 </h1>
 
 一百条已经删啦！换成了数据式简介<span class="hard-to-see">（但是黑历史还是能从某章鱼猫的肚子里扒出来的 2333 <del>Fuck you Git</del></span>  
@@ -9,7 +9,7 @@
 <h2>地球 Online™ 人物属性</h2>
 <p>
     Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Auto level-up disabled</span>
-    <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(2); </script>
+    <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
     <style>
         #rpg-attrs {
             background-color: rgba(0, 0, 0, 0.25);
@@ -57,15 +57,15 @@
     </style>
     <div id="rpg-attrs">
         <div class="rpg-attr">
-            <div class="prog" style="width: 8%; background-color: #C00;"></div>
+            <div class="prog" style="width: 7%; background-color: #C00;"></div>
             <span class="rpg-attr-text">Strength</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 33%; background-color: #CFC;"></div>
+            <div class="prog" style="width: 30%; background-color: #CFC;"></div>
             <span class="rpg-attr-text">Dexterity</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 76%; background-color: #F60;"></div>
+            <div class="prog" style="width: 80%; background-color: #F60;"></div>
             <span class="rpg-attr-text">Endurance</span>
         </div>
         <div class="rpg-attr">
@@ -85,12 +85,12 @@
             <span class="rpg-attr-text">Kindness</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 60%; background-color: #066;"></div>
+            <div class="prog" style="width: 65%; background-color: #066;"></div>
             <span class="rpg-attr-text">Deviation</span>
         </div>
         <hr>
         <div class="rpg-attr">
-            <div class="prog" style="width: 20%; background-color: #C3F;"></div>
+            <div class="prog" style="width: 23%; background-color: #C3F;"></div>
             <span class="rpg-attr-text">Music</span>
         </div>
         <div class="rpg-attr">
@@ -99,15 +99,15 @@
         </div>
         <hr>
         <div class="rpg-attr">
-            <div class="prog" style="width: 78%; background-color: #E34C26;"></div>
+            <div class="prog" style="width: 80%; background-color: #E34C26;"></div>
             <span class="rpg-attr-text">HTML</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 71%; background-color: #563D7C;"></div>
+            <div class="prog" style="width: 75%; background-color: #563D7C;"></div>
             <span class="rpg-attr-text">CSS</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 53%; background-color: #F1E05A;"></div>
+            <div class="prog" style="width: 60%; background-color: #F1E05A;"></div>
             <span class="rpg-attr-text">JavaScript</span>
         </div>
         <div class="rpg-attr">
@@ -115,11 +115,11 @@
             <span class="rpg-attr-text">C</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 12%; background-color: #F34B7D;"></div>
+            <div class="prog" style="width: 15%; background-color: #F34B7D;"></div>
             <span class="rpg-attr-text">C++</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 64%; background-color: #178600;"></div>
+            <div class="prog" style="width: 65%; background-color: #178600;"></div>
             <span class="rpg-attr-text">C# / .NET</span>
         </div>
         <div class="rpg-attr">
@@ -127,11 +127,11 @@
             <span class="rpg-attr-text">Python</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 22%; background-color: #4F5D95;"></div>
+            <div class="prog" style="width: 20%; background-color: #4F5D95;"></div>
             <span class="rpg-attr-text">PHP</span>
         </div>
         <div class="rpg-attr">
-            <div class="prog" style="width: 15%; background-color: #B07219;"></div>
+            <div class="prog" style="width: 24%; background-color: #B07219;"></div>
             <span class="rpg-attr-text">Java</span>
         </div>
     </div>
@@ -150,7 +150,7 @@
             <span class="service">bilibili</span>
         </li>
         <li>
-            <a href="https://github.com/Dwscdv3" target="_blank">我的源代码</a>
+            <a href="https://github.com/Dwscdv3" target="_blank">我的开源垃圾</a>
             <span class="service">GitHub</span>
         </li>
         <li>
@@ -161,10 +161,11 @@
             <a href="https://steamcommunity.com/id/dwscdv3" target="_blank">我的 -90%</a>
             <span class="service">Steam</span>
         </li>
-        <li>
-            <a href="https://twitter.com/Dwscdv3" target="_blank">我的 404</a>
+        <span class="comment">
+        <!-- <li>
+            <a href="https://twitter.com/Dwscdv3" target="_blank">我的【数据删除】</a>
             <span class="service">Twitter</span>
-        </li>
+        </li> -->
     </ul>
 </p>
 <p>
