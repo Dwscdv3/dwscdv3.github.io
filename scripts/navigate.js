@@ -1,4 +1,4 @@
-var mainTitle = "I'm Dwscdv3"
+var mainTitle = "I'm Dwscdv3";
 
 var commentDisabled = '<p class="cm-text-banner">评论在此页上不可用</p>';
 
@@ -6,7 +6,22 @@ var hash404 = "#/404";
 var hashHomePage = "#/about";
 var hashIndex = "#/index";
 
-var md = window.markdownit("commonmark");
+// var md = window.markdownit("commonmark");
+var md = window.markdownit({
+    html: true,
+    xhtmlOut: false,
+    breaks: false,
+    linkify: true,
+    typographer: false,
+    highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(lang, str).value;
+            } catch (__) { }
+        }
+        return '';
+    }
+});
 
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
@@ -41,14 +56,14 @@ function navigateToArticle() {
 var articleList = null;
 
 function getIndex() {
-    ajaxGet("/articles/index.json", function() {
+    ajaxGet("/articles/index.json", function () {
         if (this.readyState == XMLHttpRequest.DONE) {
             var _articleList = JSON.parse(this.responseText);
-            _articleList.forEach(function(article) {
+            _articleList.forEach(function (article) {
                 article.date = new Date(Date.parse(article.dateString));
             });
 
-            _articleList.sort(function(a, b) {
+            _articleList.sort(function (a, b) {
                 return b.date - a.date;
             });
 
@@ -104,7 +119,7 @@ function renderIndex(page) {
     if (page <= 1) {
         prevPage.classList.add("anchor-disabled");
     }
-    prevPage.addEventListener("click", function() {
+    prevPage.addEventListener("click", function () {
         if (!this.classList.contains("anchor-disabled")) {
             if (page > 1) {
                 window.location.hash = hashIndex + "/" + (page - 1);
@@ -118,7 +133,7 @@ function renderIndex(page) {
     if (page >= Math.ceil(articleList.length / itemsPerPage)) {
         nextPage.classList.add("anchor-disabled");
     }
-    nextPage.addEventListener("click", function() {
+    nextPage.addEventListener("click", function () {
         if (!this.classList.contains("anchor-disabled")) {
             window.location.hash = hashIndex + "/" + (page + 1);
         }
