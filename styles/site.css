@@ -67,6 +67,7 @@ code {
     display: inline-block;
     padding: 0.2em 0.5em;
     /*margin: 0.2em 0;*/
+    text-shadow: 0.05em 0.05em 0.05em black !important;
 }
 blockquote {
     display: inline-block;
