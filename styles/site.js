@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setBackground();
     setBlur();
 
-    sidebar = $("#left");
+    sidebar = $("header");
     Ps.initialize(sidebar, {
         wheelSpeed: 0.5,
         swipePropagation: false
