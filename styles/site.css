@@ -40,19 +40,19 @@ h1 {
     font-size: 220%;
 }
 h2 {
-    font-size: 190%;
+    font-size: 175%;
 }
 h3 {
-    font-size: 165%;
+    font-size: 150%;
 }
 h4 {
-    font-size: 145%;
+    font-size: 125%;
 }
 h5 {
-    font-size: 130%;
+    font-size: 110%;
 }
 h6 {
-    font-size: 120%;
+    font-size: 100%;
 }
 pre {
     white-space: pre-wrap;
@@ -251,7 +251,7 @@ date::before {
 
 /* ID */
 
-#footer {
+footer {
     font-size: 60%;
     position: fixed;
     right: 0;
@@ -260,7 +260,7 @@ date::before {
     text-align: right;
     pointer-events: none;
 }
-#footer span {
+footer span {
     display: inline-block;
     pointer-events: auto;
 }
@@ -307,7 +307,7 @@ date::before {
 #nickname {
     text-align: center;
 }
-#left {
+header {
     position: fixed;
     width: 14em;
     height: 100%;
@@ -317,16 +317,16 @@ date::before {
     box-sizing: border-box;
     overflow-y: hidden;
 }
-#left::-webkit-scrollbar {
+header::-webkit-scrollbar {
     width: 0;
 }
-#left ul {
+header ul {
     padding-left: 0.5em;
 }
-#left li {
+header li {
     margin-top: 0.2em;
 }
-#main {
+main {
     padding-left: 15em;
     padding-right: 1em;
     width: 100%;
