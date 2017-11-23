@@ -22,6 +22,8 @@ var md = window.markdownit({
         return '';
     }
 });
+md.linkify.tlds(".sh", false);
+md.linkify.tlds(".py", false);
 
 document.addEventListener("DOMContentLoaded", navigateToArticle);
 window.addEventListener("hashchange", navigateToArticle);
