@@ -384,6 +384,7 @@ main {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    opacity: 0.8;
     transition: all 1s;
 }
 #recentPosts {

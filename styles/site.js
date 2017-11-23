@@ -199,7 +199,7 @@ function toggleHighContrast() {
         $("#settingPanel").style.backgroundColor = "#333";
         $("#footerBackground").style.borderBottomColor = "#333";
     } else {
-        bg.style.opacity = "1";
+        bg.style.opacity = "";
         document.documentElement.style.color = "";
         $("#settingPanel").style.backgroundColor = "";
         $("#footerBackground").style.borderBottomColor = "";
