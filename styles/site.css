@@ -59,6 +59,7 @@ pre {
 }
 code {
     font-size: 0.9em;
+    font-weight: normal;
     line-height: 120%;
     border: 0.1em solid rgba(127, 127, 127, 0.5);
     border-radius: 0.5em;
