@@ -58,7 +58,8 @@
     },
     {
         "fileName": "使用Borg和MEGAcmd备份服务器数据",
-        "title": "使用Borg和MEGAcmd备份服务器数据",
+        "title": "使用 Borg 和 MEGAcmd 备份服务器数据",
+        "shortTitle": "使用 Borg 和 MEGAcmd 备份数据",
         "dateString": "2017-11-23"
     }
 ]
