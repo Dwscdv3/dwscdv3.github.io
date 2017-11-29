@@ -1,141 +1,129 @@
 <h1>
     我是谁？
-    <date>2017/11/15</date>
+    <date>2017/11/29</date>
 </h1>
 
 一百条已经删啦！换成了数据式简介<span class="hard-to-see">（但是黑历史还是能从某章鱼猫的肚子里扒出来的 2333 <del>Fuck you Git</del></span>  
 这大概是个假博客，想要认识我的话可以到传送门那里看看 ↓↓
 
 <h2>地球 Online™ 人物属性</h2>
-<p>
-    Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span>
-    <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
-    <style>
-        #rpg-attrs {
-            background-color: rgba(0, 0, 0, 0.25);
-            padding: 0.5em;
-        }
-        .rpg-attr {
-            height: 1.5em;
-            font-weight: 500;
-            text-transform: uppercase;
-            position: relative;
-            margin: 0.5em;
-        }
-        .prog {
-            height: 100%;
-        }
-        .prog-twoway {
-            width: 100%;
-            transform: scaleX(0.5);
-        }
-        .prog-twoway-inner {
-            left: 50%;
-        }
-        .prog-twoway-reverse {
-            transform: scaleX(-0.5) !important;
-        }
-        .rpg-attr-text {
-            line-height: 1.5em;
-            position: absolute;
-            top: 0;
-            margin-left: 0.25em;
-        }
-        .rpg-attr-text-left {
-            position: absolute;
-            right: calc(50% + 0.5em);
-            text-align: left;
-        }
-        .rpg-attr-text-center {
-            text-align: center;
-        }
-        .rpg-attr-text-right {
-            position: absolute;
-            left: calc(50% + 0.5em);
-            text-align: right;
-        }
-    </style>
-    <div id="rpg-attrs">
-        <div class="rpg-attr">
-            <div class="prog" style="width: 7%; background-color: #C00;"></div>
-            <span class="rpg-attr-text">Strength</span>
+<style>
+    #earthol {
+        margin-top: 0.5em;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #character {
+        margin: 0.5em;
+        flex-grow: 2;
+        font-family: "Finger Paint", fantasy;
+    }
+    #rpg-stats {
+        background-color: rgba(0, 0, 0, 0.25);
+        padding: 0.5em;
+        flex-grow: 1;
+        flex-basis: 20rem;
+        max-width: 25rem;
+    }
+    #rpg-stats>*:first-child {
+        margin-top: 0;
+    }
+    .rpg-stat {
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0.5em;
+    }
+    .prog {
+        height: 1.5em;
+        line-height: 1.5em;
+        padding-left: 0.25em;
+    }
+    .prog-twoway {
+        width: 100%;
+        transform: scaleX(0.5);
+    }
+    .prog-twoway-inner {
+        left: 50%;
+    }
+    .prog-twoway-reverse {
+        transform: scaleX(-0.5) !important;
+    }
+</style>
+<div id="earthol">
+    <div id="rpg-stats">
+        <h3>RPG-Like Stats</h3>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 7%; background-color: #C00;">Strength</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 30%; background-color: #CFC;"></div>
-            <span class="rpg-attr-text">Dexterity</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 30%; background-color: #CFC;">Dexterity</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 80%; background-color: #F60;"></div>
-            <span class="rpg-attr-text">Endurance</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 80%; background-color: #F60;">Endurance</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 72%; background-color: #09F;"></div>
-            <span class="rpg-attr-text">Intelligence</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 72%; background-color: #09F;">Intelligence</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 20%; background-color: #090;"></div>
-            <span class="rpg-attr-text">Luck</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 20%; background-color: #090;">Luck</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 25%; background-color: #906;"></div>
-            <span class="rpg-attr-text">Diligence</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 25%; background-color: #906;">Diligence</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 70%; background-color: #F36;"></div>
-            <span class="rpg-attr-text">Kindness</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 70%; background-color: #F36;">Kindness</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 65%; background-color: #066;"></div>
-            <span class="rpg-attr-text">Deviation</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 65%; background-color: #066;">Deviation</div>
         </div>
-        <hr>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 23%; background-color: #C3F;"></div>
-            <span class="rpg-attr-text">Music</span>
+        <h3>Art Skills</h3>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 23%; background-color: #C3F;">Music</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 8%; background-color: #FC0;"></div>
-            <span class="rpg-attr-text">Paint</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 8%; background-color: #FC0;">Painting</div>
         </div>
-        <hr>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 80%; background-color: #E34C26;"></div>
-            <span class="rpg-attr-text">HTML</span>
+        <h3>Programming Skills</h3>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 80%; background-color: #E34C26;">HTML</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 75%; background-color: #563D7C;"></div>
-            <span class="rpg-attr-text">CSS</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 75%; background-color: #563D7C;">CSS</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 60%; background-color: #F1E05A;"></div>
-            <span class="rpg-attr-text">JavaScript</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 60%; background-color: #F1E05A;">JavaScript</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 55%; background-color: #555;"></div>
-            <span class="rpg-attr-text">C</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 55%; background-color: #555555;">C</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 15%; background-color: #F34B7D;"></div>
-            <span class="rpg-attr-text">C++</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 15%; background-color: #F34B7D;">C++</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 65%; background-color: #178600;"></div>
-            <span class="rpg-attr-text">C# / .NET</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 67%; background-color: #178600;">C# / .NET</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 10%; background-color: #3572A5;"></div>
-            <span class="rpg-attr-text">Python</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 10%; background-color: #3572A5;">Python</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 20%; background-color: #4F5D95;"></div>
-            <span class="rpg-attr-text">PHP</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 20%; background-color: #4F5D95;">PHP</div>
         </div>
-        <div class="rpg-attr">
-            <div class="prog" style="width: 24%; background-color: #B07219;"></div>
-            <span class="rpg-attr-text">Java</span>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 24%; background-color: #B07219;">Java</div>
         </div>
     </div>
-</p>
+    <div id="character">
+        <div>Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
+        <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
+        <div style="font-size: larger;">⚧</div>
+        <div>NEET</div>
+        <div>Liberalist</div>
+        <div>Feminist</div>
+        <!-- <div>Masochist</div> -->
+        <div>......</div>
+    </div>
+</div>
 
 <h2>次元之门</h2>
 <p>
