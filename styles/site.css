@@ -54,6 +54,9 @@ h5 {
 h6 {
     font-size: 100%;
 }
+hr {
+    border: 1px solid rgba(127, 127, 127, 0.5);
+}
 pre {
     white-space: pre-wrap;
 }
