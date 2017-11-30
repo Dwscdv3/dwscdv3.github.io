@@ -1,10 +1,10 @@
 <h1>
     我是谁？
-    <date>2017/11/29</date>
+    <date>2017/11/30</date>
 </h1>
 
 一百条已经删啦！换成了数据式简介<span class="hard-to-see">（但是黑历史还是能从某章鱼猫的肚子里扒出来的 2333 <del>Fuck you Git</del></span>  
-这大概是个假博客，想要认识我的话可以到传送门那里看看 ↓↓
+这大概是个假博客，想要认识我的话可以到传送门那里看看喵 ↓↓
 
 <h2>地球 Online™ 人物属性</h2>
 <style>
@@ -16,14 +16,15 @@
     #character {
         margin: 0.5em;
         flex-grow: 2;
-        font-family: "Finger Paint", fantasy;
+        font-family: "Finger Paint", "Jokerman", fantasy;
     }
     #rpg-stats {
         background-color: rgba(0, 0, 0, 0.25);
         padding: 0.5em;
         flex-grow: 1;
-        flex-basis: 20rem;
-        max-width: 25rem;
+        min-width: 15rem;
+        font-family: "Finger Paint", "Comic Sans MS", sans-serif;
+        user-select: none;
     }
     #rpg-stats>*:first-child {
         margin-top: 0;
@@ -112,16 +113,41 @@
         <div class="rpg-stat">
             <div class="prog" style="width: 24%; background-color: #B07219;">Java</div>
         </div>
+        <h3>Human Language</h3>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 85%; background-color: #CC3300;">Chinese</div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 55%; background-color: #6600CC;">English</div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 10%; background-color: #FFBFFF;">Japanese</div>
+        </div>
+        <br>
+        <hr>
+        * This graph is absolutely not accurate.
     </div>
     <div id="character">
         <div>Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
         <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
-        <div style="font-size: larger;">⚧</div>
+        <div><span style="font-size: larger;">⚧</span></div>
         <div>NEET</div>
-        <div>Liberalist</div>
+        <hr>
         <div>Feminist</div>
+        <div>Liberalist</div>
+        <div>Idealist</div>
+        <div>Humanist</div>
+        <div><del>Fantasist</del></div>
+        <span class="comment">
         <!-- <div>Masochist</div> -->
-        <div>......</div>
+        </span>
+        <hr>
+        <div>Panic disorder</div>
+        <div>Trypophobia</div>
+        <div>Entomophobia</div>
+        <div>Telephobia</div>
+        <hr>
+        <div>To be continued...</div>
     </div>
 </div>
 
@@ -154,6 +180,7 @@
             <a href="https://twitter.com/Dwscdv3" target="_blank">我的【数据删除】</a>
             <span class="service">Twitter</span>
         </li> -->
+        </span>
     </ul>
 </p>
 <p>
