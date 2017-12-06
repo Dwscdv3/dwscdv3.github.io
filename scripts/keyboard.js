@@ -1,16 +1,16 @@
 jwerty.key("h", function() {
     NotInputingThen(function() {
-        window.location.hash = "#";
+        goTo(pathHomePage);
     })
 });
 jwerty.key("i", function() {
     NotInputingThen(function() {
-        window.location.hash = "#/index";
+        goTo(pathIndex);
     })
 });
 jwerty.key("slash/shift+slash", function() {
     NotInputingThen(function() {
-        window.location.hash = "#/shortcuts";
+        goTo("/shortcuts");
     });
 });
 
@@ -28,7 +28,7 @@ jwerty.key("alt+b", function() {
 // 彩蛋
 function jumpToEggKikkou() {
     NotInputingThen(function() {
-        window.location.hash = "#/eggs/kikkou";
+        goTo("/eggs/kikkou");
     });
 }
 
