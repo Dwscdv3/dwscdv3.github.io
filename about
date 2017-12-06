@@ -1,12 +1,12 @@
 <h1>
     我是谁？
-    <date>2017/11/30</date>
+    <date>2017/12/6</date>
 </h1>
 
 一百条已经删啦！换成了数据式简介<span class="hard-to-see">（但是黑历史还是能从某章鱼猫的肚子里扒出来的 2333 <del>Fuck you Git</del></span>  
 这大概是个假博客，想要认识我的话可以到传送门那里看看喵 ↓↓
 
-<h2>地球 Online™ 人物属性</h2>
+<h2>地球 Online™ 人物档案</h2>
 <style>
     #earthol {
         margin-top: 0.5em;
@@ -132,17 +132,21 @@
         <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
         <div><span style="font-size: larger;">⚧</span></div>
         <div>NEET</div>
+        <div>Amateur developer</div>
+        <div>Former chess player</div>
         <hr>
         <div>Feminist</div>
         <div>Liberalist</div>
         <div>Pessimist</div>
         <div>Humanist</div>
+        <div>Agnostic</div>
         <div><del>Fantasist</del></div>
         <span class="comment">
         <!-- <div>Masochist</div> -->
         </span>
         <hr>
-        <div>Severe disability</div>
+        <div>SMA type 2</div>
+        <div>Severe scoliosis</div>
         <div>Panic disorder</div>
         <div>Trypophobia</div>
         <div>Entomophobia</div>
