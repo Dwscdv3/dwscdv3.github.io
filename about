@@ -40,16 +40,6 @@
         line-height: 1.5em;
         padding-left: 0.25em;
     }
-    .prog-twoway {
-        width: 100%;
-        transform: scaleX(0.5);
-    }
-    .prog-twoway-inner {
-        left: 50%;
-    }
-    .prog-twoway-reverse {
-        transform: scaleX(-0.5) !important;
-    }
 </style>
 <div id="earthol">
     <div id="rpg-stats">
