@@ -8,7 +8,6 @@
     <meta name="description" content="这里是 Dwscdv3 的个人站，兼博客。欢迎来访！（懒癌发作中……" />
     <meta name="google-site-verification" content="PVDyEWet6DPhCx1G0m2BhrwWssaAhG3LKIcjM319zq0" />
     <meta name="msvalidate.01" content="C8087C08EB598785F62E7E594BEE5CF3" />
-    <meta name="baidu-site-verification" content="torgOnqtkK" />
     <title>I'm Dwscdv3</title>
     <!--<link rel="stylesheet" href="//comment.moe/dest/static/css/plus.css">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint">
@@ -17,16 +16,18 @@
     <link rel="stylesheet" href="fonts/material-icons.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/site.css">
-    <link rel="stylesheet" href="styles/comment.moe.css">
+    <link rel="stylesheet" href="styles/comment.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdn.bootcss.com/jwerty/0.3.2/jwerty.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.1/markdown-it.min.js"></script>
     <script src="//cdn.bootcss.com/jquery.perfect-scrollbar/0.6.16/js/perfect-scrollbar.min.js"></script>
     <script src="scripts/common.js"></script>
     <script src="styles/common.js"></script>
+    <script src="scripts/dwcomment.js"></script>
     <script src="styles/site.js"></script>
     <script src="scripts/markdown.js"></script>
     <script src="scripts/route.js"></script>
+    <script src="scripts/comment.js"></script>
     <script src="scripts/keyboard.js"></script>
 </head>
 
@@ -36,14 +37,14 @@
         <noscript>
             This site requires JavaScript to work properly.<br>
             这个站点需要 JavaScript 才能正常运转。
-        </noscript>
+        </noscript> 
         <article id="article"></article>
         <div id="comment">
             <h1 id="comment-header">
                 评论
                 <!--<a class="service" href="http://comment.moe" target="_blank">萌评论</a>-->
             </h1>
-            <div class="cm-article"></div>
+            <div id="DwComment"></div>
         </div>
     </main>
     <header>
@@ -114,7 +115,7 @@
             <div><label><input id="setting_Shadow" type="checkbox" checked>文字阴影</label></div>
             <div><label><input id="setting_Transition" type="checkbox" checked>过渡动画</label></div>
             <h4>辅助功能</h4>
-            <label><input id="setting_HighContrast" type="checkbox">提高对比度</label>
+            <label><input id="setting_HighContrast" type="checkbox">高对比度</label>
         </div>
     </div>
 

@@ -5,11 +5,11 @@ var avatarContainer;
 
 var sidebar;
 
-var $article, $cmArticle;
+var $article, $commentInfo;
 
 document.addEventListener("DOMContentLoaded", function() {
     $article = $("#article");
-    $cmArticle = $(".cm-article");
+    $commentInfo = $(".comment-info");
 
     getTips();
     $("#tip").addEventListener("mousedown", nextTip);

@@ -48,19 +48,14 @@ document.addEventListener("DOMContentLoaded", route);
 window.addEventListener("hashchange", route);
 document.addEventListener("DOMContentLoaded", getIndex);
 // Disabled due to GitHub Pages quota.
-// window.addEventListener("hashchange", getRecentPosts);
+// window.addEventListener("hashchange", getIndex);
 
 function route() {
-    var argIndex = window.location.hash.indexOf("?");
-    if (argIndex < 0) {
-        var hash = window.location.hash.substring(1);
-    } else {
-        var hash = window.location.hash.substring(1, argIndex);
-    }
+    var path = getPath();
     var handled = false;
     for (var i = 0; i < routePipeline.length; i++) {
         var rule = routePipeline[i];
-        var match = hash.match(rule.regex);
+        var match = path.match(rule.regex);
         if (match != null) {
             var args = { handled: true, match: match };
             rule.callback(args);
@@ -71,11 +66,20 @@ function route() {
         }
     }
     if (!handled) {
-        if (hash.startsWith("/")) {
+        if (path.startsWith("/")) {
             ajaxGet(window.location.hash.substring(1), renderMarkdown);
         } else {
             goTo(path404);
         }
+    }
+}
+
+function getPath() {
+    var argIndex = window.location.hash.indexOf("?");
+    if (argIndex < 0) {
+        return window.location.hash.substring(1);
+    } else {
+        return window.location.hash.substring(1, argIndex);
     }
 }
 
@@ -132,7 +136,7 @@ function renderIndex(page) {
     }
 
     document.title = "文章索引" + " - " + mainTitle;
-    $cmArticle.innerHTML = commentDisabled;
+    $commentInfo.innerHTML = commentDisabled;
     $article.innerHTML = "<h1>文章索引</h1><br>";
 
     for (var i = (page - 1) * itemsPerPage; i < min(page * itemsPerPage, articleList.length); i++) {

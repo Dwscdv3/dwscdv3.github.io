@@ -1,0 +1,28 @@
+.dwcomment-post {
+    display: flex;
+    flex-flow: row wrap;
+}
+.dwcomment-post>* {
+    flex-grow: 1;
+}
+.dwcomment-post>input[type="text"] {
+    background: none;
+    color: white;
+    margin: 0.5rem;
+    border: none;
+    border-bottom: 0.1rem solid rgba(127, 127, 127, 0.5);
+}
+.dwcomment-post>textarea {
+    flex-basis: 100%;
+    border-radius: 1rem;
+    background: rgba(127, 127, 127, 0.5);
+    padding: 0.5em;
+    min-height: 2em;
+}
+.dwcomment-info {
+    margin-bottom: 2em;
+    padding: 0.5em;
+    font-size: 2em;
+    text-align: center;
+    opacity: 0.5;
+}

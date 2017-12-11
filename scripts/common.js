@@ -58,22 +58,24 @@ function scrollToBottom(node) {
     node.scrollTop = node.scrollHeight;
 }
 
-Array.prototype.contains = function(element) {
-    return this.indexOf(element) > -1;
-};
-
-Number.prototype.pad = function(size) {
-    var s = String(this);
-    while (s.length < (size || 2)) {
-        s = "0" + s;
-    }
-    return s;
-}
-
 // Polyfills
 if (!String.prototype.startsWith) {
-    String.prototype.startsWith = function(searchString, position) {
+    String.prototype.startsWith = function (searchString, position) {
         position = position || 0;
         return this.substr(position, searchString.length) === searchString;
+    };
+}
+if (!Array.prototype.contains) {
+    Array.prototype.contains = function (element) {
+        return this.indexOf(element) > -1;
+    };
+}
+if (!Number.prototype.pad) {
+    Number.prototype.pad = function (size) {
+        var s = String(this);
+        while (s.length < (size || 2)) {
+            s = "0" + s;
+        }
+        return s;
     };
 }
