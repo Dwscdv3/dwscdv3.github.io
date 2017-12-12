@@ -72,6 +72,7 @@ function DwComment(host, node) {
                     self.node.querySelector("." + formContent).value = "";
                     self.node.querySelector("." + formMail).value = "";
                     self.node.querySelector("." + formLink).value = "";
+                    // TODO: 刷新评论区
                 }
             }
         };
@@ -114,8 +115,8 @@ function DwComment(host, node) {
                     className: formLink,
                     placeholder: "链接（可选)",
                     onfocus: function () {
-                        if (!self.value) {
-                            self.value = "https://";
+                        if (!this.value) {
+                            this.value = "https://";
                         }
                     }
                 }),
@@ -151,6 +152,7 @@ function DwComment(host, node) {
         var commentList = createElement("div", {
             className: "dwcomment-list"
         });
+        // TODO: 倒序输出
         comments.forEach(function (comment) {
             commentList.appendChild(renderComment(comment));
         });
@@ -181,6 +183,7 @@ function DwComment(host, node) {
                     className: "dwcomment-content",
                     innerHTML: md ? md.render(comment.content) : comment.content
                 })
+                // TODO: 回复与楼中楼
             ]
         });
     }
