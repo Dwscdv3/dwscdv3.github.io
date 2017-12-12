@@ -1,12 +1,14 @@
 function DwComment(host, node) {
+    const self = this;
+
     const formNickname = "dwcomment-nickname";
     const formMail = "dwcomment-mail";
     const formLink = "dwcomment-link";
     const formContent = "dwcomment-content";
 
-    this.host = host;
-    this.node = node;
-    this.threadId = undefined;
+    self.host = host;
+    self.node = node;
+    self.threadId = undefined;
 
     var md = window.markdownit ? window.markdownit({
         html: false,
@@ -28,15 +30,14 @@ function DwComment(host, node) {
         console.log("DwComment: markdown-it detected, comments will be parsed.")
     }
 
-    this.load = function () {
-        var self = this;
-        if (!this.threadId) {
-            console.log("Thread " + this.threadId);
-            renderUnavailable.bind(self)();
+    self.load = function () {
+        if (!self.threadId) {
+            console.log("Thread " + self.threadId);
+            renderUnavailable();
         } else {
-            this.threadId = parseInt(this.threadId);
-            if (this.threadId != NaN) {
-                ajaxGet(host + "/Threads/" + this.threadId, function () {
+            self.threadId = parseInt(self.threadId);
+            if (self.threadId != NaN) {
+                ajaxGet(host + "/Threads/" + self.threadId, function () {
                     if (this.readyState == XMLHttpRequest.DONE &&
                         this.status >= 200 &&
                         this.status < 300) {
@@ -49,7 +50,7 @@ function DwComment(host, node) {
         }
     }
 
-    this.post = function (nickname, content, mail, link, forwardTo) {
+    self.post = function (nickname, content, mail, link, forwardTo) {
         if (!mail || !mail.trim()) {
             mail = undefined;
         }
@@ -61,21 +62,41 @@ function DwComment(host, node) {
             forwardTo = undefined;
         }
         var req = new XMLHttpRequest();
-        req.open("POST", host + "/Threads/" + this.threadId);
+        req.open("POST", host + "/Threads/" + self.threadId);
         req.setRequestHeader("Content-type", "application/json");
+        req.onreadystatechange = function () {
+            if (this.readyState == XMLHttpRequest.DONE) {
+                // TODO: 发送成功与失败提醒
+                if (this.status == 200) {
+                    self.node.querySelector("." + formNickname).value = "";
+                    self.node.querySelector("." + formContent).value = "";
+                    self.node.querySelector("." + formMail).value = "";
+                    self.node.querySelector("." + formLink).value = "";
+                }
+            }
+        };
         req.send(JSON.stringify({
             nickname: nickname,
             content: content,
             mail: mail,
-            link: link, 
+            link: link,
             forwardTo: forwardTo
         }));
     }
 
     function renderDwComment(comments) {
-        this.node.innerHTML = "";
-        this.node.appendChild(createElement("form", {
+        self.node.innerHTML = "";
+        self.node.appendChild(createElement("form", {
             className: "dwcomment-form",
+            onsubmit: function () {
+                self.post(
+                    self.node.querySelector("." + formNickname).value,
+                    self.node.querySelector("." + formContent).value,
+                    self.node.querySelector("." + formMail).value,
+                    self.node.querySelector("." + formLink).value
+                );
+                return false;
+            },
             children: [
                 createElement("input", {
                     type: "text",
@@ -93,8 +114,8 @@ function DwComment(host, node) {
                     className: formLink,
                     placeholder: "链接（可选)",
                     onfocus: function () {
-                        if (!this.value) {
-                            this.value = "https://";
+                        if (!self.value) {
+                            self.value = "https://";
                         }
                     }
                 }),
@@ -107,8 +128,7 @@ function DwComment(host, node) {
                 createElement("div", {
                     className: "dwcomment-markdownit-status",
                     innerHTML: md ?
-                        '✔ 已加载 markdown-it' :
-                        '✖ 未找到 <a href="//github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>'
+                        '✔ 已加载 markdown-it' : '✖ 未找到 <a href="//github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>'
                 }),
                 createElement("label", {
                     className: "dwcomment-keep-field-label",
@@ -117,33 +137,25 @@ function DwComment(host, node) {
                             type: "checkbox",
                             className: "dwcomment-keep-field"
                         }),
-                        "记住我的凭据（尚未实现）"
+                        "记住我（尚未实现）"
                     ]
                 }),
                 createElement("button", {
-                    type: "button",
+                    type: "submit",
                     className: "dwcomment-publish",
-                    textContent: "发布",
-                    onclick: function () {
-                        this.post(
-                            this.node.querySelector("." + formNickname).value,
-                            this.node.querySelector("." + formContent).value,
-                            this.node.querySelector("." + formMail).value,
-                            this.node.querySelector("." + formLink).value
-                        );
-                    }.bind(this)
+                    textContent: "发布"
                 })
             ]
         }));
-        this.node.appendChild(createElement("hr"));
+        self.node.appendChild(createElement("hr"));
         var commentList = createElement("div", {
             className: "dwcomment-list"
         });
         comments.forEach(function (comment) {
             commentList.appendChild(renderComment(comment));
         });
-        this.node.appendChild(commentList);
-        this.node.appendChild(createElement("div", {
+        self.node.appendChild(commentList);
+        self.node.appendChild(createElement("div", {
             className: "dwcomment-info",
             textContent: comments.length + " 条评论"
         }));
@@ -174,8 +186,8 @@ function DwComment(host, node) {
     }
 
     function renderUnavailable() {
-        this.node.innerHTML = "";
-        this.node.appendChild(createElement("div", {
+        self.node.innerHTML = "";
+        self.node.appendChild(createElement("div", {
             className: "dwcomment-info",
             textContent: "评论在此页不可用"
         }));
