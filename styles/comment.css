@@ -1,23 +1,101 @@
-.dwcomment-post {
+.dwcomment-form {
     display: flex;
     flex-flow: row wrap;
 }
-.dwcomment-post>* {
+.dwcomment-form>* {
     flex-grow: 1;
 }
-.dwcomment-post>input[type="text"] {
+.dwcomment-form>input[type="text"] {
     background: none;
     color: white;
     margin: 0.5rem;
     border: none;
-    border-bottom: 0.1rem solid rgba(127, 127, 127, 0.5);
+    border-bottom: 2px solid rgba(127, 127, 127, 0.5);
+    transition: border-color 0.3s;
 }
-.dwcomment-post>textarea {
+.dwcomment-form>input[type="text"]:focus {
+    border-bottom-color: rgba(255, 127, 191, 1);
+}
+.dwcomment-form>textarea {
     flex-basis: 100%;
     border-radius: 1rem;
     background: rgba(127, 127, 127, 0.5);
+    margin: 0.5rem;
+    border: 2px solid rgba(127, 127, 127, 0.5);
     padding: 0.5em;
     min-height: 2em;
+    transition: border-color 0.3s;
+}
+.dwcomment-form>textarea:focus {
+    border-color: rgba(255, 127, 191, 1) !important;
+}
+.dwcomment-form *::-webkit-input-placeholder {
+    color: rgba(159, 159, 159, 1);
+    text-shadow: 1px 1px 1px black;
+    transition: color 0.3s;
+}
+.dwcomment-form *::-moz-placeholder {
+    color: rgba(159, 159, 159, 1);
+    text-shadow: 1px 1px 1px black;
+    transition: color 0.3s;
+}
+.dwcomment-form *:-ms-input-placeholder {
+    color: rgba(159, 159, 159, 1);
+    text-shadow: 1px 1px 1px black;
+    transition: color 0.3s;
+}
+.dwcomment-form *::placeholder {
+    color: rgba(159, 159, 159, 1);
+    text-shadow: 1px 1px 1px black;
+    transition: color 0.3s;
+}
+.dwcomment-form *:focus::-webkit-input-placeholder {
+    color: rgba(255, 127, 191, 1);
+}
+.dwcomment-form *:focus::-moz-placeholder {
+    color: rgba(255, 127, 191, 1);
+}
+.dwcomment-form *:focus:-ms-input-placeholder {
+    color: rgba(255, 127, 191, 1);
+}
+.dwcomment-form *:focus::placeholder {
+    color: rgba(255, 127, 191, 1);
+}
+.dwcomment-form input:not(:placeholder-shown) {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+.dwcomment-form textarea:not(:placeholder-shown) {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.dwcomment-form>.dwcomment-markdownit-status {
+    align-self: center;
+}
+.dwcomment-form>.dwcomment-keep-field-label {
+    flex-grow: 0;
+    align-self: center;
+}
+.dwcomment-form>.dwcomment-publish {
+    flex-grow: 0;
+}
+.dwcomment-form button {
+    background: rgba(127, 127, 127, 0.5);
+    color: rgba(255, 255, 255, 1);
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    outline: none;
+    transition: all 0.2s;
+}
+.dwcomment-form button:hover,
+.dwcomment-form button:focus {
+    background: rgba(191, 191, 191, 0.5);
+    color: rgba(255, 127, 255, 1);
+}
+.dwcomment-form button:active {
+    background: rgba(63, 63, 63, 0.5);
 }
 .dwcomment-info {
     margin-bottom: 2em;
@@ -25,4 +103,11 @@
     font-size: 2em;
     text-align: center;
     opacity: 0.5;
+}
+.dwcomment-time {
+    opacity: 0.5;
+}
+.dwcomment-time::before {
+    content: "·";
+    padding: 0 0.5em;
 }

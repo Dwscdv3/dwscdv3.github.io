@@ -9,38 +9,45 @@ var pathArticles = "/articles";
 
 var routePipeline = [{
     regex: /(^$|^\/$)/,
-    callback: function () {
-        goTo(pathHomePage, true);
+    callback: function (args) {
+        args.redirect = pathHomePage;
     }
 }, {
     regex: new RegExp("^" + pathIndex + "(/(\\d+)?)?$"),
     callback: function (args) {
-        waitForIndex(function () {
-            if (!args.match[2]) {
-                goTo(pathIndex + "/1", true);
-                return;
-            }
-            var page = parseInt(args.match[2]);
-            if (page > 0) {
-                renderIndex(page);
-            } else {
-                goTo(path404);
-            }
-        });
+        if (!args.match[2]) {
+            args.redirect = pathIndex + "/1";
+            return;
+        }
+        var page = parseInt(args.match[2]);
+        if (page > 0) {
+            renderIndex(page);
+        } else {
+            args.redirect = path404;
+        }
     }
 }, {
     regex: new RegExp("^" + pathArticles + "/@(\\d+)$"),
     callback: function (args) {
-        waitForIndex(function () {
-            var article = articleList.find(function (article) {
-                return article.id == args.match[1];
-            });
-            if (article) {
-                goTo(pathArticles + "/" + article.fileName, true);
-            } else {
-                goTo(path404);
-            }
-        });
+        var id = args.match[1];
+        switch (id) {
+            case "1":
+                args.redirect = pathHomePage;
+                break;
+            case "2":
+                args.redirect = "/friendly-link";
+                break;
+            default:
+                var article = articleList.find(function (article) {
+                    return article.id == id;
+                });
+                if (article) {
+                    args.redirect = pathArticles + "/" + article.fileName;
+                } else {
+                    args.redirect = path404;
+                }
+                break;
+        }
     }
 }];
 
@@ -53,25 +60,39 @@ document.addEventListener("DOMContentLoaded", getIndex);
 function route() {
     var path = getPath();
     var handled = false;
-    for (var i = 0; i < routePipeline.length; i++) {
-        var rule = routePipeline[i];
-        var match = path.match(rule.regex);
-        if (match != null) {
-            var args = { handled: true, match: match };
-            rule.callback(args);
-            if (args.handled) {
-                handled = true;
-                break;
+    var redirected = false;
+    waitForIndex(function () {
+        for (var i = 0; i < routePipeline.length; i++) {
+            var rule = routePipeline[i];
+            var match = path.match(rule.regex);
+            if (match != null) {
+                var args = {
+                    handled: true,
+                    match: match,
+                    redirect: null
+                };
+                rule.callback(args);
+                if (args.handled) {
+                    handled = true;
+                    if (args.redirect) {
+                        redirected = true;
+                        goTo(args.redirect, true);
+                    }
+                    break;
+                }
             }
         }
-    }
-    if (!handled) {
-        if (path.startsWith("/")) {
-            ajaxGet(window.location.hash.substring(1), renderMarkdown);
-        } else {
-            goTo(path404);
+        if (!handled) {
+            if (path.startsWith("/")) {
+                ajaxGet(window.location.hash.substring(1), renderMarkdown);
+            } else {
+                goTo(path404);
+            }
         }
-    }
+        if (!redirected) {
+            renderComment();
+        }
+    });
 }
 
 function getPath() {
@@ -136,7 +157,6 @@ function renderIndex(page) {
     }
 
     document.title = "文章索引" + " - " + mainTitle;
-    $commentInfo.innerHTML = commentDisabled;
     $article.innerHTML = "<h1>文章索引</h1><br>";
 
     for (var i = (page - 1) * itemsPerPage; i < min(page * itemsPerPage, articleList.length); i++) {

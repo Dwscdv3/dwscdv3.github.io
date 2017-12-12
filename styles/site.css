@@ -85,7 +85,7 @@ code {
 blockquote {
     display: inline-block;
     padding: 0.2em 0.2em 0.2em 0.5em;
-    border-left: 0.2em solid rgba(255, 191, 255, 0.8);
+    border-left: 0.2em solid rgba(255, 127, 255, 1);
     background-color: rgba(63, 63, 63, 0.33);
 }
 blockquote>p {
