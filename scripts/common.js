@@ -1,4 +1,7 @@
 function ajaxGet(url, callback) {
+    if (url[0] == '/') {
+        url = url.substring(1);
+    }
     var req = new XMLHttpRequest();
     req.onreadystatechange = callback;
     req.open("GET", url);
