@@ -45,7 +45,7 @@
     <div id="rpg-stats">
         <h3>RPG-Like Stats</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 7%; background-color: #C00;">Strength</div>
+            <div class="prog" style="width: 6%; background-color: #C00;">Strength</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 30%; background-color: #CFC;">Dexterity</div>
@@ -63,17 +63,17 @@
             <div class="prog" style="width: 25%; background-color: #906;">Diligence</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 70%; background-color: #F36;">Kindness</div>
+            <div class="prog" style="width: 75%; background-color: #F36;">Kindness</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 65%; background-color: #066;">Deviation</div>
+            <div class="prog" style="width: 70%; background-color: #066;">Deviation</div>
         </div>
         <h3>Art Skills</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 23%; background-color: #C3F;">Music</div>
+            <div class="prog" style="width: 20%; background-color: #C3F;">Music</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 8%; background-color: #FC0;">Painting</div>
+            <div class="prog" style="width: 25%; background-color: #FC0;">Painting</div>
         </div>
         <h3>Programming Skills</h3>
         <div class="rpg-stat">
@@ -92,23 +92,23 @@
             <div class="prog" style="width: 15%; background-color: #F34B7D;">C++</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 67%; background-color: #178600;">C# / .NET</div>
+            <div class="prog" style="width: 70%; background-color: #178600;">C# / .NET</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 10%; background-color: #3572A5;">Python</div>
+            <div class="prog" style="width: 20%; background-color: #3572A5;">Python</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 20%; background-color: #4F5D95;">PHP</div>
+            <div class="prog" style="width: 25%; background-color: #4F5D95;">PHP</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 24%; background-color: #B07219;">Java</div>
+            <div class="prog" style="width: 18%; background-color: #B07219;">Java</div>
         </div>
         <h3>Human Language</h3>
         <div class="rpg-stat">
             <div class="prog" style="width: 85%; background-color: #CC3300;">Chinese</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 55%; background-color: #6600CC;">English</div>
+            <div class="prog" style="width: 60%; background-color: #6600CC;">English</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 10%; background-color: #FFBFFF;">Japanese</div>
@@ -120,10 +120,14 @@
     <div id="character">
         <div>Lv. 17 (<span id="exp">?</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
         <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
-        <div><span style="font-size: larger;">⚧</span></div>
+        <div><span style="font-size: larger;">⚧</span> INFP</div>
         <div>NEET</div>
         <div>Amateur developer</div>
-        <div>Former chess player</div>
+        <hr>
+        <div>Windows & Debian</div>
+        <div>Chrome & Firefox</div>
+        <div>Visual Studio & VS Code</div>
+        <div>Braces in new line</div>
         <hr>
         <div>Feminist</div>
         <div>Liberalist</div>
@@ -136,11 +140,11 @@
         </span>
         <hr>
         <div>SMA type 2</div>
-        <div>Severe scoliosis</div>
+        <div>Scoliosis</div>
+        <div>Social anxiety disorder</div>
         <div>Panic disorder</div>
         <div>Trypophobia</div>
         <div>Entomophobia</div>
-        <div>Telephobia</div>
         <hr>
         <div>To be continued...</div>
     </div>
@@ -169,6 +173,18 @@
         <li>
             <a href="https://steamcommunity.com/id/dwscdv3" target="_blank">我的 -90%</a>
             <span class="service">Steam</span>
+        </li>
+        <li>
+            <a href="mailto:dwscdv3@hotmail.com" target="_blank">正常的联系方式</a>
+            <span class="service">Email (Outlook.com)</span>
+        </li>
+        <li>
+            <a href="mailto:dwscdv3@qq.com" target="_blank">备用的联系方式</a>
+            <span class="service">Email (QQ邮箱)</span>
+        </li>
+        <li>
+            <a href="https://t.me/Dwscdv3" target="_blank">404 的联系方式</a>
+            <span class="service">Telegram</span>
         </li>
         <span class="comment">
         <!-- <li>
