@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function renderComment() {
-    var path = getPath();
+    var path = decodeURIComponent(getPath());
     var handled = false;
     var threadId = 0;
     waitForIndex(function () {
