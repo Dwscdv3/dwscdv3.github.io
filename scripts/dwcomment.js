@@ -27,7 +27,7 @@ function DwComment(host, node) {
     }) : null;
 
     if (md) {
-        console.log("DwComment: markdown-it detected, comments will be parsed.")
+        console.log("DwComment: markdown-it detected, comments will be parsed.");
     }
 
     self.load = function () {
@@ -36,7 +36,7 @@ function DwComment(host, node) {
             renderUnavailable();
         } else {
             self.threadId = parseInt(self.threadId);
-            if (self.threadId != NaN) {
+            if (!isNaN(self.threadId)) {
                 ajaxGet(host + "/Threads/" + self.threadId, function () {
                     if (this.readyState == XMLHttpRequest.DONE &&
                         this.status >= 200 &&
@@ -48,7 +48,7 @@ function DwComment(host, node) {
                 });
             }
         }
-    }
+    };
 
     self.post = function (nickname, content, mail, link, forwardTo) {
         if (!mail || !mail.trim()) {
@@ -83,7 +83,7 @@ function DwComment(host, node) {
             link: link,
             forwardTo: forwardTo
         }));
-    }
+    };
 
     function renderDwComment(comments) {
         self.node.innerHTML = "";
