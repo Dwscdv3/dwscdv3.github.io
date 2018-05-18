@@ -1,12 +1,12 @@
 jwerty.key("h", function() {
     NotInputingThen(function() {
         goTo(pathHomePage);
-    })
+    });
 });
 jwerty.key("i", function() {
     NotInputingThen(function() {
         goTo(pathIndex);
-    })
+    });
 });
 jwerty.key("slash/shift+slash", function() {
     NotInputingThen(function() {
