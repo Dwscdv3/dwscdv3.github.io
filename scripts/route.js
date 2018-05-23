@@ -84,7 +84,7 @@ function route() {
         }
         if (!handled) {
             if (path.startsWith("/")) {
-                ajaxGet(window.location.hash.substring(1), renderMarkdown);
+                ajaxGet(window.location.hash.substring(1) + ".md", renderMarkdown);
             } else {
                 goTo(path404);
             }
