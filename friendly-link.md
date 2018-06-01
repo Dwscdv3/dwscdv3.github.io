@@ -123,7 +123,7 @@
         </div>
     </div>
     <div class="friendly-link-box">
-        <a href="http://www.pc426.com/forum-150-27.html">
+        <a href="http://www.pc426.com">
             <img class="friendly-link-avatar" src="//tva2.sinaimg.cn/crop.1262.2.716.716.180/4a954ac6gw1ewupfj4320j21kw0zk1eb.jpg">
             <h2>guanyuhan426</h2>
         </a>
@@ -153,7 +153,7 @@
         <!--<div class="friendly-link-info"></div>-->
     </div>
     <div class="friendly-link-box">
-        <a href="//im.dimpurr.com">
+        <a href="http://im.dimpurr.com">
             <img class="friendly-link-avatar" src="//tva3.sinaimg.cn/large/5ac786bbjw8eujhhwyr0oj20qx0qxk0n.jpg">
             <h2>Dimpurr Cheny</h2>
         </a>
