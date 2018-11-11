@@ -408,14 +408,14 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 1rem;
+    margin: 1rem;
     height: calc(100% - 150px);
     box-sizing: border-box;
     pointer-events: none;
 }
 #settingIcon {
-    float: right;
-    position: relative;
+    position: absolute;
+    right: 0;
     font-size: 2em;
     z-index: 1;
     pointer-events: initial;
@@ -424,7 +424,7 @@ main {
 #settingPanel {
     font-size: 75%;
     padding: 0.5em 1em 1em;
-    width: 12rem;
+    min-width: 10rem;
     max-height: 100%;
     box-sizing: border-box;
     box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.5);
@@ -432,6 +432,7 @@ main {
     background-color: rgba(0, 0, 0, 0.6);
     pointer-events: initial;
     transition: transform 0.5s, background-color 1s;
+    overflow: auto;
 }
 #settingHeader {
     margin: 0;
