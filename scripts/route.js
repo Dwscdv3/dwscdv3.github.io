@@ -126,7 +126,7 @@ function getIndex() {
             });
 
             _articleList.sort(function (a, b) {
-                return b.date - a.date;
+                return b.id - a.id;
             });
 
             articleList = _articleList;
