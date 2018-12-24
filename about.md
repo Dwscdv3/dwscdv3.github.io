@@ -133,6 +133,7 @@
         <hr>
         <div>Liberalist</div>
         <div>Feminist</div>
+        <div>Pessimist</div>
         <div>Agnostic</div>
         <div><del>Fantasist</del></div>
         <span class="comment">
