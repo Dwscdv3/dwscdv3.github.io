@@ -131,6 +131,7 @@
         <div>Amateur translator</div>
         <h3>Tags</h3>
         <hr>
+        <div>Introverted</div>
         <div>Liberalist</div>
         <div>Feminist</div>
         <div>Pessimist</div>
