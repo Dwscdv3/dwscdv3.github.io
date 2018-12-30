@@ -110,6 +110,23 @@ a:active {
     text-shadow: 1px 1px 2px red;
     transition: all 0.3s;
 }
+table {
+    border-collapse: collapse;
+}
+table>thead>tr:last-child>th {
+    font-weight: bold;
+    border-bottom: 3px solid rgba(127, 127, 127, 0.5);
+}
+table>tbody>tr>td {
+    border-top: 1px solid rgba(127, 127, 127, 0.5);
+}
+table>tbody>tr:nth-of-type(odd)>td {
+    background-color: rgba(127, 127, 127, 0.2);
+}
+table td,
+table th {
+    padding: 0.4rem 1rem;
+}
 button,
 button::before {
     color: rgba(223, 223, 255, 0.8);
