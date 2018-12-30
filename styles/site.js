@@ -1,3 +1,5 @@
+var Ps = null;
+
 var PATH_BACKGROUND_DESKTOP = "/images/backgrounds/desktop/";
 var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 
@@ -96,10 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setBlur();
 
     sidebar = $("header");
-    Ps.initialize(sidebar, {
-        wheelSpeed: 0.5,
-        swipePropagation: false
-    });
+    Ps = new PerfectScrollbar(sidebar);
 });
 window.addEventListener("resize", function() {
     Ps.update(sidebar);
