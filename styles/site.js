@@ -98,10 +98,12 @@ document.addEventListener("DOMContentLoaded", function() {
     setBlur();
 
     sidebar = $("header");
-    Ps = new PerfectScrollbar(sidebar);
+    Ps = new PerfectScrollbar(sidebar, {
+        wheelPropagation: false,
+    });
 });
 window.addEventListener("resize", function() {
-    Ps.update(sidebar);
+    Ps.update();
     setBlur();
 });
 
@@ -125,7 +127,7 @@ function nextTip() {
     } else {
         scrollToBottom($("#left"));
     }
-    Ps.update(sidebar);
+    Ps.update();
 }
 
 function setBackground() {
