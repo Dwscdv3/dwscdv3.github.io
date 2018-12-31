@@ -159,6 +159,16 @@ date::before {
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
 }
+article>h1:first-of-type {
+    /* To avoid the setting button
+     *
+     * + content 2rem
+     * + padding 0.2em * 2 == 0.4rem * 2 == 0.8rem
+     * + parent margin 2rem
+     * - main margin 1rem
+     */
+    margin-right: 3.8rem;
+}
 
 /* 类 */
 
