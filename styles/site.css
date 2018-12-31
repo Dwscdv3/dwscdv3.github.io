@@ -348,6 +348,14 @@ header {
     top: 0;
     box-sizing: border-box;
     overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.ps__rail-y {
+    position: fixed;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: unset !important;
+    left: calc(14em - 15px);
 }
 header::-webkit-scrollbar {
     width: 0;

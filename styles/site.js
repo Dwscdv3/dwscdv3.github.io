@@ -6,6 +6,7 @@ var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 var avatarContainer;
 
 var sidebar;
+var sidebarScrollTop = 0;
 
 var $article, $commentInfo;
 
@@ -98,6 +99,25 @@ document.addEventListener("DOMContentLoaded", function() {
     setBlur();
 
     sidebar = $("header");
+    Object.defineProperty(sidebar, "nativeScrollTop", Object.getOwnPropertyDescriptor(Element.prototype, "scrollTop"));
+    Object.defineProperty(sidebar, "scrollTop", {
+        enumerable: true,
+        get: function() {
+            return sidebarScrollTop;
+        },
+        set: function(value) {
+            if (getComputedStyle(sidebar)["scroll-behavior"] == "smooth"
+             && value != sidebarScrollTop
+             && Math.abs(value - sidebarScrollTop) < 10) {
+                sidebar.style.scrollBehavior = "auto";
+            }
+            var newScrollTop = Math.max(0, Math.min(value, sidebar.scrollHeight - sidebar.offsetHeight));
+            if (newScrollTop != sidebarScrollTop) {
+                sidebarScrollTop = newScrollTop;
+                sidebar.nativeScrollTop = sidebarScrollTop;
+            }
+        },
+    });
     Ps = new PerfectScrollbar(sidebar, {
         wheelPropagation: false,
     });
