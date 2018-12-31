@@ -103,9 +103,10 @@ document.addEventListener("DOMContentLoaded", function() {
     Object.defineProperty(sidebar, "scrollTop", {
         enumerable: true,
         get: function() {
-            return sidebarScrollTop;
+            return sidebar.nativeScrollTop;
         },
         set: function(value) {
+            value += sidebarScrollTop - sidebar.nativeScrollTop;
             if (getComputedStyle(sidebar)["scroll-behavior"] == "smooth"
              && value != sidebarScrollTop
              && Math.abs(value - sidebarScrollTop) < 10) {
@@ -118,6 +119,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         },
     });
+
+    // Firefox has a weird bug which cause scrolling won't work with this CSS, disable it.
+    if (navigator.userAgent.toLowerCase().indexOf("firefox") >= 0) {
+        sidebar.style.scrollBehavior = "auto";
+    }
+
     Ps = new PerfectScrollbar(sidebar, {
         wheelPropagation: false,
     });
