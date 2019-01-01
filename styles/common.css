@@ -1,18 +1,19 @@
 .hard-to-see {
-    opacity: 0.05;
-    transition: opacity 2s ease-in;
+    opacity: 0.05 !important;
+    transition: opacity 2s ease-in !important;
 }
 .hard-to-see:hover {
-    opacity: unset;
+    opacity: unset !important;
 }
 .harder-to-see {
-    opacity: 0.01;
-    transition: opacity 5s ease-in;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.01 !important;
+    transition: opacity 10s ease-in !important;
+    /* background-color: white; */
+    /* color: white; */
+    /* text-shadow: none; */
 }
 .harder-to-see:hover {
-    opacity: unset;
+    opacity: 0.1 !important;
 }
 .visible {
     visibility: visible !important;
