@@ -152,7 +152,7 @@ function nextTip() {
     if (tipFirstShow) {
         tipFirstShow = false;
     } else {
-        scrollToBottom($("#left"));
+        scrollToBottom($("header"));
     }
     Ps.update();
 }
