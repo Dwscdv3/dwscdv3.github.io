@@ -92,6 +92,10 @@ function route() {
         if (!redirected) {
             renderComment();
         }
+
+        if (window.innerWidth < AltLayoutWidth) {
+            $("#navCollapse").click();
+        }
     });
 }
 
