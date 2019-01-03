@@ -88,6 +88,18 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#setting_HighContrast").addEventListener("click", function() {
         toggleHighContrast();
     });
+    $("#navCollapse").addEventListener("click", function() {
+        $("header").classList.add("hide");
+        $("main").classList.add("expand");
+        setTimeout(function() {
+            $("#navExpand").classList.remove("hide");
+        }, 1000);
+    });
+    $("#navExpand").addEventListener("click", function() {
+        $("header").classList.remove("hide");
+        $("main").classList.remove("expand");
+        $("#navExpand").classList.add("hide");
+    });
 
     IsEdgeThen(function() {
         $("html").style.overflow = "hidden";

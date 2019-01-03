@@ -356,6 +356,10 @@ header {
     box-sizing: border-box;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    transition: transform 1s;
+}
+header.hide {
+    transform: translateX(-14em);
 }
 header>.ps__rail-y {
     position: fixed;
@@ -374,12 +378,16 @@ header li {
     margin-top: 0.2em;
 }
 main {
-    margin-left: 14em;
-    padding: 0 1em;
+    margin-left: 13em;
+    padding: 0 1em 0 2em;
     box-sizing: border-box;
     overflow-x: hidden;
     -webkit-user-select: text;
     user-select: text;
+    transition: margin 1s;
+}
+main.expand {
+    margin-left: 0;
 }
 #tip {
     margin-top: 3em;
@@ -468,6 +476,36 @@ main {
 #settingHeader {
     margin: 0;
     font-weight: normal;
+}
+#navCollapseContainer {
+    position: absolute;
+    left: 50%;
+}
+#navCollapse {
+    position: relative;
+    left: -50%;
+    z-index: 2;
+    font-size: 150%;
+    transform: translateY(-0.35em);
+}
+#navExpand {
+    position: fixed;
+    top: 50%;
+    transform: translate(-55%, -50%);
+    padding: 0.1em 0 0.1em 1em;
+    border-radius: 1000px;
+    font-size: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: transform 0.2s;
+}
+#navExpand.hide {
+    transform: translate(-100%, -50%);
+}
+#navExpand:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#navExpand:active {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* 关键帧 */
