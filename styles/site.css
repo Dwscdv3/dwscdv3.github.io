@@ -121,7 +121,7 @@ table>tbody>tr>td {
     border-top: 1px solid rgba(127, 127, 127, 0.5);
 }
 table>tbody>tr:nth-of-type(odd)>td {
-    background-color: rgba(127, 127, 127, 0.2);
+    background-color: rgba(127, 127, 127, 0.25);
 }
 table td,
 table th {
@@ -319,8 +319,8 @@ footer span {
 }
 #avatarContainer {
     position: relative;
-    width: calc(12em - 16px);
-    height: calc(12em - 16px);
+    width: 11.333em;
+    height: 11.333em;
     margin: 0 auto;
     margin-top: 3em;
     border-radius: 50%;
@@ -337,6 +337,8 @@ footer span {
 }
 #avatarController>svg,
 #avatarController>object[type="image/svg+xml"] {
+    width: 12em;
+    height: 14em;
     position: absolute;
 }
 #headband {
@@ -571,6 +573,9 @@ main.expand {
 }
 
 @media (max-width: 979px) {
+    html {
+        font-size: 100%;
+    }
     h1 {
         font-size: 200%;
     }
