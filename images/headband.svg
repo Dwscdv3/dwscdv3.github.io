@@ -1,0 +1,19 @@
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     width="288px" height="336px" viewBox="0 5 288 336">
+
+    <!-- 参考线 -->
+    <!-- <rect width="288" height="352" fill="lightgray" />
+    <circle cx="144" cy="208" r="140"
+            stroke="red" fill="transparent" opacity="0.2" />
+    <line x1="0" y1="300" x2="288" y2="300"
+          stroke="red" opacity="0.2" />
+    <line x1="144" y1="0" x2="144" y2="352"
+          stroke="red" opacity="0.2" /> -->
+
+    <path id="Headband"
+          d="M 38.5 300
+             A 140 140 0 1 1 249.5 300
+             A 136 136 0 1 0 38.5 300"
+          stroke="black" fill="white" />
+</svg>

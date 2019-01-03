@@ -203,24 +203,24 @@ article>h1:first-of-type {
     position: absolute;
 }
 .clockwise-in {
-    animation: rotate-in-clockwise 300ms linear;
+    animation: rotate-in-clockwise 300ms;
     opacity: 1;
     -webkit-transform: rotate(0);
     transform: rotate(0);
 }
 .counter-clockwise-in {
-    animation: rotate-in-counter-clockwise 300ms linear;
+    animation: rotate-in-counter-clockwise 300ms;
     opacity: 1;
     -webkit-transform: rotate(0);
     transform: rotate(0);
 }
 .clockwise-out {
-    animation: rotate-out-clockwise 300ms linear;
+    animation: rotate-out-clockwise 300ms;
     -webkit-transform: rotate(0);
     transform: rotate(0);
 }
 .counter-clockwise-out {
-    animation: rotate-out-counter-clockwise 300ms linear;
+    animation: rotate-out-counter-clockwise 300ms;
     -webkit-transform: rotate(0);
     transform: rotate(0);
 }
@@ -291,7 +291,7 @@ article>h1:first-of-type {
     transform: translateY(calc(-100% - 2rem));
 }
 
-/* ID */
+/* 单个元素 */
 
 footer {
     font-size: 60%;
@@ -318,9 +318,11 @@ footer span {
     transition: border-bottom-color 1s;
 }
 #avatarContainer {
-    position: absolute;
-    width: 12em;
-    height: 12em;
+    position: relative;
+    width: calc(12em - 16px);
+    height: calc(12em - 16px);
+    margin: 0 auto;
+    margin-top: 3em;
     border-radius: 50%;
     overflow: hidden;
     /* WebKit Hack */
@@ -329,22 +331,17 @@ footer span {
 #avatarController {
     display: inline-block;
     width: 100%;
-    height: 12em;
+    height: 15em;
     position: relative;
-    font-family: "Times New Roman", serif;
+    animation: avatar-floating 2s ease-in-out infinite alternate;
 }
-#avatarPrevious {
-    width: 1.2em;
-    height: 1.2em;
-    line-height: 1.2em;
+#avatarController>svg,
+#avatarController>object[type="image/svg+xml"] {
     position: absolute;
 }
-#avatarNext {
-    width: 1.2em;
-    height: 1.2em;
-    line-height: 1.2em;
-    position: absolute;
-    right: 0;
+#headband {
+    z-index: 1;
+    pointer-events: none;
 }
 #nickname {
     text-align: center;
@@ -377,9 +374,8 @@ header li {
     margin-top: 0.2em;
 }
 main {
-    padding-left: 15em;
-    padding-right: 1em;
-    width: 100%;
+    margin-left: 14em;
+    padding: 0 1em;
     box-sizing: border-box;
     overflow-x: hidden;
     -webkit-user-select: text;
@@ -522,5 +518,13 @@ main {
         -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
         opacity: 0;
+    }
+}
+@keyframes avatar-floating {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-15px);
     }
 }

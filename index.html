@@ -46,9 +46,38 @@
     </main>
     <header>
         <div id="avatarController">
+            <object id="headband" data="images/headband.svg" type="image/svg+xml" tabindex="-1"></object>
+            <svg version="1.1"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 id="catEars"
+                 width="288px" height="336px" viewBox="0 5 288 336">
+                <defs>
+                    <g id="SVG_Ear">
+                        <path d="M 28 130
+                                 Q 10 35 35 15
+                                 L 90 79
+                                 A 140 140 0 0 0 28 130"
+                              stroke="black" fill="#5bcefa" />
+                        <path d="M 54 101
+                                 Q 45 55 59 43
+                                 L 90 79
+                                 A 140 140 0 0 0 54 101"
+                              stroke="black" fill="#f5a9b8" />
+                        <path d="M 90 79
+                                 L 35 15
+                                 Q 60 40 121 70
+                                 A 140 140 0 0 0 90 79"
+                              stroke="black" fill="white" />
+                    </g>
+                </defs>
+                <use id="LeftEar" xlink:href="#SVG_Ear" />
+                <use id="RightEar" xlink:href="#SVG_Ear" transform="translate(288 0) scale(-1 1)" />
+            </svg>
+            <!-- <object id="catEars" data="images/cat-ears.svg" type="image/svg+xml"></object> -->
             <div id="avatarContainer">
-                <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png" alt="Yuuki (2016-5-16, 自制).png">
                 <img class="avatar-img" src="images/avatars/Cirno (Legacy).jpg" alt="Cirno (Legacy).jpg">
+                <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png" alt="Yuuki (2016-5-16, 自制).png">
                 <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg" alt="Yui (2016-9-7).jpg">
                 <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png" alt="汐音 (2016-2-27, 自制).png">
                 <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg" alt="可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
@@ -58,8 +87,6 @@
                     <a id="homeIcon" class="material-icons" href="#">home</a>
                 </div>
             </div>
-            <span id="avatarPrevious" class="text-button">←</span>
-            <span id="avatarNext" class="text-button">→</span>
         </div>
         <div id="nickname"><strong>Dwscdv3</strong></div>
         <p>一个居住在互联网里的人。</p>
@@ -100,7 +127,7 @@
         <div id="footerBackground"></div>
         <span><a href="#/thanks">致谢名单</a></span><br>
         <span>Created: 2016/12/1</span><br>
-        <span>Last modified: 2018/12/25</span><br>
+        <span>Last modified: 2019/1/3</span><br>
         <span>由 Dwscdv3 的中二能量强力驱动</span>
     </footer>
     <div id="setting">

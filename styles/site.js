@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })();
 
-    $("#avatarPrevious").addEventListener("click", function() {
+    $("#LeftEar").addEventListener("click", function() {
         avatarContainer.Previous();
     });
-    $("#avatarNext").addEventListener("click", function() {
+    $("#RightEar").addEventListener("click", function() {
         avatarContainer.Next();
     });
 
