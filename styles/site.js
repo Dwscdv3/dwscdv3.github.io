@@ -108,6 +108,13 @@ document.addEventListener("DOMContentLoaded", function() {
             $("header").classList.remove("hide");
         }, 200);
     });
+    if (window.innerWidth < 980) {
+        toggleTransition();
+        $("header").classList.add("hide");
+        $("main").classList.add("expand");
+        $("#navExpand").classList.remove("hide");
+        toggleTransition();
+    }
 
     IsEdgeThen(function() {
         $("html").style.overflow = "hidden";
