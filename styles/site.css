@@ -356,7 +356,7 @@ header {
     box-sizing: border-box;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 header.hide {
     transform: translateX(-14em);

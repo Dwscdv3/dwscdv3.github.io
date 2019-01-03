@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 $("main").classList.remove("hide");
                 $("#navExpand").classList.remove("hide");
             }, 200);
-        }, 800);
+        }, 300);
     });
     $("#navExpand").addEventListener("click", function() {
         $("main").classList.add("hide");
