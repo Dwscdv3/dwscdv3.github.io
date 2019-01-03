@@ -440,7 +440,8 @@ main.expand {
     background-position: center;
     background-size: cover;
     opacity: 0.8;
-    transition: opacity, filter 1s;
+    transition-property: opacity, filter;
+    transition-duration: 1s;
 }
 #recentPosts {
     font-size: 75%;
