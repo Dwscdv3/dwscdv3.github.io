@@ -1,3 +1,5 @@
+var AltLayoutWidth = 980;
+
 var Ps = null;
 
 var PATH_BACKGROUND_DESKTOP = "/images/backgrounds/desktop/";
@@ -90,30 +92,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     $("#navCollapse").addEventListener("click", function() {
         $("header").classList.add("hide");
-        setTimeout(function() {
-            $("main").classList.add("hide");
+        if (window.innerWidth >= AltLayoutWidth) {
             setTimeout(function() {
-                $("main").classList.add("expand");
-                $("main").classList.remove("hide");
+                $("main").classList.add("hide");
+                setTimeout(function() {
+                    $("main").classList.add("expand");
+                    $("main").classList.remove("hide");
+                    $("#navExpand").classList.remove("hide");
+                }, 200);
+            }, 300);
+        } else {
+            $("main").classList.add("expand");
+            setTimeout(function() {
                 $("#navExpand").classList.remove("hide");
-            }, 200);
-        }, 300);
+            }, 500);
+        }
     });
     $("#navExpand").addEventListener("click", function() {
-        $("main").classList.add("hide");
-        $("#navExpand").classList.add("hide");
-        setTimeout(function() {
+        if (window.innerWidth >= AltLayoutWidth) {
+            $("main").classList.add("hide");
+            $("#navExpand").classList.add("hide");
+            setTimeout(function() {
+                $("main").classList.remove("expand");
+                $("main").classList.remove("hide");
+                $("header").classList.remove("hide");
+            }, 200);
+        } else {
             $("main").classList.remove("expand");
-            $("main").classList.remove("hide");
             $("header").classList.remove("hide");
-        }, 200);
+            $("#navExpand").classList.add("hide");
+        }
     });
-    if (window.innerWidth < 980) {
+    $("main").addEventListener("click", function(event) {
+        if (window.innerWidth < AltLayoutWidth && !$("header").classList.contains("hide")) {
+            event.preventDefault();
+            $("#navCollapse").click();
+        }
+    }, true);
+    if (window.innerWidth < AltLayoutWidth) {
         toggleTransition();
         $("header").classList.add("hide");
         $("main").classList.add("expand");
         $("#navExpand").classList.remove("hide");
-        toggleTransition();
+        setTimeout(function() {
+            toggleTransition();
+        }, 50);
     }
 
     IsEdgeThen(function() {
