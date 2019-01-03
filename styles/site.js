@@ -90,15 +90,23 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     $("#navCollapse").addEventListener("click", function() {
         $("header").classList.add("hide");
-        $("main").classList.add("expand");
         setTimeout(function() {
-            $("#navExpand").classList.remove("hide");
-        }, 1000);
+            $("main").classList.add("hide");
+            setTimeout(function() {
+                $("main").classList.add("expand");
+                $("main").classList.remove("hide");
+                $("#navExpand").classList.remove("hide");
+            }, 200);
+        }, 800);
     });
     $("#navExpand").addEventListener("click", function() {
-        $("header").classList.remove("hide");
-        $("main").classList.remove("expand");
+        $("main").classList.add("hide");
         $("#navExpand").classList.add("hide");
+        setTimeout(function() {
+            $("main").classList.remove("expand");
+            $("main").classList.remove("hide");
+            $("header").classList.remove("hide");
+        }, 200);
     });
 
     IsEdgeThen(function() {
