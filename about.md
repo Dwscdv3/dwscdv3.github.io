@@ -134,6 +134,7 @@
         <div>Introverted</div>
         <div>Liberalist</div>
         <div>Feminist</div>
+        <div>Perfectionist</div>
         <div>Pessimist</div>
         <div>Agnostic</div>
         <div><del>Fantasist</del></div>
