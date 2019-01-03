@@ -574,6 +574,11 @@ main.expand {
     h1 {
         font-size: 200%;
     }
+    table {
+        display: block;
+        max-width: 100%;
+        overflow: auto;
+    }
     date {
         display: block;
         margin-top: 0.5em;
