@@ -353,7 +353,7 @@ header {
     flex-direction: column;
     position: fixed;
     width: 14em;
-    height: 100vh;
+    height: 100%;
     /*flex: 10em 0 0;*/
     top: 0;
     box-sizing: border-box;
@@ -656,7 +656,7 @@ main.expand {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     }
     main {
-        height: 100vh;
+        height: 100%;
         padding-left: 1em;
         margin-left: 0;
         opacity: 0.2;
