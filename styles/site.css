@@ -349,26 +349,19 @@ footer span {
     text-align: center;
 }
 header {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     width: 14em;
     height: 100vh;
     /*flex: 10em 0 0;*/
-    padding: 1em;
     top: 0;
     box-sizing: border-box;
     overflow-y: hidden;
-    scroll-behavior: smooth;
     transition: transform 0.5s;
 }
 header.hide {
     transform: translateX(-14em);
-}
-header>.ps__rail-y {
-    position: fixed;
-    top: 0 !important;
-    height: 100vh !important;
-    right: unset !important;
-    left: calc(14em - 15px) !important;
 }
 header::-webkit-scrollbar {
     width: 0;
@@ -378,6 +371,62 @@ header ul {
 }
 header li {
     margin-top: 0.2em;
+}
+#masterNav {
+    position: relative;
+    height: 100%;
+    padding: 1em 1em 4em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-mask: linear-gradient(to bottom, transparent, black 4em, black calc(100% - 4em), transparent 100%);
+    mask: linear-gradient(to bottom, transparent, black 4em, black calc(100% - 4em), transparent 100%);
+}
+#masterNavContainer {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: hidden;
+    transition-property: flex-grow, margin-bottom, opacity;
+    transition-duration: 0.5s, 0.5s, 0.4s;
+}
+#masterNavContainer.collapse {
+    flex-grow: 0;
+    margin-bottom: 3em;
+    opacity: 0;
+}
+#titlePanelHeader {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+#titlePanelHeader:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#titlePanelHeader:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#titlePanelHeaderText {
+    flex-grow: 1;
+    margin-left: 0.5em;
+    font-weight: normal;
+}
+#titlePanelExpandIcon {
+    margin-left: auto;
+}
+#titlePanel {
+    font-size: 70%;
+    height: 0;
+}
+#titlePanel ol {
+    counter-reset: item;
+    padding-left: 1em;
+}
+#titlePanel li {
+    display: block;
+}
+#titlePanel li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
 }
 main {
     margin-left: 13em;
@@ -484,15 +533,16 @@ main.expand {
     font-weight: normal;
 }
 #navCollapseContainer {
-    position: absolute;
-    left: 50%;
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    width: 14em;
+    text-align: center;
+    margin: 0.5em 0;
 }
 #navCollapse {
-    position: relative;
-    left: -50%;
-    z-index: 2;
+    pointer-events: all;
     font-size: 150%;
-    transform: translateY(-0.35em);
 }
 #navExpand {
     position: fixed;

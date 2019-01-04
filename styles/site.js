@@ -8,7 +8,6 @@ var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
 var avatarContainer;
 
 var sidebar;
-var sidebarScrollTop = 0;
 
 var $article, $commentInfo;
 
@@ -129,6 +128,13 @@ document.addEventListener("DOMContentLoaded", function() {
             $("#navCollapse").click();
         }
     }, true);
+    $("#titlePanelHeader").addEventListener("click", function(event) {
+        $("#masterNavContainer").classList.toggle("collapse");
+        $("#titlePanelExpandIcon").textContent =
+            $("#titlePanelExpandIcon").textContent == "expand_less"
+                ? "close"
+                : "expand_less";
+    });
     if (window.innerWidth < AltLayoutWidth) {
         toggleTransition();
         $("header").classList.add("hide");
@@ -148,27 +154,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setBackground();
     setBlur();
 
-    sidebar = $("header");
-    Object.defineProperty(sidebar, "nativeScrollTop", Object.getOwnPropertyDescriptor(Element.prototype, "scrollTop"));
-    Object.defineProperty(sidebar, "scrollTop", {
-        enumerable: true,
-        get: function() {
-            return sidebar.nativeScrollTop;
-        },
-        set: function(value) {
-            value += sidebarScrollTop - sidebar.nativeScrollTop;
-            if (getComputedStyle(sidebar)["scroll-behavior"] == "smooth"
-             && value != sidebarScrollTop
-             && Math.abs(value - sidebarScrollTop) < 10) {
-                sidebar.style.scrollBehavior = "auto";
-            }
-            var newScrollTop = Math.max(0, Math.min(value, sidebar.scrollHeight - sidebar.offsetHeight));
-            if (newScrollTop != sidebarScrollTop) {
-                sidebarScrollTop = newScrollTop;
-                sidebar.nativeScrollTop = sidebarScrollTop;
-            }
-        },
-    });
+    sidebar = $("#masterNav");
+    smoothScrollingHack(sidebar);
+    titlePanel = $("#titlePanel");
+    smoothScrollingHack(titlePanel);
 
     // Firefox has a weird bug which cause scrolling won't work with this CSS, disable it.
     if (navigator.userAgent.toLowerCase().indexOf("firefox") >= 0) {
@@ -185,6 +174,30 @@ window.addEventListener("resize", function() {
 });
 
 var tips = null;
+
+function smoothScrollingHack(element) {
+    var actualScrollTop = 0;
+    Object.defineProperty(element, "nativeScrollTop", Object.getOwnPropertyDescriptor(Element.prototype, "scrollTop"));
+    Object.defineProperty(element, "scrollTop", {
+        enumerable: true,
+        get: function () {
+            return element.nativeScrollTop;
+        },
+        set: function (value) {
+            value += actualScrollTop - element.nativeScrollTop;
+            if (getComputedStyle(element)["scroll-behavior"] == "smooth"
+                && value != actualScrollTop
+                && Math.abs(value - actualScrollTop) < 10) {
+                    element.style.scrollBehavior = "auto";
+            }
+            var newScrollTop = Math.max(0, Math.min(value, element.scrollHeight - element.offsetHeight));
+            if (newScrollTop != actualScrollTop) {
+                actualScrollTop = newScrollTop;
+                element.nativeScrollTop = actualScrollTop;
+            }
+        },
+    });
+}
 
 function getTips() {
     ajaxGet("/tips", function() {

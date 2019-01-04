@@ -47,84 +47,117 @@
     </main>
     <header>
         <div id="navCollapseContainer">
-            <div id="navCollapse" class="material-icons text-button">close</div>
+            <div id="navCollapse" class="material-icons text-button">chevron_left</div>
         </div>
-        <div id="avatarController">
-            <object id="headband" data="images/headband.svg" type="image/svg+xml" tabindex="-1"></object>
-            <svg version="1.1"
-                 xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 id="catEars"
-                 width="288px" height="336px" viewBox="0 5 288 336">
-                <defs>
-                    <g id="SVG_Ear">
-                        <path d="M 28 130
-                                 Q 10 35 35 15
-                                 L 90 79
-                                 A 140 140 0 0 0 28 130"
-                              stroke="black" fill="#5bcefa" />
-                        <path d="M 54 101
-                                 Q 45 55 59 43
-                                 L 90 79
-                                 A 140 140 0 0 0 54 101"
-                              stroke="black" fill="#f5a9b8" />
-                        <path d="M 90 79
-                                 L 35 15
-                                 Q 60 40 121 70
-                                 A 140 140 0 0 0 90 79"
-                              stroke="black" fill="white" />
-                    </g>
-                </defs>
-                <use id="LeftEar" xlink:href="#SVG_Ear" />
-                <use id="RightEar" xlink:href="#SVG_Ear" transform="translate(288 0) scale(-1 1)" />
-            </svg>
-            <!-- <object id="catEars" data="images/cat-ears.svg" type="image/svg+xml"></object> -->
-            <div id="avatarContainer">
-                <img class="avatar-img" src="images/avatars/Cirno (Legacy).jpg" alt="Cirno (Legacy).jpg">
-                <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png" alt="Yuuki (2016-5-16, 自制).png">
-                <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg" alt="Yui (2016-9-7).jpg">
-                <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png" alt="汐音 (2016-2-27, 自制).png">
-                <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg" alt="可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
-                <img class="avatar-img" src="images/avatars/天体的秩序-圆盘 (2016-1-27).jpg" alt="天体的秩序-圆盘 (2016-1-27).jpg">
-                <!--<img class="avatar-img" src="images/avatars/Chrome？ (2016-10-24, 自制, 副头像).png">-->
-                <div id="homeButton">
-                    <a id="homeIcon" class="material-icons" href="#">home</a>
+        <div id="masterNavContainer">
+            <div id="masterNav">
+                <div id="avatarController">
+                    <object id="headband" data="images/headband.svg" type="image/svg+xml" tabindex="-1"></object>
+                    <svg version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="catEars"
+                        width="288px" height="336px" viewBox="0 5 288 336">
+                        <defs>
+                            <g id="SVG_Ear">
+                                <path d="M 28 130
+                                        Q 10 35 35 15
+                                        L 90 79
+                                        A 140 140 0 0 0 28 130"
+                                    stroke="black" fill="#5bcefa" />
+                                <path d="M 54 101
+                                        Q 45 55 59 43
+                                        L 90 79
+                                        A 140 140 0 0 0 54 101"
+                                    stroke="black" fill="#f5a9b8" />
+                                <path d="M 90 79
+                                        L 35 15
+                                        Q 60 40 121 70
+                                        A 140 140 0 0 0 90 79"
+                                    stroke="black" fill="white" />
+                            </g>
+                        </defs>
+                        <use id="LeftEar" xlink:href="#SVG_Ear" />
+                        <use id="RightEar" xlink:href="#SVG_Ear" transform="translate(288 0) scale(-1 1)" />
+                    </svg>
+                    <!-- <object id="catEars" data="images/cat-ears.svg" type="image/svg+xml"></object> -->
+                    <div id="avatarContainer">
+                        <img class="avatar-img" src="images/avatars/Cirno (Legacy).jpg" alt="Cirno (Legacy).jpg">
+                        <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png" alt="Yuuki (2016-5-16, 自制).png">
+                        <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg" alt="Yui (2016-9-7).jpg">
+                        <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png" alt="汐音 (2016-2-27, 自制).png">
+                        <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg" alt="可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
+                        <img class="avatar-img" src="images/avatars/天体的秩序-圆盘 (2016-1-27).jpg" alt="天体的秩序-圆盘 (2016-1-27).jpg">
+                        <!--<img class="avatar-img" src="images/avatars/Chrome？ (2016-10-24, 自制, 副头像).png">-->
+                        <div id="homeButton">
+                            <a id="homeIcon" class="material-icons" href="#">home</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="nickname"><strong>Dwscdv3</strong></div>
+                <p>一个居住在互联网里的人。</p>
+
+                <nav class="navigate-list">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="#/index">文章索引</a></li>
+                        <li><a href="#/friendly-link">有趣的人们</a></li>
+                        <li><a href="#/shortcuts">快捷键</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="navigate-list">
+                    <h4>最近发表的文章</h4>
+                    <ul id="recentPosts"></ul>
+                </nav>
+
+                <p id="tip"></p>
+
+                <h4>背景图</h4>
+                <div id="bginfo">
+                    <div>
+                        <span id="bginfo-label-title" class="bginfo-label">标题</span>
+                        <span id="bginfo-title" class="bginfo-content"></span>
+                    </div>
+                    <div>
+                        <span id="bginfo-label-author" class="bginfo-label">作者</span>
+                        <span id="bginfo-author" class="bginfo-content"></span>
+                    </div>
+                    <div>
+                        <span id="bginfo-label-src" class="bginfo-label">来源</span>
+                        <span id="bginfo-src" class="bginfo-content"></span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="nickname"><strong>Dwscdv3</strong></div>
-        <p>一个居住在互联网里的人。</p>
-
-        <nav class="navigate-list">
-            <h4>导航</h4>
-            <ul>
-                <li><a href="#/index">文章索引</a></li>
-                <li><a href="#/friendly-link">有趣的人们</a></li>
-                <li><a href="#/shortcuts">快捷键</a></li>
-            </ul>
-        </nav>
-
-        <nav class="navigate-list">
-            <h4>最近发表的文章</h4>
-            <ul id="recentPosts"></ul>
-        </nav>
-
-        <p id="tip"></p>
-
-        <h4>背景图</h4>
-        <div id="bginfo">
-            <div>
-                <span id="bginfo-label-title" class="bginfo-label">标题</span>
-                <span id="bginfo-title" class="bginfo-content"></span>
-            </div>
-            <div>
-                <span id="bginfo-label-author" class="bginfo-label">作者</span>
-                <span id="bginfo-author" class="bginfo-content"></span>
-            </div>
-            <div>
-                <span id="bginfo-label-src" class="bginfo-label">来源</span>
-                <span id="bginfo-src" class="bginfo-content"></span>
-            </div>
+        <div id="titlePanelHeader">
+            <span class="material-icons">format_list_bulleted</span>
+            <span id="titlePanelHeaderText">本文导航</span>
+            <span id="titlePanelExpandIcon" class="material-icons">expand_less</span>
+        </div>
+        <div id="titlePanel">
+            <ol>
+                <li><a href="#">Mocked Title #1</a></li>
+                <li>
+                    <a href="#">Mocked Title #1</a>
+                    <ol>
+                        <li><a href="#">Mocked Title #2</a></li>
+                        <li><a href="#">Mocked Title #2</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">Mocked Title #1</a>
+                    <ol>
+                        <li>
+                            <a href="#">Mocked Title #2</a>
+                            <ol>
+                                <li><a href="#">Mocked Title #3</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Mocked Title #2</a></li>
+                    </ol>
+                </li>
+            </ol>
         </div>
     </header>
     <div id="navExpand" class="material-icons text-button hide">chevron_right</div>
