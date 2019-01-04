@@ -3,7 +3,7 @@
 html {
     font-family: "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
     font-size: 150%;
-    font-weight: lighter;
+    font-weight: 300;
     text-shadow: 1px 1px 2px black !important;
     color: rgba(255, 255, 255, 0.8);
     cursor: default;
