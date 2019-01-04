@@ -131,16 +131,14 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#titlePanelHeader").addEventListener("click", function(event) {
         $("#masterNavContainer").classList.toggle("collapse");
         if ($("#masterNavContainer").classList.contains("collapse")) {
+            $("#titlePanelExpandIcon").textContent = "close";
             setTimeout(function() {
                 $("#titlePanel").classList.toggle("expand");
             }, 500);
         } else {
+            $("#titlePanelExpandIcon").textContent = "expand_less";
             $("#titlePanel").classList.toggle("expand");
         }
-        $("#titlePanelExpandIcon").textContent =
-            $("#titlePanelExpandIcon").textContent == "expand_less"
-                ? "close"
-                : "expand_less";
     });
     if (window.innerWidth < AltLayoutWidth) {
         toggleTransition();
