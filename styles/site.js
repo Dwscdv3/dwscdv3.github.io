@@ -1,6 +1,6 @@
 var AltLayoutWidth = 980;
 
-var Ps = null;
+var Ps = null, PsTitle = null;
 
 var PATH_BACKGROUND_DESKTOP = "/images/backgrounds/desktop/";
 var PATH_BACKGROUND_MOBILE = "/images/backgrounds/mobile/";
@@ -130,6 +130,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }, true);
     $("#titlePanelHeader").addEventListener("click", function(event) {
         $("#masterNavContainer").classList.toggle("collapse");
+        if ($("#masterNavContainer").classList.contains("collapse")) {
+            setTimeout(function() {
+                $("#titlePanel").classList.toggle("expand");
+            }, 500);
+        } else {
+            $("#titlePanel").classList.toggle("expand");
+        }
         $("#titlePanelExpandIcon").textContent =
             $("#titlePanelExpandIcon").textContent == "expand_less"
                 ? "close"
@@ -162,14 +169,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Firefox has a weird bug which cause scrolling won't work with this CSS, disable it.
     if (navigator.userAgent.toLowerCase().indexOf("firefox") >= 0) {
         sidebar.style.scrollBehavior = "auto";
+        titlePanel.style.scrollBehavior = "auto";
     }
 
     Ps = new PerfectScrollbar(sidebar, {
         wheelPropagation: false,
     });
+    PsTitle = new PerfectScrollbar(titlePanel, {
+        wheelPropagation: false,
+    });
 });
 window.addEventListener("resize", function() {
     Ps.update();
+    PsTitle.update();
     setBlur();
 });
 

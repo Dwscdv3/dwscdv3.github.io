@@ -384,6 +384,7 @@ header li {
 #masterNavContainer {
     position: relative;
     flex-grow: 1;
+    flex-shrink: 0;
     flex-basis: 0;
     overflow: hidden;
     transition-property: flex-grow, margin-bottom, opacity, transform;
@@ -397,6 +398,7 @@ header li {
 }
 #titlePanelHeader {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     padding: 0.5em;
 }
@@ -415,8 +417,15 @@ header li {
     margin-left: auto;
 }
 #titlePanel {
-    font-size: 70%;
+    position: relative;
     height: 0;
+    font-size: 70%;
+    scroll-behavior: smooth;
+    overflow: visible !important;
+}
+#titlePanel.expand {
+    height: unset;
+    overflow: hidden !important;
 }
 #titlePanel ol {
     counter-reset: item;
