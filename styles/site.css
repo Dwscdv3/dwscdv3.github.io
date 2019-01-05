@@ -345,6 +345,37 @@ footer span {
     z-index: 1;
     pointer-events: none;
 }
+#catEars * {
+    transition: fill 0.1s, stroke 0.1s;
+}
+#LeftEar:hover>*,
+#RightEar:hover>* {
+    stroke: #808080;
+}
+#LeftEar:hover>#outer,
+#RightEar:hover>#outer {
+    fill: #ade7fd;
+}
+#LeftEar:hover>#inner,
+#RightEar:hover>#inner {
+    fill: #fad4dc;
+}
+#LeftEar:active>*,
+#RightEar:active>* {
+    stroke: #000000;
+}
+#LeftEar:active>#outer,
+#RightEar:active>#outer {
+    fill: #2e677c;
+}
+#LeftEar:active>#inner,
+#RightEar:active>#inner {
+    fill: #7b555c;
+}
+#LeftEar:active>#auricle,
+#RightEar:active>#auricle {
+    fill: #808080;
+}
 #nickname {
     text-align: center;
 }
