@@ -84,7 +84,7 @@ function route() {
         }
         if (!handled) {
             if (path.startsWith("/")) {
-                ajaxGet(window.location.hash.split("?")[0].substring(1) + ".md", renderMarkdown);
+                ajaxGet(getPath() + ".md", renderMarkdown);
             } else {
                 goTo(path404);
             }
@@ -100,23 +100,18 @@ function route() {
 }
 
 function getPath() {
-    var argIndex = window.location.hash.indexOf("?");
-    if (argIndex < 0) {
-        return window.location.hash.substring(1);
-    } else {
-        return window.location.hash.substring(1, argIndex);
-    }
+    return location.hash.split(/[\?§]+/)[0].substring(1);
 }
 
 function goTo(path, preserveArgs) {
     var args = "";
     if (preserveArgs) {
-        var argIndex = window.location.hash.indexOf("?");
+        var argIndex = Math.min(location.hash.indexOf("?"), location.hash.indexOf("§"));
         if (argIndex >= 0) {
-            args = window.location.hash.substring(argIndex);
+            args = location.hash.substring(argIndex);
         }
     }
-    window.location.hash = "#" + path + args;
+    location.hash = "#" + path + args;
 }
 
 var articleList = null;
