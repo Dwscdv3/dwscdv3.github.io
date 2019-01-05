@@ -1,4 +1,3 @@
-// var md = window.markdownit("commonmark");
 var md = window.markdownit({
     html: true,
     xhtmlOut: false,
@@ -24,11 +23,6 @@ function renderMarkdown() {
             replaceLinksToTargetBlank($article);
             window.scrollTo(0, 0);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
-            // try {
-            //     萌评.运转();
-            // } catch (ex) {
-            //     $cmArticle.innerHTML = '<div class="cm-text-banner">萌评论挂了</div>';
-            // }
             activateScript($article);
         } else if (this.status >= 400) {
             $article.innerHTML = md.render("# 404: Not found");
