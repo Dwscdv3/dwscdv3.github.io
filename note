@@ -1,0 +1,7 @@
+URL hash:
+    #<Path>(\?<Arguments>)?(§<Title>)?
+Path:
+    (/<Text>)+
+    /@<Number>
+Arguments:
+    <Key>=<Value>(&<Key>=<Value>)*

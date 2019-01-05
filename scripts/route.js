@@ -100,7 +100,7 @@ function route() {
 }
 
 function getPath() {
-    return location.hash.split(/[\?§]+/)[0].substring(1);
+    return decodeURIComponent(location.hash).split(/[\?§]+/)[0].substring(1);
 }
 
 function goTo(path, preserveArgs) {

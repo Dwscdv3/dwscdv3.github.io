@@ -459,15 +459,25 @@ header li {
     overflow: hidden !important;
 }
 #titlePanel ol {
+    padding-left: 0.8em;
+}
+#titlePanel>ol ol {
     counter-reset: item;
-    padding-left: 1em;
 }
 #titlePanel li {
     display: block;
 }
-#titlePanel li:before {
-    content: counters(item, ".") ". ";
+#titlePanel>ol>li::before {
+    content: "";
+}
+#titlePanel li::before {
+    content: counters(item, ".") " ";
     counter-increment: item;
+    font-family: Consolas, monospace;
+    font-size: 80%;
+}
+#titlePanel li::first-letter {
+    font-size: 125%;
 }
 main {
     margin-left: 13em;

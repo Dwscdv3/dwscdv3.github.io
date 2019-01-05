@@ -24,6 +24,7 @@ function renderMarkdown() {
             window.scrollTo(0, 0);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
             activateScript($article);
+            TitleNavigation.load();
         } else if (this.status >= 400) {
             $article.innerHTML = md.render("# 404: Not found");
             document.title = "404" + " - " + mainTitle;
