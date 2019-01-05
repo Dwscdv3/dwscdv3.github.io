@@ -222,12 +222,12 @@ var tipFirstShow = true;
 
 function nextTip() {
     $("#tip").innerHTML = tips[Math.floor(Math.random() * tips.length)];
+    Ps.update();
     if (tipFirstShow) {
         tipFirstShow = false;
     } else {
-        scrollToBottom($("header"));
+        scrollToBottom($("#masterNav"));
     }
-    Ps.update();
 }
 
 function setBackground() {
