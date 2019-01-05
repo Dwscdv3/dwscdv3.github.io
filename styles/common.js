@@ -1,10 +1,3 @@
-var $ = function(queryString) {
-    return document.querySelector(queryString);
-};
-var $$ = function(queryString) {
-    return document.querySelectorAll(queryString);
-};
-
 document.addEventListener("DOMContentLoaded", function() {
     setAttrAll($$(".blackbar"), "title", "你知道的太多了");
 });

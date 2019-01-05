@@ -1,3 +1,11 @@
+var $ = function(queryString) {
+    return document.querySelector(queryString);
+};
+
+var $$ = function(queryString) {
+    return document.querySelectorAll(queryString);
+};
+
 function ajaxGet(url, callback) {
     if (url[0] == '/') {
         url = url.substring(1);
