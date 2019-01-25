@@ -54,7 +54,9 @@ var routePipeline = [{
 }];
 
 document.addEventListener("DOMContentLoaded", route);
-window.addEventListener("hashchange", route);
+if (useHashbang) {
+    window.addEventListener("hashchange", route);
+}
 document.addEventListener("DOMContentLoaded", getIndex);
 document.addEventListener("DOMContentLoaded", setLinkForPushStateSPA);
 // Disabled due to GitHub Pages quota.

@@ -39,8 +39,8 @@ var TitleNavigation = (function () {
         var li = document.createElement("li");
         var a = document.createElement("a");
         var hash = location.hash;
-        if (hash.indexOf("§") >= 0) {
-            hash = hash.substr(0, hash.indexOf("§"));
+        if (hash.lastIndexOf("#") > 0) {
+            hash = hash.substr(0, hash.lastIndexOf("#"));
         }
         a.innerHTML = header.innerHTML;
         Array.from(a.children).forEach(function (element) {
@@ -48,7 +48,11 @@ var TitleNavigation = (function () {
                 a.removeChild(element);
             }
         });
-        a.href = hash + "§" + encodeURIComponent(a.textContent.trim());
+        if (useHashbang) {
+            a.href = hash + "#" + encodeURIComponent(a.textContent.trim());
+        } else {
+            a.href = location.origin + location.pathname + location.search + "#" + encodeURIComponent(a.textContent.trim());
+        }
         li.appendChild(a);
         return li;
     }
