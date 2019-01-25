@@ -21,6 +21,7 @@ function renderMarkdown() {
         if (this.status >= 200 && this.status < 400) {
             $article.innerHTML = md.render(this.responseText);
             replaceLinksToTargetBlank($article);
+            setLinkForPushStateSPA();
             window.scrollTo(0, 0);
             document.title = $("h1").childNodes[0].textContent + " - " + mainTitle;
             activateScript($article);

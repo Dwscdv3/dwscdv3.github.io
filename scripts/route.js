@@ -1,5 +1,7 @@
 var mainTitle = "Dwscdv3";
 
+var useHashbang = ["dwscdv3.github.io", "www2.dwscdv3.com", "gh-pages.dwscdv3.com"].indexOf(location.hostname) >= 0;
+
 var commentDisabled = '<p class="cm-text-banner">评论在此页上不可用</p>';
 
 var path404 = "/404";
@@ -54,11 +56,12 @@ var routePipeline = [{
 document.addEventListener("DOMContentLoaded", route);
 window.addEventListener("hashchange", route);
 document.addEventListener("DOMContentLoaded", getIndex);
+document.addEventListener("DOMContentLoaded", setLinkForPushStateSPA);
 // Disabled due to GitHub Pages quota.
 // window.addEventListener("hashchange", getIndex);
 
 function route() {
-    var path = getPath();
+    var path = getURLParts().path;
     var handled = false;
     var redirected = false;
     waitForIndex(function () {
@@ -84,7 +87,7 @@ function route() {
         }
         if (!handled) {
             if (path.startsWith("/")) {
-                ajaxGet(getPath() + ".md", renderMarkdown);
+                ajaxGet(getURLParts().path + ".md", renderMarkdown);
             } else {
                 goTo(path404);
             }
@@ -99,19 +102,61 @@ function route() {
     });
 }
 
-function getPath() {
-    return decodeURIComponent(location.hash).split(/[\?§]+/)[0].substring(1);
-}
-
-function goTo(path, preserveArgs) {
-    var args = "";
-    if (preserveArgs) {
-        var argIndex = Math.min(location.hash.indexOf("?"), location.hash.indexOf("§"));
-        if (argIndex >= 0) {
-            args = location.hash.substring(argIndex);
+/**
+ * path: "/xxx" (URL decoded, with leading '/')  
+ * options: { key1: "value1", key2: "value2", ... }  
+ * rawOptions: "?key1=value1&key2=value2&..."  
+ * hash: "xxx" (URL decoded, without leading '#')  
+ */
+function getURLParts() {
+    if (useHashbang) {
+        var options, hash = "";
+        var hashIndex = location.hash.lastIndexOf("#");
+        if (hashIndex > 1) {  // location.hash[0] is always '#', [1] is always path
+            hash = decodeURIComponent(location.hash.substring(hashIndex + 1));
+        } else {
+            hashIndex = 0x7FFFFFFF;
+        }
+        var optIndex = location.hash.indexOf("?");
+        if (optIndex > 1) {
+            options = location.hash.substring(optIndex, hashIndex);
+        } else {
+            optIndex = 0x7FFFFFFF;
+        }
+        return {
+            path: decodeURIComponent(location.hash.substring(1, Math.min(hashIndex, optIndex))),
+            options: getOptions(options),
+            rawOptions: options,
+            hash: hash,
+        };
+    } else {
+        return {
+            path: decodeURIComponent(location.pathname),
+            options: getOptions(location.search),
+            rawOptions: location.search,
+            hash: decodeURIComponent(location.hash.substring(1)),
         }
     }
-    location.hash = "#" + path + args;
+}
+
+function getOptions(query) {
+    if (!query) return {};
+    var obj = {};
+    query.substring(1).split("&").forEach(function (elem) {
+        var pair = elem.split("=");
+        obj[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+    });
+    return obj;
+}
+
+function goTo(path, preserveOptions) {
+    var options = preserveOptions ? getURLParts().rawOptions : "";
+    if (useHashbang) {
+        location.hash = "#" + path + options;
+    } else {
+        history.pushState(null, path, path + options);
+        route();
+    }
 }
 
 var articleList = null;
@@ -204,6 +249,8 @@ function renderIndex(page) {
 
     $article.appendChild(pageControl);
 
+    setLinkForPushStateSPA();
+
     window.scrollTo(0, 0);
 }
 
@@ -218,5 +265,20 @@ function renderRecentArticlesList() {
         li.appendChild(a);
         recentPostsList.appendChild(li);
     }
+    setLinkForPushStateSPA();
     Ps.update();
+}
+
+function setLinkForPushStateSPA() {
+    if (!useHashbang) {
+        Array.from(document.querySelectorAll("a")).forEach(function (element) {
+            if (element.getAttribute("href").startsWith("#")) {
+                element.setAttribute("href", element.getAttribute("href").substring(1));
+                element.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    goTo(this.href);
+                });
+            }
+        });
+    }
 }

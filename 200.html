@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="icon.png" />
+    <base href="/">
+    <meta name="description" content="这里是 Dwscdv3 的个人站，兼博客。欢迎来访！（懒癌发作中……" />
+    <meta name="google-site-verification" content="PVDyEWet6DPhCx1G0m2BhrwWssaAhG3LKIcjM319zq0" />
+    <meta name="msvalidate.01" content="C8087C08EB598785F62E7E594BEE5CF3" />
+    <title>Dwscdv3</title>
+    <!--<link rel="stylesheet" href="//comment.moe/dest/static/css/plus.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="fonts/material-icons.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/comment.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jwerty/0.3.2/jwerty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.2/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/route.js"></script>
+    <script src="scripts/markdown.js"></script>
+    <script src="scripts/titlenav.js"></script>
+    <script src="scripts/dwcomment.js"></script>
+    <script src="scripts/comment.js"></script>
+    <script src="scripts/keyboard.js"></script>
+    <script src="styles/common.js"></script>
+    <script src="styles/site.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <main>
+        <noscript>
+            This site requires JavaScript to work properly.<br>
+            这个站点需要 JavaScript 才能正常运转。
+        </noscript> 
+        <article id="article"></article>
+        <div id="comment">
+            <h1 id="comment-header">评论</h1>
+            <div id="DwComment"></div>
+        </div>
+    </main>
+    <header>
+        <div id="navCollapseContainer">
+            <div id="navCollapse" class="material-icons text-button">chevron_left</div>
+        </div>
+        <div id="masterNavContainer">
+            <div id="masterNav">
+                <div id="avatarController">
+                    <object id="headband" data="images/headband.svg" type="image/svg+xml" tabindex="-1"></object>
+                    <svg version="1.1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         id="catEars"
+                         width="288px" height="336px" viewBox="0 5 288 336">
+
+                        <g id="LeftEar">
+                            <path id="outer"
+                                  d="M 28 130
+                                     Q 10 35 35 15
+                                     L 90 79
+                                     A 140 140 0 0 0 28 130"
+                                  stroke="black" fill="#5bcefa" />
+                            <path id="inner"
+                                  d="M 54 101
+                                     Q 45 55 59 43
+                                     L 90 79
+                                     A 140 140 0 0 0 54 101"
+                                  stroke="black" fill="#f5a9b8" />
+                            <path id="auricle"
+                                  d="M 90 79
+                                     L 35 15
+                                     Q 60 40 121 70
+                                     A 140 140 0 0 0 90 79"
+                                  stroke="black" fill="white" />
+                        </g>
+                        <g id="RightEar" transform="translate(288 0) scale(-1 1)">
+                            <path id="outer"
+                                  d="M 28 130
+                                     Q 10 35 35 15
+                                     L 90 79
+                                     A 140 140 0 0 0 28 130"
+                                  stroke="black" fill="#5bcefa" />
+                            <path id="inner"
+                                  d="M 54 101
+                                     Q 45 55 59 43
+                                     L 90 79
+                                     A 140 140 0 0 0 54 101"
+                                  stroke="black" fill="#f5a9b8" />
+                            <path id="auricle"
+                                  d="M 90 79
+                                     L 35 15
+                                     Q 60 40 121 70
+                                     A 140 140 0 0 0 90 79"
+                                  stroke="black" fill="white" />
+                        </g>
+                    </svg>
+                    <!-- <object id="catEars" data="images/cat-ears.svg" type="image/svg+xml"></object> -->
+                    <div id="avatarContainer">
+                        <img class="avatar-img" src="images/avatars/Cirno (Legacy).jpg" alt="Cirno (Legacy).jpg">
+                        <img class="avatar-img" src="images/avatars/Yuuki (2016-5-16, 自制).png" alt="Yuuki (2016-5-16, 自制).png">
+                        <img class="avatar-img" src="images/avatars/Yui (2016-9-7).jpg" alt="Yui (2016-9-7).jpg">
+                        <img class="avatar-img" src="images/avatars/汐音 (2016-2-27, 自制).png" alt="汐音 (2016-2-27, 自制).png">
+                        <img class="avatar-img" src="images/avatars/可塑性记忆-OP-摩天轮 (2015-10-11).jpg" alt="可塑性记忆-OP-摩天轮 (2015-10-11).jpg">
+                        <img class="avatar-img" src="images/avatars/天体的秩序-圆盘 (2016-1-27).jpg" alt="天体的秩序-圆盘 (2016-1-27).jpg">
+                        <!--<img class="avatar-img" src="images/avatars/Chrome？ (2016-10-24, 自制, 副头像).png">-->
+                        <div id="homeButton">
+                            <a id="homeIcon" class="material-icons" href="#/">home</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="nickname"><strong>Dwscdv3</strong></div>
+                <p>一个居住在互联网里的人。</p>
+
+                <nav class="navigate-list">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="#/index">文章索引</a></li>
+                        <li><a href="#/friendly-link">有趣的人们</a></li>
+                        <li><a href="#/shortcuts">快捷键</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="navigate-list">
+                    <h4>最近发表的文章</h4>
+                    <ul id="recentPosts"></ul>
+                </nav>
+
+                <p id="tip"></p>
+
+                <h4>背景图</h4>
+                <div id="bginfo">
+                    <div>
+                        <span id="bginfo-label-title" class="bginfo-label">标题</span>
+                        <span id="bginfo-title" class="bginfo-content"></span>
+                    </div>
+                    <div>
+                        <span id="bginfo-label-author" class="bginfo-label">作者</span>
+                        <span id="bginfo-author" class="bginfo-content"></span>
+                    </div>
+                    <div>
+                        <span id="bginfo-label-src" class="bginfo-label">来源</span>
+                        <span id="bginfo-src" class="bginfo-content"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="titlePanelHeader">
+            <span class="material-icons">format_list_bulleted</span>
+            <span id="titlePanelHeaderText">本文导航</span>
+            <span id="titlePanelExpandIcon" class="material-icons">expand_less</span>
+        </div>
+        <div id="titlePanel"></div>
+    </header>
+    <div id="navExpand" class="material-icons text-button hide">chevron_right</div>
+    <footer>
+        <div id="footerBackground"></div>
+        <span><a href="#/thanks">致谢名单</a></span><br>
+        <span>Created: 2016/12/1</span><br>
+        <span>Last modified: 2019/1/25</span><br>
+        <span>由 Dwscdv3 的中二能量强力驱动</span>
+    </footer>
+    <div id="setting">
+        <span id="settingIcon" class="material-icons text-button">settings</span>
+        <div id="settingPanel" class="setting-hide">
+            <h2 id="settingHeader">设置</h2>
+            <h4>性能与效果</h4>
+            <div><label><input id="setting_Blur" type="checkbox" checked>背景模糊</label></div>
+            <div><label><input id="setting_Shadow" type="checkbox" checked>文字阴影</label></div>
+            <div><label><input id="setting_Transition" type="checkbox" checked>过渡动画</label></div>
+            <h4>辅助功能</h4>
+            <label><input id="setting_HighContrast" type="checkbox">高对比度</label>
+        </div>
+    </div>
+</body>
+
+</html>
