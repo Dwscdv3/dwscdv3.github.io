@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function renderComment() {
-    var path = decodeURIComponent(getPath());
-    var handled = false;
+    var path = getURLParts().path;
     var threadId = 0;
     waitForIndex(function () {
         for (var i = 0; i < threadIdPipeline.length; i++) {
@@ -40,7 +39,6 @@ function renderComment() {
                 };
                 threadId = rule.callback(args);
                 if (args.handled) {
-                    handled = true;
                     break;
                 }
             }
