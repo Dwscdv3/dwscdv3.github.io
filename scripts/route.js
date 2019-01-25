@@ -1,4 +1,4 @@
-var mainTitle = "I'm Dwscdv3";
+var mainTitle = "Dwscdv3";
 
 var commentDisabled = '<p class="cm-text-banner">评论在此页上不可用</p>';
 
