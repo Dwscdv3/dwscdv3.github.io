@@ -110,7 +110,7 @@ function route() {
  */
 function getURLParts() {
     if (useHashbang) {
-        var options, hash = "";
+        var options = "", hash = "";
         var hashIndex = location.hash.lastIndexOf("#");
         if (hashIndex > 1) {  // location.hash[0] is always '#', [1] is always path
             hash = decodeURIComponent(location.hash.substring(hashIndex + 1));
