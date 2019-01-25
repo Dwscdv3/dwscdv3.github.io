@@ -10,7 +10,8 @@
 <!-- * 还有马桶盖子 -->
 
 Powered by ...
-* [GitHub Pages](https://pages.github.com/) - 托管服务
+* [Surge](https://surge.sh/) - 托管服务
+* [GitHub Pages](https://pages.github.com/) - 备用托管服务
 * [Cloudflare](https://www.cloudflare.com/) - DNS 与 CDN 服务
 * <del>[BootCDN](http://www.bootcdn.cn/) - 公共 CDN</del>
 * [CDNJS](https://cdnjs.com/) - 公共 CDN
