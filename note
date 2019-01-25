@@ -1,5 +1,5 @@
 URL hash:
-    #<Path>(\?<Arguments>)?(§<Title>)?
+    #<Path>(\?<Arguments>)?(#<Title>)?
 Path:
     (/<Text>)+
     /@<Number>
