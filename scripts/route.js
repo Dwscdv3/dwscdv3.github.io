@@ -89,6 +89,7 @@ function route() {
         }
         if (!handled) {
             if (path.startsWith("/")) {
+                $("#loading").classList.add("show");
                 ajaxGet(getURLParts().path + ".md", renderMarkdown);
             } else {
                 goTo(path404);

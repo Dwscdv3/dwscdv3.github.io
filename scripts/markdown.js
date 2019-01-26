@@ -32,6 +32,7 @@ function renderMarkdown() {
             $article.innerHTML = md.render("# 404: Not found");
             document.title = "404" + " - " + mainTitle;
         }
+        $("#loading").classList.remove("show");
     }
 }
 

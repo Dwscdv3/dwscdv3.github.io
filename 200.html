@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="fonts/material-icons.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/loading.css">
     <link rel="stylesheet" href="styles/comment.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jwerty/0.3.2/jwerty.min.js"></script>
@@ -35,6 +36,15 @@
 </head>
 
 <body>
+    <div id="loading" class="show">
+        <div id="dotContainer">
+            <div class="loading-dot" id="dot1"></div>
+            <div class="loading-dot" id="dot2"></div>
+            <div class="loading-dot" id="dot3"></div>
+            <div class="loading-dot" id="dot4"></div>
+            <div class="loading-dot" id="dot5"></div>
+        </div>
+    </div>
     <div id="background"></div>
     <main>
         <noscript>
@@ -164,7 +174,7 @@
         <div id="footerBackground"></div>
         <span><a href="#/thanks">致谢名单</a></span><br>
         <span>Created: 2016/12/1</span><br>
-        <span>Last modified: 2019/1/25</span><br>
+        <span>Last modified: 2019/1/26</span><br>
         <span>由 Dwscdv3 的中二能量强力驱动</span>
     </footer>
     <div id="setting">
