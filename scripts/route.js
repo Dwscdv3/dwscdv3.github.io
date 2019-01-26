@@ -37,7 +37,7 @@ var routePipeline = [{
                 args.redirect = pathHomePage;
                 break;
             case "2":
-                args.redirect = "/friendly-link";
+                args.redirect = "/links";
                 break;
             default:
                 var article = articleList.find(function (article) {
