@@ -376,8 +376,13 @@ footer span {
 #RightEar:active>#auricle {
     fill: #808080;
 }
-#nickname {
+#nickname, #altname {
     text-align: center;
+    font-weight: bold;
+}
+#altname {
+    font-size: 66.6667%;
+    font-size: calc(1em * 2 / 3);
 }
 header {
     display: flex;
