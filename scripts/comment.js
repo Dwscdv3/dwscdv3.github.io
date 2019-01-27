@@ -47,3 +47,7 @@ function renderComment() {
         dwComment.load();
     });
 }
+
+function commentUnavailable() {
+
+}

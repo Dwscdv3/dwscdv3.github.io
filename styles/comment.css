@@ -74,6 +74,7 @@
     flex-grow: 0;
     align-self: center;
 }
+.dwcomment-form>.dwcomment-cancel-reply,
 .dwcomment-form>.dwcomment-publish {
     flex-grow: 0;
 }
@@ -97,6 +98,9 @@
 .dwcomment-form button:active {
     background: rgba(63, 63, 63, 0.5);
 }
+.dwcomment-list {
+    margin-top: 1.2em;
+}
 .dwcomment-info {
     margin-bottom: 2em;
     padding: 0.5em;
@@ -104,10 +108,52 @@
     text-align: center;
     opacity: 0.5;
 }
+.dwcomment-comment {
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+.dwcomment-content {
+    margin-left: 1em;
+}
+.dwcomment-content p {
+    margin: 0.5em 0 0;
+    padding-bottom: 0.5em;
+}
+.dwcomment-replies {
+    margin-left: 1.5em;
+    border-left: 0.1rem solid #5bcefa;
+    padding-left: 0.5em;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+    font-size: 90%;
+}
+.dwcomment-list>.dwcomment-comment>.dwcomment-replies {
+    font-size: calc(1em * 5 / 6);
+}
+.dwcomment-replies .dwcomment-replies {
+    border-left-color: #f5a9b8;
+}
+.dwcomment-replies .dwcomment-replies .dwcomment-replies {
+    border-left-color: white;
+}
+.dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies {
+    border-left-color: #f5a9b8;
+}
+.dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies {
+    border-left-color: #5bcefa;
+}
+.dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies .dwcomment-replies {
+    border-left-color: gray;
+}
 .dwcomment-time {
     opacity: 0.5;
+    font-size: 75%;
 }
 .dwcomment-time::before {
     content: "·";
     padding: 0 0.5em;
+}
+.dwcomment-reply-button {
+    font-size: 100%;
+    margin-left: 0.5em;
+    padding: 0.125em;
 }
