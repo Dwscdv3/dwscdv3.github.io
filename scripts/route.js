@@ -2,8 +2,6 @@ var mainTitle = "Dwscdv3";
 
 var useHashbang = ["dwscdv3.github.io", "www2.dwscdv3.com", "gh-pages.dwscdv3.com"].indexOf(location.hostname) >= 0;
 
-var commentDisabled = '<p class="cm-text-banner">评论在此页上不可用</p>';
-
 var path404 = "/404";
 var pathHomePage = "/about";
 var pathIndex = "/index";
@@ -61,8 +59,6 @@ if (useHashbang) {
 }
 document.addEventListener("DOMContentLoaded", getIndex);
 document.addEventListener("DOMContentLoaded", setLinkForPushStateSPA);
-// Disabled due to GitHub Pages quota.
-// window.addEventListener("hashchange", getIndex);
 
 function route() {
     var path = getURLParts().path;
