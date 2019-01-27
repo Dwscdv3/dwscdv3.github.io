@@ -13,7 +13,7 @@ var threadIdPipeline = [{
         return 1;
     }
 }, {
-    regex: /^\/friendly\-link$/,
+    regex: /^\/links$/,
     callback: function () {
         return 2;
     }
