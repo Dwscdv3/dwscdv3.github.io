@@ -4,6 +4,12 @@
 </h1>
 
 <style>
+    q::before {
+        content: "“";
+    }
+    q::after {
+        content: "”";
+    }
     .friendly-link-box > a {
         display: block;
         padding: 1em;
@@ -156,6 +162,15 @@
         </a>
         <div class="friendly-link-info">
             （暗中观察.jpg
+        </div>
+    </div>
+    <div class="friendly-link-box">
+        <a href="https://meowqvq.wordpress.com/">
+            <img class="friendly-link-avatar" src="//secure.gravatar.com/avatar/1897e44f93b6578a0e9d890e52b64958?s=216">
+            <h2>神楽坂恶魔菌</h2>
+        </a>
+        <div class="friendly-link-info">
+            一个天然呆的家伙（神楽坂？
         </div>
     </div>
     <div class="friendly-link-box">
