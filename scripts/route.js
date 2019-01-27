@@ -56,6 +56,8 @@ var routePipeline = [{
 document.addEventListener("DOMContentLoaded", route);
 if (useHashbang) {
     window.addEventListener("hashchange", route);
+} else {
+    window.addEventListener("popstate", route);
 }
 document.addEventListener("DOMContentLoaded", getIndex);
 document.addEventListener("DOMContentLoaded", setLinkForPushStateSPA);
@@ -81,7 +83,7 @@ function route() {
                     handled = true;
                     if (args.redirect) {
                         redirected = true;
-                        goTo(args.redirect, true);
+                        goTo(args.redirect, true, true);
                     }
                     break;
                 }
@@ -94,6 +96,8 @@ function route() {
             } else {
                 goTo(path404);
             }
+        } else {
+            $("#loading").classList.remove("show");
         }
         if (!redirected) {
             renderComment();
@@ -152,12 +156,16 @@ function getOptions(query) {
     return obj;
 }
 
-function goTo(path, preserveOptions) {
+function goTo(path, preserveOptions, replaceState) {
     var options = preserveOptions ? getURLParts().rawOptions : "";
     if (useHashbang) {
         location.hash = "#" + path + options;
     } else {
-        history.pushState(null, path, path + options);
+        if (replaceState) {
+            history.replaceState(null, path, path + options);
+        } else {
+            history.pushState(null, path, path + options);
+        }
         route();
     }
 }
@@ -275,7 +283,7 @@ function renderRecentArticlesList() {
 function setLinkForPushStateSPA() {
     if (!useHashbang) {
         Array.from(document.querySelectorAll("a")).forEach(function (element) {
-            if (element.getAttribute("href").startsWith("#")) {
+            if (element.getAttribute("href") && element.getAttribute("href").startsWith("#")) {
                 element.setAttribute("href", element.getAttribute("href").substring(1));
                 element.addEventListener("click", function (e) {
                     e.preventDefault();
