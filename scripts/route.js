@@ -212,15 +212,17 @@ function renderIndex(page) {
 
     for (var i = (page - 1) * itemsPerPage; i < min(page * itemsPerPage, articleList.length); i++) {
         var index = document.createElement("div");
-        index.classList.add("article");
-        var title = document.createElement("h2");
+        index.className = "index-row";
+        var title = document.createElement("div");
+        title.className = "index-title";
         var anchor = document.createElement("a");
         anchor.appendChild(document.createTextNode(articleList[i].title));
         anchor.href = "#/articles/" + articleList[i].fileName;
         title.appendChild(anchor);
         index.appendChild(title);
-        var date = document.createElement("date");
-        date.appendChild(document.createTextNode(formatAlignedDate(articleList[i].date)));
+        var date = document.createElement("div");
+        date.className = "index-date";
+        date.appendChild(document.createTextNode(formatAlignedDate(articleList[i].date, "　")));
         index.appendChild(date);
         $article.appendChild(index);
     }

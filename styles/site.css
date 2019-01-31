@@ -42,8 +42,32 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: initial;
+    font-weight: 300;
     margin-bottom: initial;
+}
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    text-align: center;
+}
+@supports (width: fit-content) {
+    article h2,
+    article h3,
+    article h4,
+    article h5,
+    article h6 {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        border-top: 0.05rem solid;
+        border-bottom: 0.05rem solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        padding: 0 1em;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.25), transparent);
+    }
 }
 h1 {
     margin-top: 0.5em;
@@ -243,30 +267,23 @@ article>h1:first-of-type {
 .navigate-list li {
     display: block;
 }
-.article {
+.index-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     border-bottom: 0.1em solid rgba(127, 127, 127, 0.2);
-    padding: 0.75em 0;
+    padding: 0.6em 0;
 }
-.article>h2 {
-    margin: 0;
-    font-size: 1.5em;
-    display: inline-block;
-    width: calc(100% - 8rem);
-    vertical-align: middle;
+.index-row>.index-title {
+    flex: 1;
+    font-size: 1.25em;
 }
-.article>date {
-    margin: 0;
+.index-row>.index-date {
+    /* flex-basis: 5em; */
     padding-right: 0.5rem;
     font-family: monospace;
-    box-sizing: border-box;
-    width: 8rem;
-    text-align: right;
     font-size: 1.2em;
     white-space: pre;
-}
-.article>date::before {
-    content: initial;
-    margin-right: 0;
 }
 .page-control {
     margin-top: 0.5em;
