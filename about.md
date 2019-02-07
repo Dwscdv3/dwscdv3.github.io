@@ -1,6 +1,6 @@
 <h1>
     关于我
-    <date>2019/1/31</date>
+    <date>2019/2/8</date>
 </h1>
 
 <style>
@@ -83,29 +83,35 @@
     </a>
 </div>
 
-<h2>地球 Online™ 人物档案</h2>
+<h2>地球 Online 人物档案</h2>
 <style>
-    article>h2, article>h3 {
-        text-align: center;
+    article h2, article h3 {
+        margin-bottom: 0.5rem;
     }
     #earthol {
         margin-top: 0.5em;
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     }
     #character {
         margin: 0.5em;
-        flex-grow: 2;
         font-family: "Finger Paint", "Jokerman", fantasy;
+    }
+    #character>* {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
     #character ul {
         margin-top: 0;
+        font-size: 75%;
     }
     #rpg-stats {
         background-color: rgba(0, 0, 0, 0.25);
+        flex: 1;
         padding: 0.5em;
-        flex-grow: 1;
-        min-width: 15rem;
+        min-width: 20rem;
         font-family: "Finger Paint", "Comic Sans MS", sans-serif;
         user-select: none;
         white-space: nowrap;
@@ -201,56 +207,98 @@
         </div>
     </div>
     <div id="character">
-        <div>Lv. 17 (<span id="exp">??</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
+        <div><span style="font-size: larger;">⚧</span> Lv. 17 (<span id="exp">??</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
         <script> $("#exp").textContent = ((new Date() - 1468339200000) / 315360000).toFixed(0); </script>
-        <div><span style="font-size: larger;">⚧</span> INFP</div>
+        <h3>Personality</h3>
+        <div>
+            <div><a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator">MBTI</a>: INFP</div>
+            <style>
+                #fav-colors>div {
+                    padding: 0.5rem 0 0 1rem;
+                    font-size: 87.5%;
+                }
+                #fav-colors>div>span {
+                    display: inline-block;
+                    box-sizing: content-box;
+                    padding: 0.75rem 0.75rem;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0.5em black;
+                    vertical-align: middle;
+                }
+            </style>
+            <div id="fav-colors">
+                Favorite colors:
+                <div>
+                    <span style="background: #ccccff;"></span>
+                    Periwinkle
+                </div>
+                <!-- <div>
+                    <span style="background: #dcd0ff;"></span>
+                    Pale Lavender
+                </div> -->
+                <div>
+                    <span style="background: #f4bbff;"></span>
+                    Brilliant Lavender
+                </div>
+                <div>
+                    <span style="background: #cc99ff;"></span>
+                    Pale Violet
+                </div>
+            </div>
+        </div>
         <h3>Occupations</h3>
-        <div>NEET</div>
-        <div>Amateur developer</div>
-        <div>Amateur translator</div>
+        <div>
+            <div>NEET</div>
+            <div>Amateur developer</div>
+            <div>Amateur translator</div>
+        </div>
         <h3>Tags</h3>
-        <div>Introverted</div>
-        <div>Liberalist</div>
-        <div>Feminist</div>
-        <div>Perfectionist</div>
-        <div>Pessimist</div>
-        <div>Agnostic</div>
-        <div><del>Fantasist</del></div>
-        <span class="comment">
-        <!-- <div>Masochist / Submissive</div> -->
-        </span>
+        <div>
+            <div>Introverted</div>
+            <div>Liberalist</div>
+            <div>Feminist</div>
+            <div>Perfectionist</div>
+            <div>Pessimist</div>
+            <div>Agnostic</div>
+            <div><del>Fantasist</del></div>
+            <span class="comment">
+            <!-- <div>Masochist / Submissive</div> -->
+            </span>
+        </div>
         <h3>Buffs & Debuffs</h3>
         <div>
-            SMA type 2
-            <ul>
-                <li>STR -85%</li>
-                <li>DEX -40%</li>
-                <li>END +30%</li>
-                <li>INT +??%</li>
-            </ul>
+            <div>
+                SMA type 2
+                <ul>
+                    <li>STR -85%</li>
+                    <li>DEX -40%</li>
+                    <li>END +30%</li>
+                    <li>INT +??%</li>
+                </ul>
+            </div>
+            <div>
+                Scoliosis
+                <ul>
+                    <li>DEX -15%</li>
+                    <li>END +10%</li>
+                </ul>
+            </div>
+            <div>
+                Gender dysphoria
+                <ul>
+                    <li>DEV +40%</li>
+                </ul>
+            </div>
+            <div>
+                Social anxiety
+                <ul>
+                    <li>KIN +30%</li>
+                </ul>
+            </div>
+            <div><del>Trypophobia</del> (inactive)</div>
+            <div><del>Entomophobia</del> (inactive)</div>
+            <div><del>Panic disorder</del> (recovered)</div>
         </div>
-        <div>
-            Scoliosis
-            <ul>
-                <li>DEX -15%</li>
-                <li>END +10%</li>
-            </ul>
-        </div>
-        <div>
-            Gender dysphoria
-            <ul>
-                <li>DEV +40%</li>
-            </ul>
-        </div>
-        <div>
-            Social anxiety
-            <ul>
-                <li>KIN +30%</li>
-            </ul>
-        </div>
-        <div><del>Trypophobia</del> (inactive)</div>
-        <div><del>Entomophobia</del> (inactive)</div>
-        <div><del>Panic disorder</del> (recovered)</div>
     </div>
 </div>
 
