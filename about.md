@@ -1,6 +1,6 @@
 <h1>
     关于我
-    <date>2019/2/8</date>
+    <date>2019/2/9</date>
 </h1>
 
 <style>
@@ -125,21 +125,43 @@
         position: relative;
         margin: 0.5em;
     }
+    .rpg-stat small {
+        font-size: calc(1em / 3 * 2);
+        opacity: 0.75;
+    }
     .prog {
+        box-sizing: border-box;
         height: 1.5em;
         line-height: 1.5em;
-        padding-left: 0.25em;
+        padding: 0 0.25em;
+    }
+    .prog-oppo-left {
+        position: relative;
+        z-index: 1;
+        border-right: 0.0416rem solid rgba(127, 127, 127, 0.25);
+    }
+    .prog-oppo-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 0.0416rem solid rgba(127, 127, 127, 0.25);
+        text-align: right;
+    }
+    .prog-oppo-right>span {
+        position: absolute;
+        right: 0.25em;
+        z-index: 2;
     }
 </style>
 <div id="earthol">
     <div id="rpg-stats">
         <small style="white-space: initial;">* This graph isn't friendly to blind people, sorry about this.</small>
-        <h3>RPG-Like Stats</h3>
+        <h3>RPG Stats</h3>
         <div class="rpg-stat">
             <div class="prog" style="width: 6%; background-color: #C00;">Strength</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 30%; background-color: #CFC;">Dexterity</div>
+            <div class="prog" style="width: 35%; background-color: #CFC;">Dexterity</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 80%; background-color: #F60;">Endurance</div>
@@ -148,16 +170,63 @@
             <div class="prog" style="width: 72%; background-color: #09F;">Intelligence</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 20%; background-color: #090;">Luck</div>
+            <div class="prog" style="width: 25%; background-color: #090;">Luck</div>
+        </div>
+        <h3>Personality</h3>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 20%; background-color: #906;">Diligence</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 25%; background-color: #906;">Diligence</div>
+            <div class="prog" style="width: 70%; background-color: #F36;">Kindness</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 75%; background-color: #F36;">Kindness</div>
+            <div class="prog" style="width: 65%; background-color: #066;">Deviation</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 70%; background-color: #066;">Deviation</div>
+            <div class="prog" style="width: 75%; background-color: #fc0;">Perfectionism</div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog prog-oppo-left" style="width: 75%; background-color: #f5a9b8;">
+                <span>Feminine</span>
+            </div>
+            <div class="prog prog-oppo-right" style="width: 25%; background-color: #5bcefa;">
+                <span>Masculine</span>
+            </div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog prog-oppo-left" style="width: 85%; background-color: #222;">
+                <span>Introverted</span>
+            </div>
+            <div class="prog prog-oppo-right" style="width: 15%; background-color: #ddd;">
+                <span>Extroverted</span>
+            </div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog prog-oppo-left" style="width: 65%; background-color: #666;">
+                <span>Pessimism</span>
+            </div>
+            <div class="prog prog-oppo-right" style="width: 35%; background-color: #7df;">
+                <span>Optimism</span>
+            </div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog prog-oppo-left" style="width: 80%; background-color: #66f;">
+                <span>Liberalism</span>
+            </div>
+            <div class="prog prog-oppo-right" style="width: 20%; background-color: #f66;">
+                <span>Conservatism</span>
+            </div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog prog-oppo-left" style="width: 90%; background-color: #0cf;">
+                <span>Submission</span>
+            </div>
+            <div class="prog prog-oppo-right" style="width: 10%; background-color: #f00;">
+                <span>Dominance</span>
+            </div>
+            <span class="comment" style="position: absolute; top: 0; width: 100%; z-index: 3; line-height: 1.375em; text-align: center; font-family: sans-serif; text-shadow: none;">
+                <!-- https://bdsmtest.org/r/m2bkV7s3 -->
+            </span>
         </div>
         <h3>Art Skills</h3>
         <div class="rpg-stat">
@@ -168,10 +237,10 @@
         </div>
         <h3>Programming Skills</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 80%; background-color: #E34C26;">HTML</div>
+            <div class="prog" style="width: 75%; background-color: #E34C26;">HTML</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 75%; background-color: #563D7C;">CSS</div>
+            <div class="prog" style="width: 80%; background-color: #563D7C;">CSS</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 55%; background-color: #F1E05A;">JavaScript</div>
@@ -180,30 +249,39 @@
             <div class="prog" style="width: 50%; background-color: #555555;">C</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 70%; background-color: #178600;">C# / .NET</div>
+            <div class="prog" style="width: 65%; background-color: #178600;">C# / .NET</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 20%; background-color: #3572A5;">Python</div>
         </div>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 15%; background-color: #dea584;">Rust</div>
+        </div>
         <h3>Human Language</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 85%; background-color: #CC3300;">Chinese -- Native</div>
+            <div class="prog" style="width: 85%; background-color: #CC3300;">Chinese <small>Native</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 55%; background-color: #6600CC;">English -- Intermediate</div>
+            <div class="prog" style="width: 55%; background-color: #6600CC;">English <small>Intermediate</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 10%; background-color: #FFBFFF;">Japanese -- Beginner</div>
+            <div class="prog" style="width: 10%; background-color: #FFBFFF;">Japanese <small>Beginner</small></div>
         </div>
         <h3>Gaming Skills</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 47%; background-color: #EE66AA;">osu! -- 4.7 Stars</div>
+            <div class="prog" style="width: 55%; background-color: #f6a;">osu! <small>4.7 Stars</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 36%; background-color: #0055BB;">LoL -- Silver I</div>
+            <div class="prog" style="width: 33%; background-color: #f6a;">osu!mania <small>2.4 Stars</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 22%; background-color: #A0A0A0;">FPS games -- completely noob</div>
+            <div class="prog" style="width: 36%; background-color: #0055BB;">LoL <small>Silver I</small></div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 22%; background-color: #A0A0A0;">FPS games <small>completely noob</small></div>
+        </div>
+        <div class="rpg-stat">
+            <div class="prog" style="width: 20%; background-color: #a3364a;">majsoul <small>雀士</small></div>
         </div>
     </div>
     <div id="character">
@@ -246,24 +324,11 @@
                 </div>
             </div>
         </div>
-        <h3>Occupations</h3>
+        <h3>Roles</h3>
         <div>
             <div>NEET</div>
             <div>Amateur developer</div>
             <div>Amateur translator</div>
-        </div>
-        <h3>Tags</h3>
-        <div>
-            <div>Introverted</div>
-            <div>Liberalist</div>
-            <div>Feminist</div>
-            <div>Perfectionist</div>
-            <div>Pessimist</div>
-            <div>Agnostic</div>
-            <div><del>Fantasist</del></div>
-            <span class="comment">
-            <!-- <div>Masochist / Submissive</div> -->
-            </span>
         </div>
         <h3>Buffs & Debuffs</h3>
         <div>
@@ -274,6 +339,7 @@
                     <li>DEX -40%</li>
                     <li>END +30%</li>
                     <li>INT +??%</li>
+                    <li>SUB +60%</li>
                 </ul>
             </div>
             <div>
@@ -287,12 +353,14 @@
                 Gender dysphoria
                 <ul>
                     <li>DEV +40%</li>
+                    <li>LIB +30%</li>
                 </ul>
             </div>
             <div>
                 Social anxiety
                 <ul>
                     <li>KIN +30%</li>
+                    <li>INTR +50%</li>
                 </ul>
             </div>
             <div><del>Trypophobia</del> (inactive)</div>
@@ -304,11 +372,10 @@
 
 <h3>已废弃的传送门 <del style="opacity: 0.5">黑历史</del></h3>
 <ul>
-    <!--<li><a href="https://dwscdv3.com/1st-Homepage/" target="_blank">旧主页 ver.1（2013/11/6 ~ 2014/3/5）</a></li>-->
-    <li><a href="https://dwscdv3.com/Anonymous-Forum/" target="_blank">旧主页 ver.2（2015/4/23 ~ 2015/6/11）</a></li>
+    <!--<li><a href="https://www2.dwscdv3.com/1st-Homepage/" target="_blank">旧主页 ver.1（2013/11/6 ~ 2014/3/5）</a></li>-->
+    <li><a href="https://www2.dwscdv3.com/Anonymous-Forum/" target="_blank">旧主页 ver.2（2015/4/23 ~ 2015/6/11）</a></li>
     <span class="comment">
     <!--<li><a href="https://zh.moegirl.org/User:Dwscdv3" target="_blank">萌娘百科用户页 (2014/12/24)</a></li>-->
-    <!--<li><a href="http://tieba.baidu.com/home/main?un=_Dwscdv3_" target="_blank">中二那年</a><span class="service">百度贴吧</span></li>-->
     <!--<li>
         31813668
         <a href="http://mole.61.com/"><span class="service">摩尔庄园</span></a>
