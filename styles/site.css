@@ -157,9 +157,11 @@ button::before {
     text-shadow: 1px 1px 2px black;
 }
 date {
-    margin-left: 0.2em;
     display: inline-block;
     opacity: 0.6;
+}
+h1>date {
+    margin-left: 0.2em;
     font-size: 50%;
 }
 date::before {
