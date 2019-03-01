@@ -11,6 +11,10 @@ var sidebar;
 
 var $article, $commentInfo;
 
+window.addEventListener("load", function () {
+    $("#loadingRes").classList.remove("show");
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     $article = $("#article");
     $commentInfo = $(".comment-info");

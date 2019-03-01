@@ -1,7 +1,7 @@
 /* 全局 */
 
 html {
-    font-family: "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    font-family: "Noto Serif SC", 思源宋体, "思源宋体 CN", "Source Han Serif SC", "source-han-serif-sc", SimSun, serif;
     font-size: 150%;
     font-weight: 300;
     text-shadow: 1px 1px 2px black !important;
@@ -42,6 +42,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Microsoft YaHei", 思源黑体, "Hiragino Sans GB", sans-serif;
     font-weight: 300;
     margin-bottom: initial;
 }
@@ -466,6 +467,7 @@ header li {
 #titlePanelHeaderText {
     flex-grow: 1;
     margin-left: 0.5em;
+    font-family: "Microsoft YaHei", 思源黑体, "Hiragino Sans GB", sans-serif;
     font-weight: normal;
 }
 #titlePanelExpandIcon {
@@ -744,7 +746,6 @@ main.expand {
         top: 1em;
     }
     #setting {
-        position: absolute;
         margin: 0.5rem;
         height: calc(100% - 1rem);
     }

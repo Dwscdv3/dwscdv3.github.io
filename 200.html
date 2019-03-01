@@ -12,6 +12,7 @@
     <meta name="msvalidate.01" content="C8087C08EB598785F62E7E594BEE5CF3" />
     <title>Dwscdv3</title>
     <!--<link rel="stylesheet" href="//comment.moe/dest/static/css/plus.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300&amp;subset=chinese-simplified,japanese">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css">
@@ -36,13 +37,23 @@
 </head>
 
 <body>
-    <div id="loading" class="show">
-        <div id="dotContainer">
-            <div class="loading-dot" id="dot1"></div>
-            <div class="loading-dot" id="dot2"></div>
-            <div class="loading-dot" id="dot3"></div>
-            <div class="loading-dot" id="dot4"></div>
-            <div class="loading-dot" id="dot5"></div>
+    <div id="loading" class="loading show">
+        <div class="loading-dot-container">
+            <div class="loading-dot loading-dot-1"></div>
+            <div class="loading-dot loading-dot-2"></div>
+            <div class="loading-dot loading-dot-3"></div>
+            <div class="loading-dot loading-dot-4"></div>
+            <div class="loading-dot loading-dot-5"></div>
+        </div>
+    </div>
+    <div id="loadingRes" class="loading show">
+        <div id="loadingText">资源还在<br>加载中… </div>
+        <div class="loading-dot-container">
+            <div class="loading-dot loading-dot-1"></div>
+            <div class="loading-dot loading-dot-2"></div>
+            <div class="loading-dot loading-dot-3"></div>
+            <div class="loading-dot loading-dot-4"></div>
+            <div class="loading-dot loading-dot-5"></div>
         </div>
     </div>
     <div id="background"></div>
@@ -175,7 +186,7 @@
         <div id="footerBackground"></div>
         <span><a href="#/thanks">致谢名单</a></span><br>
         <span>Created: 2016/12/1</span><br>
-        <span>Last modified: 2019/1/27</span><br>
+        <span>Last modified: 2019/3/1</span><br>
         <span>由 Dwscdv3 的中二能量强力驱动</span>
     </footer>
     <div id="setting">

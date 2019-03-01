@@ -4,20 +4,60 @@
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
     pointer-events: none;
     z-index: 10;
     background: rgba(0, 0, 0, 0.5);
+}
+
+#loadingRes {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    top: 0.9rem;
+    right: 0.9rem;
+    transition: opacity 1s;
+}
+
+#loadingRes #loadingText {
+    position: absolute;
+    width: 10em;
+    width: fit-content;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 58.333%;
+    font-size: calc(1rem * 7 / 12);
+    font-family: "Microsoft YaHei", 思源黑体, "Hiragino Sans GB", sans-serif;
+    font-weight: 400;
+}
+
+#loadingRes .loading-dot-container {
+    transform: translate(-50%, -50%) scale(0.25);
+}
+
+@media (max-width: 979px) {
+    #loadingRes {
+        position: fixed;
+        top: 0.4em;
+        right: 0.4em;
+    }
+}
+
+/* General rules */
+
+.loading {
+    opacity: 0;
     transition: opacity 0.2s;
 }
 
-#loading.show {
+.loading.show {
     opacity: 1;
     pointer-events: all;
     transition-delay: 0.1s;
 }
 
-#dotContainer {
+.loading-dot-container {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -26,18 +66,18 @@
     transform: translate(-50%, -50%) scale(0.4);
 }
 
-#loading .loading-dot {
+.loading .loading-dot {
     position: absolute;
     opacity: 0;
     width: 8em;
     height: 8em;
 }
 
-#loading.show .loading-dot {
+.loading.show .loading-dot {
     animation: Circle 5s infinite;
 }
 
-#loading .loading-dot::before {
+.loading .loading-dot::before {
     content: "";
     position: absolute;
     top: 0;
@@ -55,28 +95,28 @@
     80% { transform: rotate(530deg); opacity: 0; }
 }
 
-#loading.show #dot1 {
+.loading.show .loading-dot-1 {
     animation-delay: 0.1s;
 }
-#loading.show #dot2 {
+.loading.show .loading-dot-2 {
     animation-delay: 0.25s;
 }
-#loading.show #dot3 {
+.loading.show .loading-dot-3 {
     animation-delay: 0.4s;
 }
-#loading.show #dot4 {
+.loading.show .loading-dot-4 {
     animation-delay: 0.55s;
 }
-#loading.show #dot5 {
+.loading.show .loading-dot-5 {
     animation-delay: 0.7s;
 }
 
-#dot1::before, #dot5::before {
+.loading-dot-1::before, .loading-dot-5::before {
     background-color: #5bcefa;
 }
-#dot2::before, #dot4::before {
+.loading-dot-2::before, .loading-dot-4::before {
     background-color: #f5a9b8;
 }
-#dot3::before {
+.loading-dot-3::before {
     background-color: white;
 }
