@@ -1,6 +1,6 @@
 <h1>
     关于我
-    <date>2019/2/9</date>
+    <date>2019/3/9</date>
 </h1>
 
 <style>
@@ -9,7 +9,7 @@
         line-height: 1.5rem;
     }
     #portals {
-        max-width: 40rem;
+        max-width: 45rem;
         margin: 1em auto 0;
         text-align: center;
         font-size: 66.6667%;
@@ -17,7 +17,7 @@
     #portals>* {
         display: inline-block;
         box-sizing: border-box;
-        width: 12.5%;
+        width: 11.1%;
         min-width: 5em;
         margin-bottom: 0.5em;
         padding: 0 1.2%;
@@ -56,6 +56,9 @@
     <a href="mailto:dwscdv3@hotmail.com">
         <img src="/images/logos/email.svg">
         <span class="portal-title">Email</span>
+    </a><a href="/files/96e24706df7cd363.txt">
+        <img src="/images/logos/gnupg.svg">
+        <span class="portal-title">GnuPG</span>
     </a><a href="https://github.com/Dwscdv3">
         <img src="/images/logos/github.svg">
         <span class="portal-title">GitHub</span>
