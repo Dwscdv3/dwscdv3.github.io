@@ -165,7 +165,7 @@
         </div>
     </div>
     <div class="friendly-link-box">
-        <a href="https://meowqvq.wordpress.com/">
+        <a href="https://meow3.family.blog/">
             <img class="friendly-link-avatar" src="//secure.gravatar.com/avatar/1897e44f93b6578a0e9d890e52b64958?s=216">
             <h2>神楽坂恶魔菌</h2>
         </a>
