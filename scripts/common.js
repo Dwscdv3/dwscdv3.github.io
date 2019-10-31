@@ -34,7 +34,7 @@ function formatAlignedDate(date, separator, largeSeparator) {
         }
         var dateString = "";
         dateString += date.getUTCFullYear() % 100;
-        dateString += date.getUTCMonth() < 10 ? largeSeparator : separator;
+        dateString += date.getUTCMonth() + 1 < 10 ? largeSeparator : separator;
         dateString += date.getUTCMonth() + 1;
         dateString += date.getUTCDate() < 10 ? largeSeparator : separator;
         dateString += date.getUTCDate();
