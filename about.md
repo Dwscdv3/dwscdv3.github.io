@@ -1,6 +1,6 @@
 <h1>
     关于我
-    <date>2019/3/9</date>
+    <date>2020/2/28</date>
 </h1>
 
 <style>
@@ -158,26 +158,22 @@
 </style>
 <div id="earthol">
     <div id="rpg-stats">
-        <small style="white-space: initial;">* This graph isn't friendly to blind people, sorry about this.</small>
         <h3>RPG Stats</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 6%; background-color: #C00;">Strength</div>
+            <div class="prog" style="width: 5%; background-color: #C00;">Strength</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 35%; background-color: #CFC;">Dexterity</div>
+            <div class="prog" style="width: 30%; background-color: #CFC;">Dexterity</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 80%; background-color: #F60;">Endurance</div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 72%; background-color: #09F;">Intelligence</div>
-        </div>
-        <div class="rpg-stat">
-            <div class="prog" style="width: 25%; background-color: #090;">Luck</div>
+            <div class="prog" style="width: 70%; background-color: #09F;">Intelligence</div>
         </div>
         <h3>Personality</h3>
         <div class="rpg-stat">
-            <div class="prog" style="width: 20%; background-color: #906;">Diligence</div>
+            <div class="prog" style="width: 25%; background-color: #906;">Diligence</div>
         </div>
         <div class="rpg-stat">
             <div class="prog" style="width: 70%; background-color: #F36;">Kindness</div>
@@ -254,12 +250,6 @@
         <div class="rpg-stat">
             <div class="prog" style="width: 65%; background-color: #178600;">C# / .NET</div>
         </div>
-        <div class="rpg-stat">
-            <div class="prog" style="width: 20%; background-color: #3572A5;">Python</div>
-        </div>
-        <div class="rpg-stat">
-            <div class="prog" style="width: 15%; background-color: #dea584;">Rust</div>
-        </div>
         <h3>Human Language</h3>
         <div class="rpg-stat">
             <div class="prog" style="width: 85%; background-color: #CC3300;">Chinese <small>Native</small></div>
@@ -268,7 +258,7 @@
             <div class="prog" style="width: 55%; background-color: #6600CC;">English <small>Intermediate</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 10%; background-color: #FFBFFF;">Japanese <small>Beginner</small></div>
+            <div class="prog" style="width: 15%; background-color: #FFBFFF;">Japanese <small>Beginner</small></div>
         </div>
         <h3>Gaming Skills</h3>
         <div class="rpg-stat">
@@ -278,14 +268,13 @@
             <div class="prog" style="width: 33%; background-color: #f6a;">osu!mania <small>2.4 Stars</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 36%; background-color: #0055BB;">LoL <small>Silver I</small></div>
+            <div class="prog" style="width: 40%; background-color: #a3364a;">majsoul <small>雀豪一</small></div>
         </div>
         <div class="rpg-stat">
-            <div class="prog" style="width: 22%; background-color: #A0A0A0;">FPS games <small>completely noob</small></div>
+            <div class="prog" style="width: 25%; background-color: #a3364a;">Go / Weiqi <small>11k</small></div>
         </div>
-        <div class="rpg-stat">
-            <div class="prog" style="width: 20%; background-color: #a3364a;">majsoul <small>雀士</small></div>
-        </div>
+        <hr>
+        <small style="white-space: initial;">* This graph isn't friendly to blind people, sorry about this.</small>
     </div>
     <div id="character">
         <div><span style="font-size: larger;">⚧</span> Lv. 17 (<span id="exp">??</span>%) <span style="font-size: smaller; opacity: 0.4;">Level locked</span></div>
@@ -366,9 +355,6 @@
                     <li>INTR +50%</li>
                 </ul>
             </div>
-            <div><del>Trypophobia</del> (inactive)</div>
-            <div><del>Entomophobia</del> (inactive)</div>
-            <div><del>Panic disorder</del> (recovered)</div>
         </div>
     </div>
 </div>
