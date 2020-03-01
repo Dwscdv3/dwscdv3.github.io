@@ -132,31 +132,31 @@
         "id": 31,
         "fileName": "新年新气象，新的头像框",
         "title": "新年新气象，新的头像框",
-        "dateString": "2019-1-3"
+        "dateString": "2019-01-03"
     },
     {
         "id": 32,
         "fileName": "昨日无法重现，明年已是今年",
         "title": "昨日无法重现，明年已是今年",
-        "dateString": "2019-1-7"
+        "dateString": "2019-01-07"
     },
     {
         "id": 33,
         "fileName": "本站已迁移至Surge",
         "title": "本站已迁移至 Surge",
-        "dateString": "2019-1-26"
+        "dateString": "2019-01-26"
     },
     {
         "id": 34,
         "fileName": "少女祈祷中…",
         "title": "少女祈祷中…",
-        "dateString": "2019-1-26"
+        "dateString": "2019-01-26"
     },
     {
         "id": 35,
         "fileName": "DwTime-2.0",
         "title": "DwTime 史诗级更新",
-        "dateString": "2019-3-16"
+        "dateString": "2019-03-16"
     },
     {
         "id": 36,
@@ -181,5 +181,17 @@
         "fileName": "2019-11-12-呓语",
         "title": "2019/11/12 呓语",
         "dateString": "2019-11-12"
+    },
+    {
+        "id": 40,
+        "fileName": "Diary-Disclosure-Project",
+        "title": "Diary Disclosure Project",
+        "dateString": "2020-03-01"
+    },
+    {
+        "id": 41,
+        "fileName": "diary/2019-3-1",
+        "title": "2019/3/1",
+        "dateString": "2019-03-01"
     }
 ]
