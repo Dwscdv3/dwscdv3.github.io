@@ -193,5 +193,11 @@
         "fileName": "diary/2019-3-1",
         "title": "2019/3/1",
         "dateString": "2019-03-01"
+    },
+    {
+        "id": 42,
+        "fileName": "diary/2019-3-2",
+        "title": "2019/3/2 国土战略局特工再度集合",
+        "dateString": "2019-03-02"
     }
 ]
