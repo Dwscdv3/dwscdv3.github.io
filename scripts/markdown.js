@@ -49,7 +49,10 @@ function replaceLinksToTargetBlank(node) {
     if (node instanceof HTMLElement) {
         var anchors = node.querySelectorAll("a");
         for (var i = 0; i < anchors.length; i++) {
-            anchors[i].target = "_blank";
+            var a = anchors[i];
+            if (a.origin !== location.origin) {
+                a.target = "_blank";
+            }
         }
     }
 }

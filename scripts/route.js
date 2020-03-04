@@ -281,12 +281,23 @@ function renderRecentArticlesList() {
 function setLinkForPushStateSPA() {
     if (!useHashbang) {
         Array.from(document.querySelectorAll("a")).forEach(function (element) {
-            if (element.getAttribute("href") && element.getAttribute("href").startsWith("#")) {
+            if (element.getAttribute("href") && element.getAttribute("href").startsWith("#/")) {
                 element.setAttribute("href", element.getAttribute("href").substring(1));
+                element.dataset.fixed = "true"; // This attr is just for quick debug purpose
+            }
+            if (!element.dataset.hooked && element.origin === location.origin) {
                 element.addEventListener("click", function (e) {
                     e.preventDefault();
                     goTo(this.href);
                 });
+                element.dataset.hooked = "true";
+            }
+        });
+    } else {
+        Array.from(document.querySelectorAll("a")).forEach(function (element) {
+            if (element.getAttribute("href").startsWith("/") && !element.getAttribute("href").startsWith("//")) {
+                element.setAttribute("href", "#" + element.getAttribute("href"));
+                element.dataset.fixed = "true";
             }
         });
     }
