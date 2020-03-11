@@ -159,8 +159,13 @@ function DwComment(host, node) {
                 }),
                 createElement("div", {
                     className: "dwcomment-markdownit-status",
-                    innerHTML: md ?
-                        '✔ 已加载 markdown-it' : '✖ 未找到 <a href="//github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>',
+                    innerHTML:
+                        (
+                            md
+                            ? '✔ 已加载 markdown-it'
+                            : '✖ 未找到 <a href="//github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>'
+                        )
+                        + '，<a href="markdown-cheatsheet" target="_blank">格式帮助</a>',
                 }),
                 createElement("label", {
                     className: "dwcomment-keep-field-label",
