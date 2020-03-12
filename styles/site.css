@@ -645,6 +645,10 @@ main.expand {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+#article {
+    line-height: 1.75;
+}
+
 /* 关键帧 */
 
 @keyframes rotate-in-clockwise {
