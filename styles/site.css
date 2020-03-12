@@ -510,9 +510,9 @@ header li {
     font-size: 125%;
 }
 main {
-    margin-left: 13em;
-    padding: 0 1em 0 2em;
-    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em 0 15em;
     overflow-x: hidden;
     -webkit-user-select: text;
     user-select: text;
@@ -522,7 +522,7 @@ main.hide {
     opacity: 0;
 }
 main.expand {
-    margin-left: 0;
+    padding-left: 2em;
 }
 #tip {
     margin-top: 3em;
