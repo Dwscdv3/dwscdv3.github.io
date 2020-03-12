@@ -112,6 +112,7 @@
 .dwcomment-comment {
     margin-bottom: 0.5em;
     padding-top: 0.5em;
+    padding-left: 0.5em;
 }
 .dwcomment-content {
     margin-left: 1em;
@@ -123,7 +124,6 @@
 .dwcomment-replies {
     margin-left: 1.5em;
     border-left: 0.1rem solid #5bcefa;
-    padding-left: 0.5em;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
     font-size: 90%;
 }

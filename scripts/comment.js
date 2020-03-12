@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function renderComment() {
-    var path = getURLParts().path;
+    var url = getURLParts();
     var threadId = 0;
     waitForIndex(function () {
         for (var i = 0; i < threadIdPipeline.length; i++) {
             var rule = threadIdPipeline[i];
-            var match = path.match(rule.regex);
+            var match = url.path.match(rule.regex);
             if (match != null) {
                 var args = {
                     handled: true,
@@ -44,7 +44,15 @@ function renderComment() {
             }
         }
         dwComment.threadId = threadId;
-        dwComment.load();
+        dwComment.load(function (e) {
+            if (e.success && url.options.Comment) {
+                var focusComment = document.getElementById("comment-" + url.options.Comment);
+                if (focusComment) {
+                    focusComment.scrollIntoView({ behavior: "smooth" });
+                    focusComment.style.backgroundColor = "rgba(255, 191, 0, 0.3)";
+                }
+            }
+        });
     });
 }
 
