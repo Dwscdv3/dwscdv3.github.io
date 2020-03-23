@@ -53,6 +53,9 @@ article h5,
 article h6 {
     text-align: center;
 }
+article img {
+    max-width: 100%;
+}
 @supports (width: fit-content) {
     article h2,
     article h3,
