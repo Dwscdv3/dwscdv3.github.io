@@ -29,6 +29,14 @@ main {
     padding: 0;
 }
 
+#comment {
+    break-before: page;
+}
+
+#comment-header {
+    text-align: center;
+}
+
 article h1 {
     margin: unset !important;
     padding-top: 0.5em;
