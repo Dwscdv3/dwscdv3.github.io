@@ -1,0 +1,48 @@
+header,
+footer,
+#loading,
+#loadingRes,
+#setting,
+#background,
+.dwcomment-form,
+.dwcomment-form+hr,
+.dwcomment-reply-button {
+    display: none;
+}
+
+html {
+    font-size: 14pt !important;
+    color: black !important;
+    text-shadow: unset !important;
+}
+
+body {
+    background: white;
+}
+
+a {
+    color: unset !important;
+    text-shadow: unset !important;
+}
+
+main {
+    padding: 0;
+}
+
+article h1 {
+    margin: unset !important;
+    padding-top: 0.5em;
+    text-align: center;
+}
+
+article h1 date {
+    display: block;
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    background: unset;
+}
