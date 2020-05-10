@@ -282,7 +282,7 @@ function DwComment(host, node) {
                 });
             } else if (prop === "children" && arg instanceof Array) {
                 arg.forEach(function (child) {
-                    if (child instanceof Element) {
+                    if (child instanceof Node) {
                         element.appendChild(child);
                     } else if (typeof child === "string") {
                         element.appendChild(document.createTextNode(child));
@@ -292,6 +292,10 @@ function DwComment(host, node) {
                 for (var name in arg) {
                     element.style[name] = arg[name];
                 }
+            } else if (prop.startsWith("attr_")) {
+                element.setAttribute(prop.substring(5), arg);
+            } else if (prop.startsWith("on")) {
+                element.addEventListener(prop.substring(2), arg);
             } else {
                 element[prop] = arg;
             }
