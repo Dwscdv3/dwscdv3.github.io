@@ -285,7 +285,7 @@ function setLinkForPushStateSPA() {
                 element.setAttribute("href", element.getAttribute("href").substring(1));
                 element.dataset.fixed = "true"; // This attr is just for quick debug purpose
             }
-            if (!element.dataset.hooked && element.origin === location.origin) {
+            if (!element.dataset.hooked && element.origin === location.origin && !element.hasAttribute("external")) {
                 element.addEventListener("click", function (e) {
                     e.preventDefault();
                     goTo(this.href);

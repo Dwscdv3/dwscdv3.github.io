@@ -56,7 +56,7 @@
     <a href="mailto:dwscdv3@hotmail.com">
         <img src="/images/logos/email.svg">
         <span class="portal-title">Email</span>
-    </a><a href="/files/96e24706df7cd363.txt">
+    </a><a href="/files/96e24706df7cd363.txt" target="_blank" external>
         <img src="/images/logos/gnupg.svg">
         <span class="portal-title">GnuPG</span>
     </a><a href="https://github.com/Dwscdv3">
