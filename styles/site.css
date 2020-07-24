@@ -745,6 +745,7 @@ main.expand {
             opacity: 1;
         }
         main.expand {
+            padding-left: 1em;
             opacity: 1;
         }
         footer {
@@ -756,6 +757,9 @@ main.expand {
         #setting {
             margin: 0.5rem;
             height: calc(100% - 1rem);
+        }
+        #settingPanel {
+            border-radius: 22.4px;
         }
     }
 }
