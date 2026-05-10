@@ -90,7 +90,7 @@
         </a>
     </div>
     <div class="friendly-link-box">
-        <a href="https//yoooooooooo.com/">
+        <a href="https://yoooooooooo.com/">
             <img class="friendly-link-avatar" src="https://github.com/kagurazakayashi.png">
             <h2>神楽坂雅詩</h2>
         </a>
@@ -115,7 +115,7 @@
     </div> -->
     <div class="friendly-link-box">
         <a href="https://blog.silversky.moe/">
-            <img class="friendly-link-avatar" src="https://tva2.sinaimg.cn/large/005QHKeDjw8fb11iajhxcj30ro0rowgf.jpg">
+            <img class="friendly-link-avatar" src="https://github.com/AkatsukiRyuunosuke.png">
             <h2>暁龍之介</h2>
         </a>
     </div>
@@ -125,13 +125,12 @@
             <h2>卜卜口</h2>
         </a>
     </div>
-    <!-- <div class="friendly-link-box">
-        <a href="https://ops.moe/">
-            <img class="friendly-link-avatar" src="https://blog-asuka.oss-cn-beijing.aliyuncs.com/Avatar.png">
+    <div class="friendly-link-box">
+        <a>
+            <img class="friendly-link-avatar" src="https://github.com/asukaops.png">
             <h2>Asuka_Ops</h2>
         </a>
-        网站挂了
-    </div> -->
+    </div>
 </div>
 
 <h2>友链</h2>
@@ -166,22 +165,28 @@
             <h2>Nayuki</h2>
         </a>
     </div>
-    <!-- <div class="friendly-link-box">
-        <a href="https://tomli.blog/">
-            <img class="friendly-link-avatar" src="https://tvax4.sinaimg.cn/crop.186.85.745.745.216/48ab9a77ly8frqc77eq7aj20t811aqdt.jpg">
+    <div class="friendly-link-box">
+        <a href="https://diygod.cc/">
+            <img class="friendly-link-avatar" src="https://github.com/DIYgod.png">
+            <h2>DIYgod</h2>
+        </a>
+    </div>
+    <div class="friendly-link-box">
+        <a href="https://github.com/biergaizi">
+            <img class="friendly-link-avatar" src="https://github.com/biergaizi.png">
             <h2>比尔盖子</h2>
         </a>
         失踪人口
-    </div> -->
+    </div>
     <div class="friendly-link-box">
         <a href="https://github.com/dimpurr">
-            <img class="friendly-link-avatar" src="https://tva3.sinaimg.cn/large/5ac786bbjw8eujhhwyr0oj20qx0qxk0n.jpg">
+            <img class="friendly-link-avatar" src="https://github.com/dimpurr.png">
             <h2>Dimpurr Cheny</h2>
         </a>
     </div>
     <div class="friendly-link-box">
         <a href="http://www.pc426.com/">
-            <img class="friendly-link-avatar" src="https://tva2.sinaimg.cn/crop.1262.2.716.716.216/4a954ac6gw1ewupfj4320j21kw0zk1eb.jpg">
+            <img class="friendly-link-avatar" src="/images/avatars/@guanyuhan426.webp">
             <h2>guanyuhan426</h2>
         </a>
     </div>
