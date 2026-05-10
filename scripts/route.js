@@ -295,7 +295,7 @@ function setLinkForPushStateSPA() {
         });
     } else {
         Array.from(document.querySelectorAll("a")).forEach(function (element) {
-            if (element.getAttribute("href").startsWith("/") && !element.getAttribute("href").startsWith("//")) {
+            if (element.getAttribute("href")?.startsWith("/") && !element.getAttribute("href").startsWith("//")) {
                 element.setAttribute("href", "#" + element.getAttribute("href"));
                 element.dataset.fixed = "true";
             }
